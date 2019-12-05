@@ -7,7 +7,7 @@
 
 ## Accounts <a id="accounts-1"></a>
 
-* [Create an Account](create-an-account.md)
+* [Create an account](create-an-account.md)
 * [Update an account](update-an-account.md)
 * [Transfer cryptocurrency](transfer-cryptocurrency.md)
 * [Delete an account](delete-an-account.md)
