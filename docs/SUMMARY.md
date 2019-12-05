@@ -8,7 +8,9 @@
 ## Accounts <a id="accounts-1"></a>
 
 * [Create an Account](create-an-account.md)
-* [Accounts](accounts.md)
+* [Update an account](update-an-account.md)
+* [Transfer cryptocurrency](transfer-cryptocurrency.md)
+* [Delete an account](delete-an-account.md)
 
 ## File Service <a id="file-service-1"></a>
 
