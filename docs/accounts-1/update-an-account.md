@@ -10,15 +10,14 @@ The account must be signed by the **old keys** and **new key** when updating the
 
 ```java
 new AccountUpdateTransaction()
-.setAccountForUpdate()  
-.setAutoRenewPeriod()  
-.setExpirationTime()  
-.setKey()  
-.setSendRecordThreshold()  
-.setReceiveRecordThreshold()  
-.setProxyAccount()  
-.seTransactionFee()  
-.sign();
-
+  .setAccountForUpdate()
+  .setAutoRenewPeriod()
+  .setExpirationTime()
+  .setKey()
+  .setSendRecordThreshold()
+  .setReceiveRecordThreshold()
+  .setProxyAccount()
+  .seTransactionFee()
+  .sign();
 ```
 
