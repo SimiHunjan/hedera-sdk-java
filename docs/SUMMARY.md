@@ -27,10 +27,10 @@
 
 ## Smart Contracts
 
-* [Create a smart contract](create-a-smart-contract.md)
-* [Update a smart contract](update-a-smart-contract.md)
-* [Call a smart contract function](call-a-smart-contract-function.md)
-* [Get smart contract bytecode](get-smart-contract-bytecode.md)
-* [Get smart contract info](get-smart-contract-info.md)
-* [Get smart contract record](get-smart-contract-record.md)
+* [Create a smart contract](smart-contracts/create-a-smart-contract.md)
+* [Update a smart contract](smart-contracts/update-a-smart-contract.md)
+* [Call a smart contract function](smart-contracts/call-a-smart-contract-function.md)
+* [Get smart contract bytecode](smart-contracts/get-smart-contract-bytecode.md)
+* [Get smart contract info](smart-contracts/get-smart-contract-info.md)
+* [Get smart contract record](smart-contracts/get-smart-contract-record.md)
 
