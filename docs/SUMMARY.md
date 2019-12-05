@@ -7,6 +7,8 @@
 * [Client](client.md)
 ## Accounts
 * [Accounts](accounts.md)
+## File Service
 * [File Service](fileservice.md)
+## Smart Contracts
 * [Smart Contracts](smartcontracts.md)
 
