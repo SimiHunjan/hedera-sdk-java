@@ -18,9 +18,19 @@
 
 ## File Service <a id="file-service-1"></a>
 
-* [File Service](file-service-1/file-service.md)
+* [Create a file](file-service-1/create-a-file.md)
+* [Append to a file](file-service-1/append-to-a-file.md)
+* [Update a file](file-service-1/update-a-file.md)
+* [Delete a file](file-service-1/delete-a-file.md)
+* [Get file contents](file-service-1/get-file-contents.md)
+* [Get file info](file-service-1/get-file-info.md)
 
 ## Smart Contracts
 
-* [Smart Contracts](smart-contracts/smartcontracts.md)
+* [Create a smart contract](create-a-smart-contract.md)
+* [Update a smart contract](update-a-smart-contract.md)
+* [Call a smart contract function](call-a-smart-contract-function.md)
+* [Get smart contract bytecode](get-smart-contract-bytecode.md)
+* [Get smart contract info](get-smart-contract-info.md)
+* [Get smart contract record](get-smart-contract-record.md)
 
