@@ -7,6 +7,7 @@
 
 ## Accounts <a id="accounts-1"></a>
 
+* [Create an Account](create-an-account.md)
 * [Accounts](accounts.md)
 
 ## File Service <a id="file-service-1"></a>
