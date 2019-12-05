@@ -8,8 +8,6 @@ The account represents your account specific to the Hedera network. Accounts are
 
 Together these values make up your accountId. When an accountId is requested, be sure all three values are included.
 
-
-
 ## Basic
 
 The easiest way to create an account is using `.createAccount()`. with the simple client. `createAccount()` requires two properties, the public key to be associated with the new account and the initial balance in tinybars.
@@ -32,8 +30,6 @@ new AccountCreateTransaction()
   .setReceiveRecordThreshold()
   .setSendRecordThreshold();
 ```
-
-
 
 <table>
   <thead>
