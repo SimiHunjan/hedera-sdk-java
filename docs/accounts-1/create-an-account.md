@@ -33,14 +33,11 @@ new AccountCreateTransaction()
 
 ### Descriptions
 
-| Property                         | Type     | Description                                                                                                                                                                                                                                                                                                                                                                             | Default Value     |
-|----------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| `setKey()`                       | key      | The private key generated for the new account.                                                                                                                                                                                                                                                                                                                                          | None              |
-| `setInitialBalance()`            | uint64   | The initial balance for the account in tinybars                                                                                                                                                                                                                                                                                                                                         | None              |
-| `setTransactionFee()`            | duration | The transaction fee for the account create transaction                                                                                                                                                                                                                                                                                                                                  | None              |
-| `setAutoRenewPeriod()`           | long     | The period of time in which the account will auto-renew in seconds. The account is charged tinybars for every auto-renew period. Duration type is in seconds. For example, one hour would result in the input value of 3,600 seconds.NOTE: This is fixed to approximately 3 months (7890000 seconds). Any other value will return the following error: AUTORENEW_DURATION_NOT_IN_RANGE. | 2,592,000 seconds |
-| `setReceiverSignatureRequired()` | boolean  |                                                                                                                                                                                                                                                                                                                                                                                   | False             |
-
-
-
+| Property | Type | Description | Default Value |
+| :--- | :--- | :--- | :--- |
+| `setKey()` | key | The private key generated for the new account. | None |
+| `setInitialBalance()` | uint64 | The initial balance for the account in tinybars | None |
+| `setTransactionFee()` | duration | The transaction fee for the account create transaction | None |
+| `setAutoRenewPeriod()` | long | The period of time in which the account will auto-renew in seconds. The account is charged tinybars for every auto-renew period. Duration type is in seconds. For example, one hour would result in the input value of 3,600 seconds.NOTE: This is fixed to approximately 3 months \(7890000 seconds\). Any other value will return the following error: AUTORENEW\_DURATION\_NOT\_IN\_RANGE. | 2,592,000 seconds |
+| `setReceiverSignatureRequired()` | boolean |  | False |
 
