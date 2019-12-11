@@ -5,6 +5,7 @@
 * [Generate Keys](keys.md)
 * [Client](client.md)
 * [Address Book](addressbook.md)
+* [Request Cost](request-cost.md)
 
 ## Accounts <a id="accounts-1"></a>
 
@@ -36,6 +37,4 @@
 * [Get smart contract record](smart-contracts/get-smart-contract-record.md)
 
 ## Miscellaneous
-
-* [Request Cost](miscellaneous/request-cost.md)
 
