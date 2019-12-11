@@ -6,14 +6,17 @@
 new AccountDeleteTransaction()
 .setTransferAccountId()
 .setDeleteAccountId()
-.setTransactionFee();
+.build();
 ```
 
 | Method | Type | Description | Default Value |
 | :--- | :--- | :--- | :--- |
-| **`setTransferAccountId()`** | [accountId](../user-defined-data-types.md#accountid) | The ID of the account the tinybars will be transferred to from the account that will be deleted. | None |
-| **`setDeleteAccountId()`** | [accountId](../user-defined-data-types.md#accountid) |  | None |
-|  |  |  | None |
+| **`setTransferAccountId()`** | [accountId](../user-defined-data-types.md#accountid) | The ID of the account the tinybars will be transferred to from the account that will be deleted | None |
+| **`setDeleteAccountId()`** | [accountId](../user-defined-data-types.md#accountid) | The ID of the account to be deleted from the Hedera network | None |
 
 ##  Example
+
+```java
+<insert example>
+```
 
