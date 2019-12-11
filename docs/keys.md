@@ -6,8 +6,10 @@ description: Generate keys using Java SDK
 
 | Method | Description |
 | :--- | :--- |
-| Ed25519PrivateKey.generate\(\) | Generates a Ed25519 private key |
-| Ed25519PrivateKey.generate\(\).getPublicKey\(\) | Gets the corresponding public key |
+| `Ed25519PrivateKey.generate()` | Generates a Ed25519 private key |
+| `Ed25519PrivateKey.generate().getPublicKey()` | Gets the corresponding public key |
+
+### Example:
 
 ```java
 // Generate a Ed25519 private, public key pair
