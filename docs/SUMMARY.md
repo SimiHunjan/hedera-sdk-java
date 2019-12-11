@@ -4,6 +4,7 @@
 * [Keys](keys.md)
 * [Address Book](addressbook.md)
 * [Client](client.md)
+* [User-defined Data Types](user-defined-data-types.md)
 
 ## Accounts <a id="accounts-1"></a>
 
