@@ -41,7 +41,7 @@ new AccountCreateTransaction()
 | `setAutoRenewPeriod()` | long | The period of time in which the account will auto-renew in seconds. The account is charged tinybars for every auto-renew period. Duration type is in seconds. For example, one hour would result in the input value of 3,600 seconds.NOTE: This is fixed to approximately 3 months \(7890000 seconds\). Any other value will return the following error: AUTORENEW\_DURATION\_NOT\_IN\_RANGE. | 2,592,000 seconds |
 | `setReceiverSignatureRequired()` | boolean |  | False |
 
-## Create an Account Example:
+## Example:
 
 ```java
 public final class CreateAccount {

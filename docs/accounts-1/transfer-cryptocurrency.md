@@ -21,7 +21,7 @@ new CryptoTransferTransaction()
 .build(client);
 ```
 
-## Crypto Transfer Example
+## Example
 
 ```java
 public final class TransferCrypto {
