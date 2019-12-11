@@ -7,7 +7,10 @@
 | **`AccountId.fromString()`** | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
 | **`AccountId.fromSolidityAddress()`** | Constructs an `AccountId` from a solidity address in string format  |
 
-## [FileId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/file/FileId.java)
+```java
+AccountId accountId = AccountId.fromString("0.0.10");
+System.out.println(accountId);
+```
 
 <table>
   <thead>
@@ -46,7 +49,12 @@
       <td style="text-align:left">The current fee schedule for the network</td>
     </tr>
   </tbody>
-</table>## [ContractId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/contract/ContractId.java)
+</table>```java
+FileId fileId = FileId.fromString("0.0.10");
+System.out.println(fileId);
+```
+
+## [ContractId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/contract/ContractId.java)
 
 <table>
   <thead>
@@ -71,4 +79,8 @@
         format</td>
     </tr>
   </tbody>
-</table>
+</table>```java
+ContractId contractId = ContractId.fromString("0.0.10");
+System.out.println(contractId);
+```
+
