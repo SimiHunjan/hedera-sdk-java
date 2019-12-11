@@ -12,6 +12,8 @@ AccountId accountId = AccountId.fromString("0.0.10");
 System.out.println(accountId);
 ```
 
+## [FileId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/file/FileId.java)
+
 <table>
   <thead>
     <tr>

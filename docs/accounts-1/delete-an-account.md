@@ -4,5 +4,18 @@
 
 ## Advanced
 
+```java
+new AccountDeleteTransaction()
+.setTransferAccountId()
+.setDeleteAccountId()
+.setTransactionFee();
+```
+
+| Method | Type | Description | Default Value |
+| :--- | :--- | :--- | :--- |
+| **`setTransferAccountId()`** | `accountId` | The ID of the account the tinybars will be transferred to from the account that will be deleted. | None |
+| **`setDeleteAccountId()`** |  |  | None |
+|  |  |  | None |
+
 ##  Example
 
