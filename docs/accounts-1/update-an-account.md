@@ -17,8 +17,6 @@ description: Update the properties of a Hedera account
 The account must be signed by the **old key\(s\)** and **new key\(s\)** when updating the keys of an account.
 {% endhint %}
 
-
-
 ## Advanced  <a id="advanced-methods-and-descriptions"></a>
 
 ```java
