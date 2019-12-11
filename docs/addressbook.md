@@ -23,7 +23,7 @@ final FileContentsQuery fileQuery = new FileContentsQuery()
 final long cost = fileQuery.getCost(client);
 System.out.println("file contents cost: " + cost);
 
-fileQuery.setMaxQueryPayment(100_000_000);
+fileQuery.setMaxQueryPayment(100000000);
 
 final ByteString contents = fileQuery.execute(client).getFileContents().getContents();
 

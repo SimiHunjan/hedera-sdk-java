@@ -1,10 +1,10 @@
 # Table of contents
 
 * [README](README.md)
-* [Generate Keys](keys.md)
-* [Address Book](addressbook.md)
-* [Client](client.md)
 * [User-defined Data Types](user-defined-data-types.md)
+* [Generate Keys](keys.md)
+* [Client](client.md)
+* [Address Book](addressbook.md)
 
 ## Accounts <a id="accounts-1"></a>
 
@@ -34,4 +34,8 @@
 * [Get smart contract bytecode](smart-contracts/get-smart-contract-bytecode.md)
 * [Get smart contract info](smart-contracts/get-smart-contract-info.md)
 * [Get smart contract record](smart-contracts/get-smart-contract-record.md)
+
+## Miscellaneous
+
+* [Request Cost](miscellaneous/request-cost.md)
 
