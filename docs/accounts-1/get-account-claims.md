@@ -5,6 +5,9 @@
 ```java
 new AccountClaimQuery()
   .setAccount()
-  .setHash();
+  .setHash()
+  .build();
 ```
+
+## Example
 
