@@ -35,7 +35,7 @@ new AccountUpdateTransaction()
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Input Value</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
