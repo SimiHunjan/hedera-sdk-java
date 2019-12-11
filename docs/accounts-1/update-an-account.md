@@ -1,6 +1,8 @@
-# Update an account
+---
+description: Update the properties of a Hedera account
+---
 
-Update the properties of a Hedera account
+# Update an account
 
 `AccountUpdateTransaction()` updates/changes the properties for an existing account. Any null field is ignored \(left unchanged\). Any of the following properties can be updated for an account:
 
