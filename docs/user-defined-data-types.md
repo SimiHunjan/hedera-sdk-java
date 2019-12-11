@@ -2,6 +2,14 @@
 
 ## [AccountId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/account/AccountId.java)
 
+An `accountId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; \(eg. 0.0.10\).
+
+* **shardNum** represents the shard number \(`shardId`\). It will default to 0 today, as Hedera only performs in one shard.
+* **realmnNum** represents the realm number \(`realmId`\). It will default to 0 today, as realms are not yet supported.
+* **accountNum** represents the account number \( `accountId` \)
+
+Together these values make up your accountId. When an `accountId` is requested, be sure all three values are included.
+
 | Method | Description |
 | :--- | :--- |
 | **`AccountId.fromString()`** | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |

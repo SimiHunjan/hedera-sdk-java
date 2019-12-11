@@ -4,13 +4,7 @@ description: AccountCreateTransaction()
 
 # Create an account
 
-The account represents your account specific to the Hedera network. Accounts are required to utilize the Hedera network services and to pay network transaction fees. Hedera account IDs have the format: x.y.z. eg 0.0.3. where:
-
-* x represents the shard number \(`shardId`\). It will default to 0 today, as Hedera only performs in one shard
-* y represents the realm number \(`realmId`\). It will default to 0 today, as realms are not yet supported.
-* z represents the account number \( `accountId` \)
-
-Together these values make up your accountId. When an `accountId` is requested, be sure all three values are included.
+The account represents your account specific to the Hedera network. Accounts are required to utilize the Hedera network services and to pay network transaction fees. 
 
 {% hint style="info" %}
 When creating a new account an existing account will need to fund the initial balance and pay for the transaction fee.
