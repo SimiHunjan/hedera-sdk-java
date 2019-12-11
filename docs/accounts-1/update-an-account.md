@@ -1,5 +1,5 @@
 ---
-description: Update the properties of a Hedera account
+description: AccountUpdateTransaction()
 ---
 
 # Update an account

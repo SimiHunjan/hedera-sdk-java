@@ -1,3 +1,7 @@
+---
+description: AccountCreateTransaction()
+---
+
 # Create an account
 
 The account represents your account specific to the Hedera network. Accounts are required to utilize the Hedera network services and to pay network transaction fees. Hedera account IDs have the format: x.y.z. eg 0.0.3. where:
