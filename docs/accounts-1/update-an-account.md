@@ -41,7 +41,7 @@ new AccountUpdateTransaction()
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><code>setAccountForUpdate()</code>
+      <td style="text-align:left"><b><code>setAccountForUpdate()</code></b>
       </td>
       <td style="text-align:left">accoountId</td>
       <td style="text-align:left">
@@ -52,7 +52,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setAutoRenewPeriod()</code>
+      <td style="text-align:left"><b><code>setAutoRenewPeriod()</code></b>
       </td>
       <td style="text-align:left">duration</td>
       <td style="text-align:left">
@@ -64,7 +64,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setExpirationTime()</code>
+      <td style="text-align:left"><b><code>setExpirationTime()</code></b>
       </td>
       <td style="text-align:left">timestamp</td>
       <td style="text-align:left">
@@ -74,7 +74,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setKey()</code>
+      <td style="text-align:left"><b><code>setKey()</code></b>
       </td>
       <td style="text-align:left">key</td>
       <td style="text-align:left">
@@ -84,7 +84,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setSendRecordThreshold()</code>
+      <td style="text-align:left"><b><code>setSendRecordThreshold()</code></b>
       </td>
       <td style="text-align:left">long</td>
       <td style="text-align:left">
@@ -95,7 +95,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setReceiveRecordThreshold()</code>
+      <td style="text-align:left"><b><code>setReceiveRecordThreshold()</code></b>
       </td>
       <td style="text-align:left">long</td>
       <td style="text-align:left">
@@ -106,7 +106,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setProxyAccount()</code>
+      <td style="text-align:left"><b><code>setProxyAccount()</code></b>
       </td>
       <td style="text-align:left">accountId</td>
       <td style="text-align:left">
@@ -120,7 +120,7 @@ new AccountUpdateTransaction()
 
 ## Update Account Keys Example:
 
-The following example:
+The following example you will:
 
 * Create a new account
 * Update the keys of that account
