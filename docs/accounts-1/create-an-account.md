@@ -41,3 +41,52 @@ new AccountCreateTransaction()
 | `setAutoRenewPeriod()` | long | The period of time in which the account will auto-renew in seconds. The account is charged tinybars for every auto-renew period. Duration type is in seconds. For example, one hour would result in the input value of 3,600 seconds.NOTE: This is fixed to approximately 3 months \(7890000 seconds\). Any other value will return the following error: AUTORENEW\_DURATION\_NOT\_IN\_RANGE. | 2,592,000 seconds |
 | `setReceiverSignatureRequired()` | boolean |  | False |
 
+## Create an Account Example:
+
+```java
+public final class CreateAccount {
+
+    // see `.env.sample` in the repository root for how to specify these values
+    // or set environment variables with the same names
+    private static final AccountId NODE_ID = AccountId.fromString(Objects.requireNonNull(Dotenv.load().get("NODE_ID")));
+    private static final String NODE_ADDRESS = Objects.requireNonNull(Dotenv.load().get("NODE_ADDRESS"));
+    private static final AccountId OPERATOR_ID = AccountId.fromString(Objects.requireNonNull(Dotenv.load().get("OPERATOR_ID")));
+    private static final Ed25519PrivateKey OPERATOR_KEY = Ed25519PrivateKey.fromString(Objects.requireNonNull(Dotenv.load().get("OPERATOR_KEY")));
+
+    private CreateAccount() { }
+
+    public static void main(String[] args) throws HederaException {
+        // Generate a Ed25519 private, public key pair
+        Ed25519PrivateKey newKey = Ed25519PrivateKey.generate();
+        Ed25519PublicKey newPublicKey = newKey.getPublicKey();
+
+        System.out.println("private key = " + newKey);
+        System.out.println("public key = " + newPublicKey);
+
+        // To improve responsiveness, you should specify multiple nodes using the
+        // `Client(<Map<AccountId, String>>)` constructor instead
+        Client client = new Client(NODE_ID, NODE_ADDRESS);
+
+        // Defaults the operator account ID and key such that all generated transactions will be paid for
+        // by this account and be signed by this key
+        client.setOperator(OPERATOR_ID, OPERATOR_KEY);
+
+        Transaction tx = new AccountCreateTransaction()
+            // The only _required_ property here is `key`
+            .setKey(newKey.getPublicKey())
+            .setInitialBalance(1000)
+            .setMaxTransactionFee(10_000_000)
+            .build(client);
+
+        tx.execute(client);
+
+        // This will wait for the receipt to become available
+        TransactionReceipt receipt = tx.getReceipt(client);
+
+        AccountId newAccountId = receipt.getAccountId();
+
+        System.out.println("account = " + newAccountId);
+    }
+}
+```
+
