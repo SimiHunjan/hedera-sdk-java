@@ -17,8 +17,6 @@ description: Update the properties of a Hedera account
 The account must be signed by the **old key\(s\)** and **new key\(s\)** when updating the keys of an account.
 {% endhint %}
 
-## Advanced  <a id="advanced-methods-and-descriptions"></a>
-
 ```java
 new AccountUpdateTransaction()
   .setAccountForUpdate()
@@ -28,8 +26,7 @@ new AccountUpdateTransaction()
   .setSendRecordThreshold()
   .setReceiveRecordThreshold()
   .setProxyAccount()
-  .setTransactionFee()
-  .sign();
+  .build();
 ```
 
 
@@ -114,29 +111,6 @@ new AccountUpdateTransaction()
       <td style="text-align:left">accountId</td>
       <td style="text-align:left">
         <p>ID of account to which this account should be proxy staked.</p>
-        <p><em>default:  None</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setTransactionFee()</code>
-      </td>
-      <td style="text-align:left">long</td>
-      <td style="text-align:left">
-        <p>The transaction fee (node fee, service fee, and network fee combined)
-          to process the transaction.</p>
-        <p><em>default:  None</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>sign()</code>
-      </td>
-      <td style="text-align:left">key</td>
-      <td style="text-align:left">
-        <p>The private key of the account executing and paying for the transaction.
-          The transaction does not need to be explicitly signed if the signer is
-          the operator.</p>
         <p><em>default:  None</em>
         </p>
       </td>
