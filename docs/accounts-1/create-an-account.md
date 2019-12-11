@@ -32,7 +32,6 @@ Additional properties can be set when creating a new account object. The propert
 new AccountCreateTransaction()
   .setKey()
   .setInitialBalance()
-  .setTransactionfee()
   .setAutoRenewPeriod()
   .setReceiverSignatureRequired()
   .setReceiveRecordThreshold()
