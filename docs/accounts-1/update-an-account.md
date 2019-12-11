@@ -2,11 +2,22 @@
 
 Update the properties of a Hedera account
 
-`AccountUpdateTransaction()` updates/changes the properties for an existing account. Any null field is ignored \(left unchanged\).
+`AccountUpdateTransaction()` updates/changes the properties for an existing account. Any null field is ignored \(left unchanged\). Any of the following properties can be updated for an account:
 
-The account must be signed by the **old keys** and **new key** when updating the keys of an account.
+* Auto Renew Period
+* Expiration Time
+* Key\(s\)
+* Send Record Threshold
+* Receive Record Threshold 
+* Proxy Account
 
-## Advanced Methods and Descriptions <a id="advanced-methods-and-descriptions"></a>
+{% hint style="danger" %}
+The account must be signed by the **old key\(s\)** and **new key\(s\)** when updating the keys of an account.
+{% endhint %}
+
+
+
+## Advanced  <a id="advanced-methods-and-descriptions"></a>
 
 ```java
 new AccountUpdateTransaction()
@@ -17,7 +28,7 @@ new AccountUpdateTransaction()
   .setSendRecordThreshold()
   .setReceiveRecordThreshold()
   .setProxyAccount()
-  .seTransactionFee()
+  .setTransactionFee()
   .sign();
 ```
 
@@ -133,7 +144,13 @@ new AccountUpdateTransaction()
   </tbody>
 </table>
 
-## Example
+## Update Account Keys Example:
+
+The following example:
+
+* Create a new account
+* Update the keys of that account
+* Validate the keys have been changed by requesting the account info
 
 ```java
 public final class UpdateAccountPublicKey {
