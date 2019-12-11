@@ -6,7 +6,11 @@ The account represents your account specific to the Hedera network. Accounts are
 * y represents the realm number \(`realmId`\). It will default to 0 today, as realms are not yet supported.
 * z represents the account number \( `accountId` \)
 
-Together these values make up your accountId. When an accountId is requested, be sure all three values are included.
+Together these values make up your accountId. When an `accountId` is requested, be sure all three values are included.
+
+{% hint style="info" %}
+When creating a new account an existing account will need to fund the initial balance and pay for the transaction fee.
+{% endhint %}
 
 ## Basic
 
@@ -18,7 +22,7 @@ client.setMaxTransactionFee().createAccount(PublicKey, initialBalance);
 
 ## Advanced
 
-Additional properties can be set when creating a new account. The properties and their descriptions can be found below.
+Additional properties can be set when creating a new account object. The properties and their descriptions can be found below.
 
 ```java
 new AccountCreateTransaction()
@@ -75,7 +79,7 @@ public final class CreateAccount {
             // The only _required_ property here is `key`
             .setKey(newKey.getPublicKey())
             .setInitialBalance(1000)
-            .setMaxTransactionFee(10_000_000)
+            .setMaxTransactionFee(10000000)
             .build(client);
 
         tx.execute(client);
