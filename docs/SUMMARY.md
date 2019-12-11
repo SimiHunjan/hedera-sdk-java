@@ -1,7 +1,7 @@
 # Table of contents
 
 * [README](README.md)
-* [Keys](keys.md)
+* [Generate Keys](keys.md)
 * [Address Book](addressbook.md)
 * [Client](client.md)
 * [User-defined Data Types](user-defined-data-types.md)
