@@ -12,7 +12,7 @@ Together these values make up your `AccountId`. When an `AccountId` is requested
 
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
-| `new AccountId(<shard>, <realm>, <account>)` | long, long, long | Constructs an `AccountId` with `0` for `shard` and `realm` \(e.g., `0.0.<accountNum>`\) |
+| **`new`** `AccountId(<shard>,<realm>, <accountNum>)` | long, long, long | Constructs an `AccountId` with `0` for `shard` and `realm` \(e.g., `0.0.<accountNum>`\) |
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
