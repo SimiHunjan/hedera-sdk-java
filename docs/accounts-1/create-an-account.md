@@ -22,7 +22,8 @@ new AccountCreateTransaction()
   .setAutoRenewPeriod()
   .setReceiverSignatureRequired()
   .setReceiveRecordThreshold()
-  .setSendRecordThreshold();
+  .setSendRecordThreshold()
+  .build();
 ```
 
 ### 
