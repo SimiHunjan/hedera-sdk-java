@@ -32,7 +32,7 @@ new AccountCreateTransaction()
   .setSendRecordThreshold();
 ```
 
-### Descriptions
+### 
 
 | Property | Input Value | Description | Default Value |
 | :--- | :--- | :--- | :--- |
