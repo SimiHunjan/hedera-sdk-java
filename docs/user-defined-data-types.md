@@ -111,7 +111,7 @@ Together these values make up your `ContractId`. When an `ContractId` is request
 
 | Constructor | Type | Description |
 | :--- | :--- | :--- |
-| **`new`** `ContractId(<shardNum>,<realmNum>,<contractNum>)` | long, long, long | Constructs an `ContractId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<contractNum>`\) |
+| **`new`** `ContractId(<shardNum>,<realmNum>,<contractNum>)` | long, long, long | Constructs a `ContractId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<contractNum>`\) |
 
 <table>
   <thead>
@@ -127,7 +127,7 @@ Together these values make up your `ContractId`. When an `ContractId` is request
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left">
-        <p>Constructs an <code>FileId</code> from a string formatted as</p>
+        <p>Constructs a <code>ContractId </code>from a string formatted as</p>
         <p>&lt;shardNum&gt;.&lt;realmNum&gt;.&lt;contractNum&gt;</p>
       </td>
     </tr>
@@ -135,8 +135,7 @@ Together these values make up your `ContractId`. When an `ContractId` is request
       <td style="text-align:left"><code>ContractId.fromSolidityAddress(&lt;address&gt;)</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">Constructs an <code>ContractId</code> from a solidity address in string
-        format</td>
+      <td style="text-align:left">Constructs a <code>ContractId</code> from a solidity address in string format</td>
     </tr>
   </tbody>
 </table>### Example
