@@ -7,20 +7,12 @@ description: AccountCreateTransaction()
 The account represents your account specific to the Hedera network. Accounts are required to utilize the Hedera network services and to pay network transaction fees. 
 
 {% hint style="info" %}
-When creating a new account an existing account will need to fund the initial balance and pay for the transaction fee.
+When creating a **new account** an existing account will need to fund the initial balance and pay for the transaction fee.
 {% endhint %}
 
-## Basic
-
-The easiest way to create an account is using `.createAccount()`. with the simple client. `createAccount()` requires two properties, the public key to be associated with the new account and the initial balance in tinybars.
-
-```java
-client.setMaxTransactionFee().createAccount(PublicKey, initialBalance);
-```
-
-## Advanced
-
-Additional properties can be set when creating a new account object. The properties and their descriptions can be found below.
+| Constructor | Description |
+| :--- | :--- |
+| **`new`** `AccountCreateTransaction()` | Constructs the account object |
 
 ```java
 new AccountCreateTransaction()
@@ -34,60 +26,83 @@ new AccountCreateTransaction()
 
 ### 
 
-| Property | Input Value | Description | Default Value |
-| :--- | :--- | :--- | :--- |
-| **`setKey()`** | [key](../keys.md#ed25519-key-pair) | The private key generated for the new account. | None |
-| **`setInitialBalance()`** | uint64 | The initial balance for the account in tinybars | None |
-| **`setTransactionFee()`** | duration | The transaction fee for the account create transaction | None |
-| **`setAutoRenewPeriod()`** | long | The period of time in which the account will auto-renew in seconds. The account is charged tinybars for every auto-renew period. Duration type is in seconds. For example, one hour would result in the input value of 3,600 seconds.NOTE: This is fixed to approximately 3 months \(7890000 seconds\). Any other value will return the following error: AUTORENEW\_DURATION\_NOT\_IN\_RANGE. | 2,592,000 seconds |
-| **`setReceiverSignatureRequired()`** | boolean | If true, all the account keys must sign any transaction depositing into this account \(in addition to all withdrawals\) | False |
-
-## Example:
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Methods</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>setKey(&lt;key&gt;)</code>
+      </td>
+      <td style="text-align:left"><a href="https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PrivateKey.java">Ed25519PrivateKe</a>y</td>
+      <td
+      style="text-align:left">The private key generated for the new account.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setInitialBalance(&lt;amount&gt;)</code>
+      </td>
+      <td style="text-align:left">uint64</td>
+      <td style="text-align:left">The initial balance for the account in tinybars</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setTransactionFee(&lt;fee&gt;)</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">The transaction fee for the account create transaction</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setAutoRenewPeriod(&lt;autoRenewPeriod&gt;)</code>
+      </td>
+      <td style="text-align:left">Duration</td>
+      <td style="text-align:left">
+        <p>The period of time in which the account will auto-renew in seconds. The
+          account is charged tinybars for every auto-renew period. Duration type
+          is in seconds. For example, one hour would result in the input value of
+          3,600 seconds.NOTE: This is fixed to approximately 3 months (7890000 seconds).
+          Any other value will return the following error: AUTORENEW_DURATION_NOT_IN_RANGE.</p>
+        <p>default: 2,592,000 seconds</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setReceiverSignatureRequired(&lt;boolean&gt;)</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">
+        <p>If true, all the account keys must sign any transaction depositing into
+          this account (in addition to all withdrawals)</p>
+        <p>default: false</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setSendRecordThreshold()</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">Creates a record for any transaction that withdraws more than x value
+        of tinybars.</td>
+    </tr>
+  </tbody>
+</table>## Example:
 
 ```java
-public final class CreateAccount {
+Transaction tx = new AccountCreateTransaction()
+     // The only _required_ property here is `key`
+     .setKey(newKey.getPublicKey())
+     .setInitialBalance(1000)
+     .setMaxTransactionFee(10000000)
+     .build(client);
 
-    // see `.env.sample` in the repository root for how to specify these values
-    // or set environment variables with the same names
-    private static final AccountId NODE_ID = AccountId.fromString(Objects.requireNonNull(Dotenv.load().get("NODE_ID")));
-    private static final String NODE_ADDRESS = Objects.requireNonNull(Dotenv.load().get("NODE_ADDRESS"));
-    private static final AccountId OPERATOR_ID = AccountId.fromString(Objects.requireNonNull(Dotenv.load().get("OPERATOR_ID")));
-    private static final Ed25519PrivateKey OPERATOR_KEY = Ed25519PrivateKey.fromString(Objects.requireNonNull(Dotenv.load().get("OPERATOR_KEY")));
+tx.execute(client);
 
-    private CreateAccount() { }
+// This will wait for the receipt to become available
+TransactionReceipt receipt = tx.getReceipt(client);
 
-    public static void main(String[] args) throws HederaException {
-        // Generate a Ed25519 private, public key pair
-        Ed25519PrivateKey newKey = Ed25519PrivateKey.generate();
-        Ed25519PublicKey newPublicKey = newKey.getPublicKey();
+AccountId newAccountId = receipt.getAccountId();
 
-        System.out.println("private key = " + newKey);
-        System.out.println("public key = " + newPublicKey);
+System.out.println("account = " + newAccountId);
 
-        // To improve responsiveness, you should specify multiple nodes using the
-        // `Client(<Map<AccountId, String>>)` constructor instead
-        Client client = new Client(NODE_ID, NODE_ADDRESS);
-
-        // Defaults the operator account ID and key such that all generated transactions will be paid for
-        // by this account and be signed by this key
-        client.setOperator(OPERATOR_ID, OPERATOR_KEY);
-
-        Transaction tx = new AccountCreateTransaction()
-            // The only _required_ property here is `key`
-            .setKey(newKey.getPublicKey())
-            .setInitialBalance(1000)
-            .setMaxTransactionFee(10000000)
-            .build(client);
-
-        tx.execute(client);
-
-        // This will wait for the receipt to become available
-        TransactionReceipt receipt = tx.getReceipt(client);
-
-        AccountId newAccountId = receipt.getAccountId();
-
-        System.out.println("account = " + newAccountId);
-    }
-}
 ```
 

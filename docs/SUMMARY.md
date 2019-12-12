@@ -18,6 +18,10 @@
 * [Get account record](accounts-1/get-account-record.md)
 * [Get account claims](accounts-1/get-account-claims.md)
 
+## Consensus
+
+* [Untitled](consensus/untitled.md)
+
 ## File Service <a id="file-service-1"></a>
 
 * [Create a file](file-service-1/create-a-file.md)
