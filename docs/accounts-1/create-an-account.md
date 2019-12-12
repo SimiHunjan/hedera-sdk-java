@@ -18,6 +18,7 @@ When creating a **new account** an existing account will need to fund the initia
 new AccountCreateTransaction()
   .setKey()
   .setInitialBalance()
+  .setMaxTransactionFee()
   .setAutoRenewPeriod()
   .setReceiverSignatureRequired()
   .setReceiveRecordThreshold()
@@ -38,9 +39,8 @@ new AccountCreateTransaction()
     <tr>
       <td style="text-align:left"><code>setKey(&lt;key&gt;)</code>
       </td>
-      <td style="text-align:left"><a href="https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PrivateKey.java">Ed25519PrivateKe</a>y</td>
-      <td
-      style="text-align:left">The private key generated for the new account.</td>
+      <td style="text-align:left">Ed25519PrivateKey</td>
+      <td style="text-align:left">The private key generated for the new account.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setInitialBalance(&lt;amount&gt;)</code>
@@ -49,10 +49,11 @@ new AccountCreateTransaction()
       <td style="text-align:left">The initial balance for the account in tinybars</td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setTransactionFee(&lt;fee&gt;)</code>
+      <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
       </td>
       <td style="text-align:left">long</td>
-      <td style="text-align:left">The transaction fee for the account create transaction</td>
+      <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
+        The actual fee may be less, but will never be greater than this value.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setAutoRenewPeriod(&lt;autoRenewPeriod&gt;)</code>
@@ -64,7 +65,8 @@ new AccountCreateTransaction()
           is in seconds. For example, one hour would result in the input value of
           3,600 seconds.NOTE: This is fixed to approximately 3 months (7890000 seconds).
           Any other value will return the following error: AUTORENEW_DURATION_NOT_IN_RANGE.</p>
-        <p>default: 2,592,000 seconds</p>
+        <p><em>default: 2,592,000 seconds</em>
+        </p>
       </td>
     </tr>
     <tr>
@@ -74,7 +76,8 @@ new AccountCreateTransaction()
       <td style="text-align:left">
         <p>If true, all the account keys must sign any transaction depositing into
           this account (in addition to all withdrawals)</p>
-        <p>default: false</p>
+        <p><em>default: false</em>
+        </p>
       </td>
     </tr>
     <tr>

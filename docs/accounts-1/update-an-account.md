@@ -17,12 +17,16 @@ description: AccountUpdateTransaction()
 The account must be signed by the **old key\(s\)** and **new key\(s\)** when updating the keys of an account.
 {% endhint %}
 
+| Constructor | Description |
+| :--- | :--- |
+| **`new`** `AccountUpdateTransaction()` | Updates an existing account object |
+
 ```java
 new AccountUpdateTransaction()
   .setAccountForUpdate()
+  .setKey()
   .setAutoRenewPeriod()
   .setExpirationTime()
-  .setKey()
   .setSendRecordThreshold()
   .setReceiveRecordThreshold()
   .setProxyAccount()
@@ -34,16 +38,16 @@ new AccountUpdateTransaction()
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Input Value</th>
+      <th style="text-align:left">Methods</th>
+      <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b><code>setAccountForUpdate()</code></b>
+      <td style="text-align:left"><code>setAccountForUpdate()</code>
       </td>
-      <td style="text-align:left">accoountId</td>
+      <td style="text-align:left">AccountId</td>
       <td style="text-align:left">
         <p>The ID of the account to update in this transaction</p>
         <p><em>default:  None</em>
@@ -52,9 +56,19 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b><code>setAutoRenewPeriod()</code></b>
+      <td style="text-align:left"><code>setKey()</code>
       </td>
-      <td style="text-align:left">duration</td>
+      <td style="text-align:left">Ed25519PrivateKey</td>
+      <td style="text-align:left">
+        <p>The public key generated for the new account.</p>
+        <p><em>default:  None</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setAutoRenewPeriod()</code>
+      </td>
+      <td style="text-align:left">Duration</td>
       <td style="text-align:left">
         <p>The period of time in which the account will auto-renew in seconds. Duration
           type is in seconds. For example, one hour would result in the input value
@@ -64,9 +78,9 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b><code>setExpirationTime()</code></b>
+      <td style="text-align:left"><code>setExpirationTime()</code>
       </td>
-      <td style="text-align:left">timestamp</td>
+      <td style="text-align:left">Timestamp</td>
       <td style="text-align:left">
         <p>The new expiration time to extend to.</p>
         <p><em>default:  None</em>
@@ -74,17 +88,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b><code>setKey()</code></b>
-      </td>
-      <td style="text-align:left">key</td>
-      <td style="text-align:left">
-        <p>The public key generated for the new account.</p>
-        <p><em>default:  None</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b><code>setSendRecordThreshold()</code></b>
+      <td style="text-align:left"><code>setSendRecordThreshold()</code>
       </td>
       <td style="text-align:left">long</td>
       <td style="text-align:left">
@@ -95,7 +99,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b><code>setReceiveRecordThreshold()</code></b>
+      <td style="text-align:left"><code>setReceiveRecordThreshold()</code>
       </td>
       <td style="text-align:left">long</td>
       <td style="text-align:left">
@@ -106,9 +110,9 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b><code>setProxyAccount()</code></b>
+      <td style="text-align:left"><code>setProxyAccount()</code>
       </td>
-      <td style="text-align:left">accountId</td>
+      <td style="text-align:left">AccountId</td>
       <td style="text-align:left">
         <p>ID of account to which this account should be proxy staked.</p>
         <p><em>default:  None</em>
