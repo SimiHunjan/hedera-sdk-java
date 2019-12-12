@@ -1,5 +1,5 @@
 ---
-description: AccountUpdateTransaction()
+description: AccountUpdateTransaction
 ---
 
 # Update an account

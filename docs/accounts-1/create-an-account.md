@@ -1,5 +1,5 @@
 ---
-description: AccountCreateTransaction()
+description: AccountCreateTransaction
 ---
 
 # Create an account

@@ -1,5 +1,5 @@
 ---
-description: CryptoTransferTransaction()
+description: CryptoTransferTransaction
 ---
 
 # Transfer cryptocurrency

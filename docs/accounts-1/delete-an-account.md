@@ -1,5 +1,5 @@
 ---
-description: AccountDeleteTransaction()
+description: AccountDeleteTransaction
 ---
 
 # Delete an account
