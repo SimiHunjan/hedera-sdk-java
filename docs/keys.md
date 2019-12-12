@@ -2,7 +2,7 @@
 description: Generate keys using Java SDK
 ---
 
-# Generate Keys
+# Keys
 
 | **Method** | Type | Description |
 | :--- | :---: | :--- |

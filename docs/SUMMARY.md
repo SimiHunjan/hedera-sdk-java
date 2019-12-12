@@ -2,14 +2,15 @@
 
 * [README](README.md)
 * [User-defined Data Types](user-defined-data-types.md)
-* [Generate Keys](keys.md)
+* [Keys](keys.md)
 * [Client](client.md)
 * [Address Book](addressbook.md)
 * [Request Cost](request-cost.md)
 
 ## Accounts <a id="accounts-1"></a>
 
-* [Create an account](accounts-1/create-an-account.md)
+* [Create an account](accounts-1/create-an-account/README.md)
+  * [Create an advanced account](accounts-1/create-an-account/create-an-advanced-account.md)
 * [Update an account](accounts-1/update-an-account.md)
 * [Transfer cryptocurrency](accounts-1/transfer-cryptocurrency.md)
 * [Delete an account](accounts-1/delete-an-account.md)
