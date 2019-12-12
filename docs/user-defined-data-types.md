@@ -10,13 +10,17 @@ An `AccountId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum
 
 Together these values make up your `AccountId`. When an `AccountId` is requested, be sure all three values are included.
 
-| Method | Description |
-| :--- | :--- |
-| **`AccountId.fromString()`** | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
-| **`AccountId.fromSolidityAddress()`** | Constructs an `AccountId` from a solidity address in string format  |
+| Constructor | Type | Description |
+| :--- | :---: | :--- |
+| `new AccountId(<shard>, <realm>, <account>)` | long, long, long | Constructs an `AccountId` with `0` for `shard` and `realm` \(e.g., `0.0.<accountNum>`\) |
+
+| Method | Type | Description |
+| :--- | :--- | :--- |
+| `AccountId.fromString(<account>)` | String | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
+| `AccountId.fromSolidityAddress(<address>)` | String | Constructs an `AccountId` from a solidity address in string format  |
 
 ```java
-AccountId accountId = AccountId.fromString("0.0.10");
+AccountId accountId = new AccountId.fromString("0.0.10");
 System.out.println(accountId);
 ```
 
