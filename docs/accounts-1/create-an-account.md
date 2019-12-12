@@ -31,7 +31,7 @@ new AccountCreateTransaction()
   <thead>
     <tr>
       <th style="text-align:left">Methods</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -39,26 +39,26 @@ new AccountCreateTransaction()
     <tr>
       <td style="text-align:left"><code>setKey(&lt;key&gt;)</code>
       </td>
-      <td style="text-align:left">Ed25519PrivateKey</td>
+      <td style="text-align:center">Ed25519PrivateKey</td>
       <td style="text-align:left">The private key generated for the new account.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setInitialBalance(&lt;amount&gt;)</code>
       </td>
-      <td style="text-align:left">uint64</td>
+      <td style="text-align:center">uint64</td>
       <td style="text-align:left">The initial balance for the account in tinybars</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
       </td>
-      <td style="text-align:left">long</td>
+      <td style="text-align:center">long</td>
       <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
         The actual fee may be less, but will never be greater than this value.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setAutoRenewPeriod(&lt;autoRenewPeriod&gt;)</code>
       </td>
-      <td style="text-align:left">Duration</td>
+      <td style="text-align:center">Duration</td>
       <td style="text-align:left">
         <p>The period of time in which the account will auto-renew in seconds. The
           account is charged tinybars for every auto-renew period. Duration type
@@ -72,7 +72,7 @@ new AccountCreateTransaction()
     <tr>
       <td style="text-align:left"><code>setReceiverSignatureRequired(&lt;boolean&gt;)</code>
       </td>
-      <td style="text-align:left">boolean</td>
+      <td style="text-align:center">boolean</td>
       <td style="text-align:left">
         <p>If true, all the account keys must sign any transaction depositing into
           this account (in addition to all withdrawals)</p>
@@ -81,9 +81,16 @@ new AccountCreateTransaction()
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>setReceiveRecordThreshold(&lt;amount&gt;)</code>
+      </td>
+      <td style="text-align:center">long</td>
+      <td style="text-align:left">Creates a record for any transaction that deposits more than x value of
+        tinybars.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>setSendRecordThreshold(&lt;amount&gt;)</code>
       </td>
-      <td style="text-align:left">long</td>
+      <td style="text-align:center">long</td>
       <td style="text-align:left">Creates a record for any transaction that withdraws more than x value
         of tinybars.</td>
     </tr>
