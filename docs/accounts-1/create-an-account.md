@@ -12,7 +12,7 @@ When creating a **new account** an existing account will need to fund the initia
 
 | Constructor | Description |
 | :--- | :--- |
-| **`new`** `AccountCreateTransaction()` | Constructs the account object |
+| `new AccountCreateTransaction()` | Constructs the account object |
 
 ```java
 new AccountCreateTransaction()
@@ -82,14 +82,14 @@ new AccountCreateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setReceiveRecordThreshold(&lt;amount&gt;)</code>
+      <td style="text-align:left"><code>setReceiveRecordThreshold(&lt;receiveRecordThreshold&gt;)</code>
       </td>
       <td style="text-align:center">long</td>
       <td style="text-align:left">Creates a record for any transaction that deposits more than x value of
         tinybars.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setSendRecordThreshold(&lt;amount&gt;)</code>
+      <td style="text-align:left"><code>setSendRecordThreshold(&lt;sendRecordThreshold&gt;)</code>
       </td>
       <td style="text-align:center">long</td>
       <td style="text-align:left">Creates a record for any transaction that withdraws more than x value

@@ -10,20 +10,25 @@ description: CryptoTransferTransaction()
 There are `100_000_000` tinybars in one hbar.
 {% endhint %}
 
-## Basic
-
-```text
-client.transferCryptoTo(<accountID>,<long>);
-```
-
-## Advanced
+| Constructor | Description |
+| :--- | :--- |
+| `new CryptoTransferTransaction()` |  |
 
 ```java
 new CryptoTransferTransaction()
-.addSender(accountID, amount)
+.addSender()
 .addRecipient(accountId, amount)
 .build(client);
+
+
+
+
 ```
+
+| Methods | Type | Description |
+| :--- | :--- | :--- |
+| `addSender(<accountId>, <amount>)` | AccountId, long |  |
+| `addRecipient(<accountId>, <amount>)` |  |  |
 
 ## Example
 
@@ -59,5 +64,17 @@ public final class TransferCrypto {
 
         System.out.println("transferred 10_000 tinybar...");
     }
+```
+
+|  |  |
+| :--- | :--- |
+|  |  |
+
+|  |  |
+| :--- | :--- |
+|  |  |
+
+```java
+
 ```
 
