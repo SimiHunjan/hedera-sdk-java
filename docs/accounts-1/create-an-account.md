@@ -114,6 +114,5 @@ TransactionReceipt receipt = tx.getReceipt(client);
 AccountId newAccountId = receipt.getAccountId();
 
 System.out.println("account = " + newAccountId);
-
 ```
 

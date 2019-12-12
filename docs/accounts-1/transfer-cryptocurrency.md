@@ -19,10 +19,6 @@ new CryptoTransferTransaction()
 .addSender()
 .addRecipient(accountId, amount)
 .build(client);
-
-
-
-
 ```
 
 | Methods | Type | Description |
