@@ -12,12 +12,14 @@ Together these values make up your `AccountId`. When an `AccountId` is requested
 
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
-| **`new`** `AccountId(<shard>,<realm>, <accountNum>)` | long, long, long | Constructs an `AccountId` with `0` for `shard` and `realm` \(e.g., `0.0.<accountNum>`\) |
+| **`new`** `AccountId(<shardNum>,<realmNum>,<accountNum>)` | long, long, long | Constructs an `AccountId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<accountNum>`\) |
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `AccountId.fromString(<account>)` | String | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
 | `AccountId.fromSolidityAddress(<address>)` | String | Constructs an `AccountId` from a solidity address in string format  |
+
+### Example
 
 ```java
 AccountId accountId = new AccountId(0 ,0 ,10);
@@ -38,6 +40,10 @@ A `FileId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;fileNum&gt; \(
 * **fileNum** represents the file number
 
 Together these values make up your accountId. When an `FileId` is requested, be sure all three values are included.
+
+| Constructor | Type | Description |
+| :--- | :---: | :--- |
+| **`new`** `FileId(<shardNum>,<realmNum>,<fileNum>)` | long, long, long | Constructs a `FileId` from a string formatted as &lt;shardNum&gt;, &lt;realmNum&gt;, &lt;fileNum&gt; |
 
 <table>
   <thead>
@@ -66,23 +72,29 @@ Together these values make up your accountId. When an `FileId` is requested, be 
     <tr>
       <td style="text-align:left"><code>FileId.ADDRESS_BOOK</code>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">FileId</td>
       <td style="text-align:left">The public node address book for the current network</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>FileId.EXCHANGE_RATES</code>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">FileId</td>
       <td style="text-align:left">The current exchange rate of HBAR to USD</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>FileId.FEE_SCHEDULE</code>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">FileId</td>
       <td style="text-align:left">The current fee schedule for the network</td>
     </tr>
   </tbody>
-</table>```java
+</table>### Example
+
+```java
+FileId fileId = new FileId(0,0,15);
+System.out.println(fileId);
+
+//Contruct FileId from string
 FileId fileId = FileId.fromString("0.0.15");
 System.out.println(fileId);
 ```
@@ -120,7 +132,9 @@ Together these values make up your `ContractId`. When an `ContractId` is request
         format</td>
     </tr>
   </tbody>
-</table>```java
+</table>### Example
+
+```java
 ContractId contractId = ContractId.fromString("0.0.20");
 System.out.println(contractId);
 ```
