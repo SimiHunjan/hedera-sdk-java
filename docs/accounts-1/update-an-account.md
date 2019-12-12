@@ -6,9 +6,9 @@ description: AccountUpdateTransaction()
 
 `AccountUpdateTransaction()` updates/changes the properties for an existing account. Any null field is ignored \(left unchanged\). Any of the following properties can be updated for an account:
 
+* Key\(s\)
 * Auto Renew Period
 * Expiration Time
-* Key\(s\)
 * Send Record Threshold
 * Receive Record Threshold 
 * Proxy Account
@@ -45,7 +45,7 @@ new AccountUpdateTransaction()
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><code>setAccountForUpdate()</code>
+      <td style="text-align:left"><code>setAccountForUpdate(&lt;accountId&gt;)</code>
       </td>
       <td style="text-align:left">AccountId</td>
       <td style="text-align:left">
@@ -56,9 +56,9 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setKey()</code>
+      <td style="text-align:left"><code>setKey(&lt;key&gt;)</code>
       </td>
-      <td style="text-align:left">Ed25519PrivateKey</td>
+      <td style="text-align:left">Ed25519PublicKey</td>
       <td style="text-align:left">
         <p>The public key generated for the new account.</p>
         <p><em>default:  None</em>
@@ -66,7 +66,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setAutoRenewPeriod()</code>
+      <td style="text-align:left"><code>setAutoRenewPeriod(&lt;autoRenewPeriod&gt;)</code>
       </td>
       <td style="text-align:left">Duration</td>
       <td style="text-align:left">
@@ -78,9 +78,9 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setExpirationTime()</code>
+      <td style="text-align:left"><code>setExpirationTime(&lt;expirationTime&gt;)</code>
       </td>
-      <td style="text-align:left">Timestamp</td>
+      <td style="text-align:left">Instant</td>
       <td style="text-align:left">
         <p>The new expiration time to extend to.</p>
         <p><em>default:  None</em>
@@ -88,7 +88,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setSendRecordThreshold()</code>
+      <td style="text-align:left"><code>setSendRecordThreshold(&lt;sendRecordThreshold&gt;)</code>
       </td>
       <td style="text-align:left">long</td>
       <td style="text-align:left">
@@ -99,7 +99,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setReceiveRecordThreshold()</code>
+      <td style="text-align:left"><code>setReceiveRecordThreshold(&lt;receiveRecordThreshold)</code>
       </td>
       <td style="text-align:left">long</td>
       <td style="text-align:left">
@@ -110,7 +110,7 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setProxyAccount()</code>
+      <td style="text-align:left"><code>setProxyAccount(&lt;accountId&gt;)</code>
       </td>
       <td style="text-align:left">AccountId</td>
       <td style="text-align:left">
