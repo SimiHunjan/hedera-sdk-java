@@ -81,7 +81,7 @@ new AccountCreateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setSendRecordThreshold()</code>
+      <td style="text-align:left"><code>setSendRecordThreshold(&lt;amount&gt;)</code>
       </td>
       <td style="text-align:left">long</td>
       <td style="text-align:left">Creates a record for any transaction that withdraws more than x value
