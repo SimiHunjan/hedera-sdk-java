@@ -144,7 +144,6 @@ Together these values make up your `ContractId`. When an `ContractId` is request
 ContractId contractId = new ContractId(0,0,20);
 System.out.println(contractId);
 
-
 // Construct ContractId from string
 ContractId contractId = ContractId.fromString("0.0.20");
 System.out.println(contractId);
