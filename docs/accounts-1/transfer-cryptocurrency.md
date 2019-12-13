@@ -12,7 +12,7 @@ There are `100_000_000` tinybars in one hbar.
 
 | Constructor | Description |
 | :--- | :--- |
-| `new CryptoTransferTransaction()` | Constructs the transfer object |
+| `CryptoTransferTransaction()` | Constructs the transfer object |
 
 ```java
 new CryptoTransferTransaction()

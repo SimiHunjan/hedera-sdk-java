@@ -1,6 +1,7 @@
 # Table of contents
 
 * [README](README.md)
+* [Get Started](get-started.md)
 * [Getting Started](getting-started.md)
 * [User-defined Data Types](user-defined-data-types.md)
 * [Keys](keys.md)
@@ -15,14 +16,16 @@
 * [Update an account](accounts-1/update-an-account.md)
 * [Transfer cryptocurrency](accounts-1/transfer-cryptocurrency.md)
 * [Delete an account](accounts-1/delete-an-account.md)
-* [Get account balance](accounts-1/get-account-balance.md)
+* [Get account balance](accounts-1/get-account-balance/README.md)
+  * [Advanced account balance](accounts-1/get-account-balance/advanced-account-balance.md)
 * [Get account info](accounts-1/get-account-info.md)
 * [Get account record](accounts-1/get-account-record.md)
 * [Get account claims](accounts-1/get-account-claims.md)
 
 ## Consensus
 
-* [Untitled](consensus/untitled.md)
+* [Create a topic](consensus/create-a-topic.md)
+* [Subscribe to topic](consensus/untitled.md)
 
 ## File Service <a id="file-service-1"></a>
 

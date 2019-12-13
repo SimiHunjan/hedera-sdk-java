@@ -4,7 +4,11 @@
 
 | Constructor | Description |
 | :--- | :--- |
-| `new AccountInfoQuery()` |  |
+| `AccountInfoQuery()` |  |
+
+```java
+new AccountInfoQuery()
+```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |

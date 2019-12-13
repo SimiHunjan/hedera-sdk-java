@@ -12,7 +12,7 @@ Together these values make up your `AccountId`. When an `AccountId` is requested
 
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
-| `new AccountId(<shardNum>,<realmNum>,<accountNum>)` | long, long, long | Constructs an `AccountId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<accountNum>`\) |
+| `AccountId(<shardNum>,<realmNum>,<accountNum>)` | long, long, long | Constructs an `AccountId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<accountNum>`\) |
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
@@ -43,7 +43,7 @@ Together these values make up your accountId. When an `FileId` is requested, be 
 
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
-| `new` **``**`FileId(<shardNum>,<realmNum>,<fileNum>)` | long, long, long | Constructs an `FileId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<fileNum>`\) |
+| `FileId(<shardNum>,<realmNum>,<fileNum>)` | long, long, long | Constructs an `FileId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<fileNum>`\) |
 
 <table>
   <thead>
@@ -111,7 +111,7 @@ Together these values make up your `ContractId`. When an `ContractId` is request
 
 | Constructor | Type | Description |
 | :--- | :--- | :--- |
-| `new ContractId(<shardNum>,<realmNum>,<contractNum>)` | long, long, long | Constructs a `ContractId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<contractNum>`\) |
+| `ContractId(<shardNum>,<realmNum>,<contractNum>)` | long, long, long | Constructs a `ContractId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<contractNum>`\) |
 
 <table>
   <thead>
