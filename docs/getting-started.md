@@ -2,7 +2,9 @@
 
 ## 1. Download the Java SDK
 
-## 2. Edit the env.sample file
+## 2. Generate Keys
 
-## 3. Run SDK examples
+## 3. Edit the env.sample file
+
+## 4. Run SDK examples
 

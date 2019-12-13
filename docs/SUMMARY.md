@@ -1,7 +1,6 @@
 # Table of contents
 
 * [README](README.md)
-* [Get Started](get-started.md)
 * [Getting Started](getting-started.md)
 * [User-defined Data Types](user-defined-data-types.md)
 * [Keys](keys.md)
