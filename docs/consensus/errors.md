@@ -4,7 +4,7 @@
 
 | **`Error`**  | **`Description`** |
 | :--- | :--- |
-| `INVALID_TOPIC_ID` | `The Topic ID specified is not in the system.` |
+| `INVALID_TOPIC_ID` | The Topic ID specified is not in the system. |
 | `TOPIC_DELETED` | The Topic has been deleted |
 | `INVALID_TOPIC_EXPIRATION_TIME` |  |
 | `INVALID_TOPIC_ADMIN_KEY` |  |
