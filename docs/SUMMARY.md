@@ -6,10 +6,11 @@
 * [Keys](keys.md)
 * [Client](client.md)
 * [Address Book](addressbook.md)
-* [Request Cost](request-cost.md)
+* [Global Errors](global-errors.md)
 
 ## Accounts <a id="accounts-1"></a>
 
+* [Errors](accounts-1/errors.md)
 * [Create an account](accounts-1/create-an-account/README.md)
   * [Create an advanced account](accounts-1/create-an-account/create-an-advanced-account.md)
 * [Update an account](accounts-1/update-an-account.md)
@@ -23,11 +24,13 @@
 
 ## Consensus
 
+* [Errors](consensus/errors.md)
 * [Create a topic](consensus/create-a-topic.md)
 * [Subscribe to topic](consensus/untitled.md)
 
 ## File Service <a id="file-service-1"></a>
 
+* [Errors](file-service-1/errors.md)
 * [Create a file](file-service-1/create-a-file.md)
 * [Append to a file](file-service-1/append-to-a-file.md)
 * [Update a file](file-service-1/update-a-file.md)
@@ -39,6 +42,7 @@
 
 * [Create a smart contract](smart-contracts/create-a-smart-contract.md)
 * [Update a smart contract](smart-contracts/update-a-smart-contract.md)
+* [Delete a smart contract](smart-contracts/delete-a-smart-contract.md)
 * [Call a smart contract function](smart-contracts/call-a-smart-contract-function.md)
 * [Get smart contract bytecode](smart-contracts/get-smart-contract-bytecode.md)
 * [Get smart contract info](smart-contracts/get-smart-contract-info.md)

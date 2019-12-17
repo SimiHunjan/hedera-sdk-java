@@ -1,5 +1,5 @@
 ---
-description: AccountRecordsQuery
+description: AccountRecordsQuery (TBD)
 ---
 
 # Get account record
@@ -18,7 +18,13 @@ A record returns the following information about an account:
 
 | Constructor | Description |
 | :--- | :--- |
-| `new AccountRecordsQuery()` |  |
+| `AccountRecordsQuery()` | Initializes the AccountRecordsQuery object |
+
+```java
+new AccountRecordsQuery()
+  .setAccount()
+  .execute();
+```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
@@ -27,8 +33,9 @@ A record returns the following information about an account:
 ## Example
 
 ```java
-new AccountRecordsQuery()
-  .setAccount()
-  .build();
+CryptoGetAccountRecordsResponse accountRecord = new AccountRecordsQuery()
+     .setAccountId(newAccountId)
+     .execute(client);
+
 ```
 

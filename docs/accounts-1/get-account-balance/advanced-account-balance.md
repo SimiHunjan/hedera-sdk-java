@@ -4,7 +4,7 @@ You can also create an `AccountBalanceQuery()` object.
 
 | Constructor | Description |
 | :--- | :--- |
-| `AccountBalanceQuery()` | Instantiates an account balance query object |
+| `AccountBalanceQuery()` | Initializes the AccountBalanceQuery object |
 
 ```java
 new AccountBalanceQuery()

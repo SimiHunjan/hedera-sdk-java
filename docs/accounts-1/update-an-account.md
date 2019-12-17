@@ -19,7 +19,7 @@ The account must be signed by the **old key\(s\)** and **new key\(s\)** when upd
 
 | Constructor | Description |
 | :--- | :--- |
-| `AccountUpdateTransaction()` | Updates an existing account object |
+| `AccountUpdateTransaction()` | Initializes the AccountUpdateTransaction object |
 
 ```java
 new AccountUpdateTransaction()

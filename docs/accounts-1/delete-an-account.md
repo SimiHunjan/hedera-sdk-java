@@ -8,7 +8,7 @@ description: AccountDeleteTransaction
 
 | Constructor | Description |
 | :--- | :--- |
-| `AccountDeleteTransaction()` | Constructs the account delete object |
+| `AccountDeleteTransaction()` | Initializes the AccountDeleteTransaction object |
 
 ```java
 new AccountDeleteTransaction()

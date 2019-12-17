@@ -12,7 +12,7 @@ When creating a **new account** an existing account will need to fund the initia
 
 | Constructor | Description |
 | :--- | :--- |
-| `AccountCreateTransaction()` | Constructs the account object |
+| `AccountCreateTransaction()` | Initializes the AccountCreateTransaction object |
 
 ```java
 new AccountCreateTransaction()

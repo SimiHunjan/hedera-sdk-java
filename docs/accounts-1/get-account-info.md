@@ -2,24 +2,38 @@
 
 `AccountInfoQuery()` returns all of the information about an account. This **does not** include the list of records associated with the account.
 
+This information includes:
+
+* Account ID
+* Key\(s\)
+* Balance
+* Expiration time
+* AutoRenewPeriod
+* Whether the account is deleted or not
+* Whether the receiver signature is required or not
+* The proxy account ID, if any
+
 | Constructor | Description |
 | :--- | :--- |
-| `AccountInfoQuery()` |  |
+| `AccountInfoQuery()` | Initializes the AccountInfoQuery object |
 
 ```java
 new AccountInfoQuery()
+     .setAccountId()
+     .execute();
 ```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-| setAccountId\(&lt;accountId&gt;\) | AccountId | The accountId of the account to return the query for |
+| `setAccountId(<accountId>)` | AccountId | The accountId of the account to return the information for |
 
 ## Example
 
 ```java
-new AccountInfoQuery()
-.setAccountId()
-.build()
+AccountInfo myAccountInfo = new AccountInfoQuery()
+    .setAccountId(accountId)
+    .execute(client);
+System.out.Println(myAccountInfo.expirationTime)
 
 ```
 
