@@ -1,4 +1,4 @@
-# README
+# Getting Started
 
 [![Build Status](https://travis-ci.org/hashgraph/hedera-sdk-java.svg?branch=master)](https://travis-ci.org/hashgraph/hedera-sdk-java) ![Maven](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/hedera/hashgraph/sdk/maven-metadata.xml.svg) [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)](https://github.com/hashgraph/hedera-sdk-java/blob/master/LICENSE)
 
@@ -52,11 +52,18 @@ implementation 'io.grpc:grpc-netty:1.24.0'
 implementation 'io.grpc:grpc-okhttp:1.24.0'
 ```
 
-## Contributing to this Project
+## Run SDK Examples
 
-We welcome participation from all developers! For instructions on how to contribute to this repo, please review the [Contributing Guide](https://github.com/SimiHunjan/hedera-sdk-java/tree/11164c2457f9031bc48348440d77eef88a7d2df2/docs/CONTRIBUTING.md).
+### Requirements
 
-## License Information
+1. [ ] IDE of your choice
+2. [ ] Hedera Java SDK
 
-Licensed under Apache License, Version 2.0 – see [LICENSE](https://github.com/SimiHunjan/hedera-sdk-java/tree/11164c2457f9031bc48348440d77eef88a7d2df2/docs/LICENSE/README.md) in this repo or [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+### 1. Download the Java SDK
+
+### 2. Open the project in your IDE
+
+### 3. Edit your configure your environment variables 
+
+###  4. Run SDK examples
 
