@@ -16,4 +16,8 @@
 | `INSUFFICIENT_PAYER_BALANCE` | The payer account has insufficient cryptocurrency to pay the transaction fee |
 | `DUPLICATE_TRANSACTION` | This transaction ID is a duplicate of one that was submitted to this node or reached consensus in the last 180 seconds \(receipt period\) |
 | `NOT_SUPPORTED` | The API is not currently supported |
+| `INVALID_TRANSACTION_ID` | Transaction id is not valid |
+| `RECEIPT_NOT_FOUND` | Receipt for given transaction id does not exist |
+| `RECORD_NOT_FOUND` | Record for given transaction id does not exist |
+|  |  |
 
