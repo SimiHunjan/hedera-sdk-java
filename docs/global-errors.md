@@ -14,6 +14,7 @@
 | `INVALID_TRANSACTION_DURATION` | valid transaction duration is a positive non zero number that does not exceed 120 seconds |
 | `INVALID_SIGNATURE` | The transaction signature is not valid |
 | `MEMO_TOO_LONG` | Transaction memo size exceeded 100 bytes |
+| `INVALID_RECEIVING_NODE_ACCOUNT` | In Query validation, account with +ve\(amount\) value should be Receiving node account, the receiver account should be only one account in the list |
 | `INSUFFICIENT_TX_FEE` | The fee provided in the transaction is insufficient for this type of transaction |
 | `INSUFFICIENT_PAYER_BALANCE` | The payer account has insufficient cryptocurrency to pay the transaction fee |
 | `DUPLICATE_TRANSACTION` | This transaction ID is a duplicate of one that was submitted to this node or reached consensus in the last 180 seconds \(receipt period\) |
@@ -24,6 +25,7 @@
 | `UNKNOWN` | Transaction hasn't yet reached consensus, or has already expired |
 | `SUCCESS` | The transaction succeeded |
 | `FAIL_INVALID` | There was a system error and the transaction failed because of invalid request parameters. |
+| `MISSING_QUERY_HEADER` | Header is missing in Query request |
 
 ## Keys
 

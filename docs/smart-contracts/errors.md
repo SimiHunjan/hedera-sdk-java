@@ -21,7 +21,9 @@
 | `OBTAINER_DOES_NOT_EXIST` | TransferAccountId or transferContractId specified for contract delete does not exist |
 | `OBTAINER_REQUIRED` | When deleting smart contract that has crypto balance either transfer account or transfer smart contract is required |
 | `OBTAINER_SAME_CONTRACT_ID` | When deleting smart contract that has crypto balance you can not use the same contract id as transferContractId as the one being deleted |
+| `LOCAL_CALL_MODIFICATION_EXCEPTION` | Local execution \(query\) is requested for a function which changes state |
 | `MAX_CONTRACT_STORAGE_EXCEEDED` | Contract permanent storage exceeded the currently allowable limit |
 | `MODIFYING_IMMUTABLE_CONTRACT` | Attempting to modify \(update or delete a immutable smart contract, i.e. one created without a admin key\) |
+| `NULL_SOLIDITY_ADDRESS` | Null solidity address |
 | `RESULT_SIZE_LIMIT_EXCEEDED` | Smart contract result size greater than specified maxResultSize |
 

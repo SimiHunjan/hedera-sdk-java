@@ -9,7 +9,7 @@
 
 ## 2. Open the project in your IDE
 
-## 3. Edit your enviornment 
+## 3. Edit your configure your environment variables 
 
 ##  4. Run SDK examples
 
