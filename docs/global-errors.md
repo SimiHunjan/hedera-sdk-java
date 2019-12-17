@@ -31,7 +31,9 @@
 | `EMPTY_TRANSACTION_BODY` | Transaction body provided is empty |
 | `INVALID_TRANSACTION_BODY` | Invalid transaction body provided |
 | `EMPTY_QUERY_BODY` | The query body is empty |
-|  |  |
+| `TRANSACTION_TOO_MANY_LAYERS` | The Transaction has more than 50 levels |
+| `TRANSACTION_OVERSIZE` | The size of the Transaction is greater than transactionMaxBytes |
+| `PLATFORM_NOT_ACTIVE` | The platform node is either disconnected or lagging behind |
 
 ## Keys
 
