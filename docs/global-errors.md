@@ -19,5 +19,6 @@
 | `INVALID_TRANSACTION_ID` | Transaction id is not valid |
 | `RECEIPT_NOT_FOUND` | Receipt for given transaction id does not exist |
 | `RECORD_NOT_FOUND` | Record for given transaction id does not exist |
-|  |  |
+| `UNKNOWN` | Transaction hasn't yet reached consensus, or has already expired |
+| `SUCCESS` | The transaction succeeded |
 
