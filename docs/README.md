@@ -10,6 +10,22 @@ Hedera Hashgraph communicates using [gRPC](https://grpc.io); the Protobufs defin
 
 ### Maven
 
+{% tabs %}
+{% tab title="Gradle" %}
+```groovy
+implementation 'com.hedera.hashgraph:sdk:0.8.1'
+
+// SELECT ONE:
+// netty transport (for high throughput applications)
+implementation 'io.grpc:grpc-netty-shaded:1.24.0'
+// netty transport, unshaded (if you have a matching Netty dependency already)
+implementation 'io.grpc:grpc-netty:1.24.0'
+// okhttp transport (for lighter-weight applications or Android)
+implementation 'io.grpc:grpc-okhttp:1.24.0'
+```
+{% endtab %}
+
+{% tab title="Maven" %}
 ```markup
 <dependency>
   <groupId>com.hedera.hashgraph</groupId>
@@ -37,20 +53,8 @@ Hedera Hashgraph communicates using [gRPC](https://grpc.io); the Protobufs defin
   <version>1.24.0</version>
 </dependency>
 ```
-
-### Gradle
-
-```groovy
-implementation 'com.hedera.hashgraph:sdk:0.8.1'
-
-// SELECT ONE:
-// netty transport (for high throughput applications)
-implementation 'io.grpc:grpc-netty-shaded:1.24.0'
-// netty transport, unshaded (if you have a matching Netty dependency already)
-implementation 'io.grpc:grpc-netty:1.24.0'
-// okhttp transport (for lighter-weight applications or Android)
-implementation 'io.grpc:grpc-okhttp:1.24.0'
-```
+{% endtab %}
+{% endtabs %}
 
 ## Run SDK Examples
 
