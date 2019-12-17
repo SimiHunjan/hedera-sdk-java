@@ -4,7 +4,10 @@
 
 | Error  | Description |
 | :--- | :--- |
-| `BUSY` | If API is throttled out |
+| `AUTORENEW_DURATION_NOT_IN_RANGE` | the duration is not a subset of \[MINIMUM\_AUTORENEW\_DURATION,MAXIMUM\_AUTORENEW\_DURATION\] |
+| `ACCOUNT_IS_NOT_GENESIS_ACCOUNT` | Special Account Operations should be performed by only Genesis account, return this code if it is not Genesis Account |
+| `ENTITY_NOT_ALLOWED_TO_DELETE` | Entities with Entity ID below 1000 are not allowed to be deleted |
+| `EMPTY_QUERY_BODY` | The query body is empty |
 | `OK` | The transaction passed the precheck validations. |
 | `INVALID_TRANSACTION` | For any error not handled by specific error codes listed below. |
 | `PAYER_ACCOUNT_NOT_FOUND` | Payer account does not exist. |
@@ -30,18 +33,14 @@
 | `INVALID_PAYER_SIGNATURE` | Payer signature is invalid |
 | `EMPTY_TRANSACTION_BODY` | Transaction body provided is empty |
 | `INVALID_TRANSACTION_BODY` | Invalid transaction body provided |
-| `EMPTY_QUERY_BODY` | The query body is empty |
 | `TRANSACTION_TOO_MANY_LAYERS` | The Transaction has more than 50 levels |
 | `TRANSACTION_OVERSIZE` | The size of the Transaction is greater than transactionMaxBytes |
 | `PLATFORM_NOT_ACTIVE` | The platform node is either disconnected or lagging behind |
 | `PLATFORM_TRANSACTION_NOT_CREATED` | Transaction not created by platform due to either large backlog or message size exceeded transactionMaxBytes |
 | `INVALID_RENEWAL_PERIOD` | Auto renewal period is not a positive number of seconds |
-| `AUTORENEW_DURATION_NOT_IN_RANGE` | the duration is not a subset of \[MINIMUM\_AUTORENEW\_DURATION,MAXIMUM\_AUTORENEW\_DURATION\] |
-| `ACCOUNT_IS_NOT_GENESIS_ACCOUNT` | Special Account Operations should be performed by only Genesis account, return this code if it is not Genesis Account |
 | `PAYER_ACCOUNT_UNAUTHORIZED` | The fee payer account doesn't have permission to submit such Transaction |
 | `INVALID_FREEZE_TRANSACTION_BODY` | FreezeTransactionBody is invalid |
 | `FREEZE_TRANSACTION_BODY_NOT_FOUND` | FreezeTransactionBody does not exist |
-| `ENTITY_NOT_ALLOWED_TO_DELETE` | Entities with Entity ID below 1000 are not allowed to be deleted |
 
 ## Keys
 
