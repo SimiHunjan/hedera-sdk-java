@@ -1,5 +1,7 @@
 # Global Errors
 
+## General
+
 | Error  | Description |
 | :--- | :--- |
 | `BUSY` | If API is throttled out |
@@ -21,4 +23,17 @@
 | `RECORD_NOT_FOUND` | Record for given transaction id does not exist |
 | `UNKNOWN` | Transaction hasn't yet reached consensus, or has already expired |
 | `SUCCESS` | The transaction succeeded |
+| `FAIL_INVALID` | There was a system error and the transaction failed because of invalid request parameters. |
+
+## Keys
+
+| Error | Description |
+| :--- | :--- |
+| `BAD_ENCODING` | Unsupported algorithm/encoding used for keys in the transaction |
+| `INVALID_KEY_ENCODING` | Provided key encoding was not supported by the system |
+| `INVALID_SIGNATURE_COUNT_MISMATCHING_KEY` | The number of key \(KeyList, or ThresholdKey\) does not match that of signature \(SignatureList, or ThresholdKeySignature\). e.g. if a keyList has 3 base keys, then the corresponding signatureList should also have 3 base signatures. |
+| `INVALIDSIGNATURE_TYPE_MISMATCHING` | The type of key \(base ed25519 key, KeyList, or ThresholdKey\) does not match the type of signature \(base ed25519 signature, SignatureList, or ThresholdKeySignature\) |
+| `KEY_NOT_PROVIDED` | The keys were not provided in the request. |
+| `KEY_PREFIX_MISMATCH` | One public key matches more than one prefixes on the signature map |
+| `KEY_REQUIRED` | Key not provided in the transaction body |
 
