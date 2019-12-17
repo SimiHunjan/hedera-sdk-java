@@ -26,6 +26,12 @@
 | `SUCCESS` | The transaction succeeded |
 | `FAIL_INVALID` | There was a system error and the transaction failed because of invalid request parameters. |
 | `MISSING_QUERY_HEADER` | Header is missing in Query request |
+| `INVALID_FEE_SUBMITTED` | Invalid fee submitted |
+| `INVALID_PAYER_SIGNATURE` | Payer signature is invalid |
+| `EMPTY_TRANSACTION_BODY` | Transaction body provided is empty |
+| `INVALID_TRANSACTION_BODY` | Invalid transaction body provided |
+| `EMPTY_QUERY_BODY` | The query body is empty |
+|  |  |
 
 ## Keys
 
