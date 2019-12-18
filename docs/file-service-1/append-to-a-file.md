@@ -15,7 +15,7 @@ new FileAppendTransaction()
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-| `setFileId(<fileId>)` | FileId | The ID of the file to append content to |
+| `setFileId(<fileId>)` | FileId | The `fileId` of the file to append content to |
 | `setContents(<content>)` | byte\[ \] | The appended content in byte format |
 
 ## Example
