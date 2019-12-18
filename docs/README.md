@@ -70,7 +70,7 @@ implementation 'io.grpc:grpc-okhttp:1.24.0'
 
                                              OR
 
-Download the sdk here
+Download the sdk [here](https://github.com/hashgraph/hedera-sdk-java)
 
 ### 2. Open the project in your favorite IDE
 
@@ -86,4 +86,10 @@ Download the sdk here
 
 ###  4. Run SDK examples
 
-* 
+* Navigate to **/examples/src/main/java/com/hedera/hashgraph/sdk/examples/simple/**
+* Run **CreateAccount.java** file
+
+
+
+If you have any issues running the examples, please connect with with us via Discord! 
+
