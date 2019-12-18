@@ -66,7 +66,11 @@ implementation 'io.grpc:grpc-okhttp:1.24.0'
 
 ### 1. Download the Java SDK
 
-`git clone https://github.com/hashgraph/hedera-sdk-java.git`
+`git clone https://github.com/hashgraph/hedera-sdk-java.git\`
+
+                                             OR
+
+Download the sdk here
 
 ### 2. Open the project in your favorite IDE
 
@@ -82,3 +86,4 @@ implementation 'io.grpc:grpc-okhttp:1.24.0'
 
 ###  4. Run SDK examples
 
+* 
