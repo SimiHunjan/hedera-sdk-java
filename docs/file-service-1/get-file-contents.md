@@ -8,14 +8,14 @@
 
 ```java
 new FileContentsQuery()
-    .setAcountId
+    .setAcountId()
     .execute();
 
 ```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-| `setAccountId()` | AccountID | The ID of the file to get contents from |
+| `setAccountId(<account>)` | AccountID | The ID of the file to get contents from |
 
 ## Example
 
