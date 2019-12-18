@@ -4,19 +4,23 @@
 
 | Constructor | Description |
 | :--- | :--- |
-|  | Initializes |
+| `FileInfoQuery()` | Initializes the FileInfoQuery object |
 
-```text
-
+```java
+new FileInfoQuery()
+    .setFileId()
+    .execute();
 ```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-|  |  |  |
+| `setFileId(<fileId>)` | FileId | The `fileId` of the file to return information for |
 
 ## Example
 
-```text
-
+```java
+new FileInfoQuery()
+    .setFileId()
+    .execute();
 ```
 
