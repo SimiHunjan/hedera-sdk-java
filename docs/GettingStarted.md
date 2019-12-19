@@ -1,4 +1,4 @@
-# Getting Started
+# Introduction
 
 [![Build Status](https://travis-ci.org/hashgraph/hedera-sdk-java.svg?branch=master)](https://travis-ci.org/hashgraph/hedera-sdk-java) ![Maven](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/hedera/hashgraph/sdk/maven-metadata.xml.svg) [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)](https://github.com/hashgraph/hedera-sdk-java/blob/master/LICENSE)
 
@@ -68,13 +68,15 @@ implementation 'io.grpc:grpc-okhttp:1.24.0'
 
 `git clone https://github.com/hashgraph/hedera-sdk-java.git\`
 
-                                             OR
+```text
+                                         OR
+```
 
 Download the sdk [here](https://github.com/hashgraph/hedera-sdk-java)
 
 ### 2. Open the project in your favorite IDE
 
-### 3. Configure your environment variables 
+### 3. Configure your environment variables
 
 * Locate the **env.sample** file in the root directory
 * Edit the following variables
@@ -84,12 +86,10 @@ Download the sdk [here](https://github.com/hashgraph/hedera-sdk-java)
   * `OPERATOR_KEY`: the **private key** associated with the operator `accountId`
 * Rename the **env.sample** file to **.env**
 
-###  4. Run SDK examples
+### 4. Run SDK examples
 
 * Navigate to **/examples/src/main/java/com/hedera/hashgraph/sdk/examples/simple/**
 * Run **CreateAccount.java** file
 
-
-
-If you have any issues running the examples, please connect with with us via Discord! 
+If you have any issues running the examples, please connect with with us via Discord!
 

@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Getting Started](README.md)
+* [Introduction](GettingStarted.md)
+* [Getting Started](getting-started.md)
 * [User-defined Data Types](user-defined-data-types.md)
 * [Keys](keys.md)
 * [Client](client.md)
@@ -47,6 +48,4 @@
 * [Get smart contract info](smart-contracts/get-smart-contract-info.md)
 * [Get smart contract record](smart-contracts/get-smart-contract-record.md)
 * [Errors](smart-contracts/errors.md)
-
-## Miscellaneous
 
