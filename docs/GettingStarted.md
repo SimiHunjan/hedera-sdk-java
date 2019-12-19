@@ -66,10 +66,8 @@ implementation 'io.grpc:grpc-okhttp:1.24.0'
 
 ### 1. Download the Java SDK
 
-`git clone https://github.com/hashgraph/hedera-sdk-java.git\`
-
 ```text
-                                         OR
+git clone https://github.com/hashgraph/hedera-sdk-java.git\
 ```
 
 Download the sdk [here](https://github.com/hashgraph/hedera-sdk-java)
