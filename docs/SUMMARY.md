@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](GettingStarted.md)
-* [User-defined Data Types](user-defined-data-types.md)
+* [Specialized Data Types](user-defined-data-types.md)
 * [Keys](keys.md)
 * [Client](client.md)
 * [Address Book](addressbook.md)
