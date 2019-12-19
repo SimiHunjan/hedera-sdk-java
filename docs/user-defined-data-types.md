@@ -10,7 +10,7 @@ An `AccountId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum
 
 * **shardNum** represents the shard number \(`shardId`\). It will default to 0 today, as Hedera only performs in one shard.
 * **realmnNum** represents the realm number \(`realmId`\). It will default to 0 today, as realms are not yet supported.
-* **accountNum** represents the account number
+* **accountNum** represents the account number \(`accountId`\)
 
 Together these values make up your `AccountId`. When an `AccountId` is requested, be sure all three values are included.
 

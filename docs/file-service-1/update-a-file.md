@@ -8,7 +8,11 @@
 
 ```java
 new FileUpdateTransaction()
-
+    .setFileId()
+    .addKey()
+    .setContents()
+    .setExpirationTime()
+    .
 ```
 
 | Method | Type | Description |
@@ -16,7 +20,7 @@ new FileUpdateTransaction()
 | `setFileId(<fileId>)` | FileId | The FileID of the file to update |
 | `addKey(<key>)` | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) | The public key\(s\) to add to update the file with |
 | `setContents(<contents>)` | byte\[ \] | The contents to update the file with |
-| `setExpirationTime(<expiration)` | Instant | The expiration time to update the file |
+| `setExpirationTime(<expiration>)` | Instant | The expiration time to update the file |
 
 ## Example
 
