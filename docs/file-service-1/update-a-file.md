@@ -12,7 +12,7 @@ new FileUpdateTransaction()
     .addKey()
     .setContents()
     .setExpirationTime()
-    .
+    .build();
 ```
 
 | Method | Type | Description |
