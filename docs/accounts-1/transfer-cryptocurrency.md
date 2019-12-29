@@ -18,6 +18,10 @@ There are `100_000_000` tinybars in one hbar.
 new CryptoTransferTransaction()
 .addSender()
 .addRecipient()
+.setMaxTransactionFee()
+.setNodeAccountId()
+.setTransactionId()
+.setMemo()
 .build();
 ```
 
@@ -25,6 +29,10 @@ new CryptoTransferTransaction()
 | :--- | :--- | :--- |
 | `addSender(<accountId>, <amount>)` | AccountId, long | The sender is the account ID of the account and the amount \(value\) of tinybars that will be withdrawn from that account. The amount being withdrawn from the sender has to equal the amount that will be deposited into the recipient account. This method can be called multple times. |
 | `addRecipient(<accountId>, <amount>)` | AccountId, long | The recipient is account ID of the account the tinybars will be deposited into and the amount \(value\). The amount being withdrawn from the sender account has to equal the amount that will be deposited into the recipient account. |
+| setMaxTransactionFee\(&lt;fee&gt;\) | long |  |
+| setNodeAccountId\(&lt;accountId&gt;\) | AccountID |  |
+| setTransactionId\(&lt;transactionId&gt;\) | TransactionID |  |
+| setMemo\(&lt;memo&gt;\) | string |  |
 
 ## Example
 

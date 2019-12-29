@@ -30,6 +30,7 @@ new AccountUpdateTransaction()
   .setSendRecordThreshold()
   .setReceiveRecordThreshold()
   .setProxyAccount()
+  .setMemo()
   .build();
 ```
 
@@ -117,6 +118,15 @@ new AccountUpdateTransaction()
         <p>ID of account to which this account should be proxy staked.</p>
         <p><em>default:  None</em>
         </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setMemo()</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">
+        <p>A short note attached to the transaction</p>
+        <p>Max: 100 bytes</p>
       </td>
     </tr>
   </tbody>
