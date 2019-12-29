@@ -10,13 +10,17 @@
 new FileAppendTransaction()
      .setFileId()
      .setContents()
-     .Build;
+     .setMaxTransactionFee()
+     .setMemo()
+     .build();
 ```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setFileId(<fileId>)` | FileId | The `fileId` of the file to append content to |
 | `setContents(<content>)` | byte\[ \] | The appended content in byte format |
+| `setMaxTransactionFee(<fee>)` | long |  |
+| `setMemo(<memo>)` | String |  |
 
 ## Example
 
