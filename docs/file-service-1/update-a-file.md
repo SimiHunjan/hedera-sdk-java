@@ -12,6 +12,8 @@ new FileUpdateTransaction()
     .addKey()
     .setContents()
     .setExpirationTime()
+    .setMaxTransactionFee()
+    .setMemo()
     .build();
 ```
 
@@ -21,6 +23,8 @@ new FileUpdateTransaction()
 | `addKey(<key>)` | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) | The public key\(s\) to add to update the file with |
 | `setContents(<contents>)` | byte\[ \] | The contents to update the file with |
 | `setExpirationTime(<expiration>)` | Instant | The expiration time to update the file |
+| `setMaxTransactionFee(<fee>)` | long |  |
+| `setMemo(<memo>)` | string |  |
 
 ## Example
 
