@@ -18,6 +18,8 @@ new ContractUpdateTransaction()
      .setAutoRenewPeriod()
      .setExpirationTime()
      .setProxyAccount()
+     .setMaxTransactionFee()
+     .setMemo()
      .build()
 ```
 
@@ -29,6 +31,8 @@ new ContractUpdateTransaction()
 | `setAutoRenewPeriod(<duration>)` | Duration | The instance will charge its account every this many seconds to renew for this long. Duration type is in seconds. For example, one hour duration would result in the value of 3,600 seconds. |
 | `setExpirationTime(<expiration>)` | Instant | Extend the expiration of the instance and its account to this time. |
 | `setProxyAccount(<accountId>)` | [AccountId](../user-defined-data-types.md#accountid) | ID of the account to which this account is proxy staked. |
+| `setMaxTransactionFee(<fee>)` | long |  |
+| `setMemo(<memo>)` | String |  |
 
 ## Example
 
