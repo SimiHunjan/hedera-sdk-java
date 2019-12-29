@@ -24,7 +24,7 @@ new FileUpdateTransaction()
 | `setContents(<contents>)` | byte\[ \] | The contents to update the file with |
 | `setExpirationTime(<expiration>)` | Instant | The expiration time to update the file |
 | `setMaxTransactionFee(<fee>)` | long |  |
-| `setMemo(<memo>)` | string |  |
+| `setMemo(<memo>)` | String |  |
 
 ## Example
 

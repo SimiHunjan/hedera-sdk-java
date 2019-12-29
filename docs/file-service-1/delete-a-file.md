@@ -9,6 +9,12 @@
 ```java
 new FileDeleteTransaction()
      .setFileId()
+     .setMaxTransactionFee()
+     .setTransactionId()
+     .setNodeAccountId()
+     .setTransactionValidDuration()
+     .setMemo()
+     .sign()
      .execute();
 
 ```
@@ -16,6 +22,12 @@ new FileDeleteTransaction()
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setFileId(<fileId>)` | FileId | The ID of the file to delete |
+| `setMaxTransactionFee(<fee>)` | long |  |
+| `setTransactionId(<transactionId>)` | TransactionID |  |
+| `setNodeAccountId(<accountId>)` | AccountID |  |
+| `setTransactionValidDuration(<duration>)` | Duration |  |
+| `setMemo(<memo>)` | string |  |
+| `sign(<key>)` | PrivateKey |  |
 
 ## Example
 
