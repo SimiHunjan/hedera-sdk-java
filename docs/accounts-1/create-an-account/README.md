@@ -104,19 +104,19 @@ new AccountCreateTransaction()
       <td style="text-align:left"><code>setRealmId(&lt;realmId&gt;)</code>
       </td>
       <td style="text-align:center">long</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">The ID of the realm</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setShardId(&lt;shardId&gt;)</code>
       </td>
       <td style="text-align:center">long</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">The ID of the shard</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setTransactionId(&lt;transactionId&gt;)</code>
       </td>
       <td style="text-align:center">TransactionID</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">The ID of the transaction</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setNewRealAdminKey(&lt;publicKey&gt;)</code>
