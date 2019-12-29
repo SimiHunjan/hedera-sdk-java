@@ -23,6 +23,7 @@ new AccountCreateTransaction()
   .setReceiverSignatureRequired()
   .setReceiveRecordThreshold()
   .setSendRecordThreshold()
+  .setMemo()
   .setRealmId()
   .setShardId()
   .setProxyAccountId()
@@ -99,6 +100,15 @@ new AccountCreateTransaction()
       <td style="text-align:center">long</td>
       <td style="text-align:left">Creates a record for any transaction that withdraws more than x value
         of tinybars.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setMemo()</code>
+      </td>
+      <td style="text-align:center">string</td>
+      <td style="text-align:left">
+        <p>A short note attached to the transaction</p>
+        <p>Max: 100 bytes</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setRealmId(&lt;realmId&gt;)</code>
