@@ -30,6 +30,8 @@ TransactionId accountKeyList = new AccountCreateTransaction()
 
 ## Threshold Key
 
+Requires a minimum of x number of signatures from a total of y signatures to modify the account.
+
 | Constructor | Type | Description |
 | :--- | :--- | :--- |
 | `ThresholdKey(<thresholdValue>)` | int | Initializes the ThresholdKey object and takes the int value represents the minimum number of signatures required to modify the account |
