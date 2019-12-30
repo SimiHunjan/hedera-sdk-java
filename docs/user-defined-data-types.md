@@ -18,6 +18,10 @@ Together these values make up your `AccountId`. When an `AccountId` is requested
 | :--- | :---: | :--- |
 | `AccountId(<shardNum>,<realmNum>,<accountNum>)` | long, long, long | Constructs an `AccountId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<accountNum>`\) |
 
+```java
+new AccountId(); 
+```
+
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `AccountId.fromString(<account>)` | string | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
@@ -44,6 +48,10 @@ A `FileId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;fileNum&gt; \(
 * **fileNum** represents the file number
 
 Together these values make up your accountId. When an `FileId` is requested, be sure all three values are included.
+
+```java
+new FileId();
+```
 
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
@@ -110,6 +118,10 @@ A `ContractId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;contractNu
 * **shardNum** represents the shard number \(`shardId`\). It will default to 0 today, as Hedera only performs in one shard.
 * **realmnNum** represents the realm number \(`realmId`\). It will default to 0 today, as realms are not yet supported.
 * **contractNum** represents the contract number
+
+```java
+new ContractId(); 
+```
 
 Together these values make up your `ContractId`. When an `ContractId` is requested, be sure all three values are included.
 

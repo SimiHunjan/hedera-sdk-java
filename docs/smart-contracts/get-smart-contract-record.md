@@ -9,16 +9,12 @@
 ```java
 new ContractRecordQuery()
      .setContractId
-     .setPaymentAmount()
-     .setMaxQueryPaymentAmount()
      .execute();
 ```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setContractId(<contractId>`\) | ContractId | The ID of the contract to retreive the record for |
-| `setPaymentAmount(<paymentAmount>)` | long |  |
-| `setMaxQueryPaymentAmount(<maxPayment>)` | long |  |
 
 ## Example
 
