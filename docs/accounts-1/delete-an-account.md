@@ -14,15 +14,53 @@ description: AccountDeleteTransaction
 new AccountDeleteTransaction()
 .setTransferAccountId()
 .setDeleteAccountId()
+.setMaxTransactionFee()
+.setMemo()
 .build();
 ```
 
-| Method | Type | Description |
-| :--- | :--- | :--- |
-| `setTransferAccountId(<accountId>)` | [AccountId](../user-defined-data-types.md#accountid) | The ID of the account the tinybars will be transferred to from the account that will be deleted |
-| `setDeleteAccountId(<accountId>)` | [AccountId](../user-defined-data-types.md#accountid) | The ID of the account to be deleted from the Hedera network |
-
-##  Example
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>setTransferAccountId(&lt;accountId&gt;)</code>
+      </td>
+      <td style="text-align:left"><a href="../user-defined-data-types.md#accountid">AccountId</a>
+      </td>
+      <td style="text-align:left">The ID of the account the tinybars will be transferred to from the account
+        that will be deleted</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setDeleteAccountId(&lt;accountId&gt;)</code>
+      </td>
+      <td style="text-align:left"><a href="../user-defined-data-types.md#accountid">AccountId</a>
+      </td>
+      <td style="text-align:left">The ID of the account to be deleted from the Hedera network</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
+        The actual fee may be less, but will never be greater than this value.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">
+        <p>A short note attached to the transaction</p>
+        <p>Max: 100 bytes</p>
+      </td>
+    </tr>
+  </tbody>
+</table>##  Example
 
 ```java
 Transaction transaction = new AccountDeleteTransaction()
