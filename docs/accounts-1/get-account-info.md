@@ -20,20 +20,23 @@ This information includes:
 ```java
 new AccountInfoQuery()
      .setAccountId()
+     .setMaxQueryPayment()
      .execute();
 ```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setAccountId(<accountId>)` | AccountId | The accountId of the account to return the information for |
+| `setMaxQueryPayment(<maxPayment>)` | long | The max the client will pay for the query |
+| `getCost(<client>)` | Client | Returns the cost of the query  |
 
 ## Example
 
 ```java
-AccountInfo myAccountInfo = new AccountInfoQuery()
+// Returns the cost of the query
+long info = new AccountInfoQuery()
     .setAccountId(accountId)
-    .execute(client);
-System.out.Println(myAccountInfo.expirationTime)
+    .getCost(client);
 
 ```
 
