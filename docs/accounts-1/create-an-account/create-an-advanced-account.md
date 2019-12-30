@@ -19,16 +19,20 @@ new KeyList().addKey()
 ### Example
 
 ```java
-var account = new AccountCreateTransaction(client).  
-  //All three signatures required 
+TransactionId account = new AccountCreateTransaction()  
+    // All three signatures required 
     .setKey(new KeyList().addKey(publicKey1).addKey(publicKey2).addKey(publicKey3))
     .setInitialBalance(1000000)
     .setAutoRenewPeriod(Duration.ofSeconds(7890000))
     .setTransactionFee(80000000)
-    .executeForReceipt();
+    .build(client);
 ```
 
 ## Threshold Key
+
+| Constructor | Description |
+| :--- | :--- |
+| `ThresholdKey()` | Initializes the ThresholdKey object |
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
