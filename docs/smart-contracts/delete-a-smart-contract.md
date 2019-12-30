@@ -6,11 +6,25 @@
 
 ```java
 ​new ContractDeleteTransaction()
+    .setContractId()
+    .setMaxTransactionFee()
+    .setTransactionId()
+    .setTransactionValidDuration()
+    .setNodeAccountId()
+    .setMemo()
+    .sign()
+    .build()
 ```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-| ​Content | ​Content | ​Content |
+| `setContractId(<contractID>)` | ContractID |  |
+| `setMaxTransactionFee(<fee>)` | long |  |
+| `setTransactionId(<transactionId>)` | TransactionID |  |
+| `setTransactionValidDuration(<duration>)` | Duration |  |
+| `setNodeAccountId(<accountId>)` | AccountID |  |
+| `setMemo(<memo>)` | String |  |
+| `sign(<key>)` | PrivateKey |  |
 
 ‌
 
