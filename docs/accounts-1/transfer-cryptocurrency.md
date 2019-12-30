@@ -62,19 +62,19 @@ new CryptoTransferTransaction()
     <tr>
       <td style="text-align:left"><code>setNodeAccountId(&lt;accountId&gt;)</code>
       </td>
-      <td style="text-align:left">AccountId</td>
+      <td style="text-align:left">AccountID</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setTransactionId(&lt;transactionId&gt;)</code>
       </td>
-      <td style="text-align:left">TransactionId</td>
+      <td style="text-align:left">TransactionID</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
       </td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
       <td style="text-align:left">
         <p>A short note attached to the transaction</p>
         <p>Max: 100 bytes</p>

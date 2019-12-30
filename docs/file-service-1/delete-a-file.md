@@ -62,7 +62,7 @@ new FileDeleteTransaction()
     <tr>
       <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
       </td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
       <td style="text-align:left">
         <p>A short note attached to the transaction</p>
         <p>Max: 100 bytes</p>
