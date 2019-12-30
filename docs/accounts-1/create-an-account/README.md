@@ -23,12 +23,6 @@ new AccountCreateTransaction()
   .setReceiverSignatureRequired()
   .setReceiveRecordThreshold()
   .setSendRecordThreshold()
-  .setMemo()
-  .setRealmId()
-  .setShardId()
-  .setProxyAccountId()
-  .setTransactionId()
-  .setNewRealmAdminKey()
   .build();
 ```
 
@@ -100,39 +94,6 @@ new AccountCreateTransaction()
       <td style="text-align:center">long</td>
       <td style="text-align:left">Creates a record for any transaction that withdraws more than x value
         of tinybars.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setMemo()</code>
-      </td>
-      <td style="text-align:center">String</td>
-      <td style="text-align:left">
-        <p>A short note attached to the transaction</p>
-        <p>Max: 100 bytes</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setRealmId(&lt;realmId&gt;)</code>
-      </td>
-      <td style="text-align:center">long</td>
-      <td style="text-align:left">The ID of the realm</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setShardId(&lt;shardId&gt;)</code>
-      </td>
-      <td style="text-align:center">long</td>
-      <td style="text-align:left">The ID of the shard</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setTransactionId(&lt;transactionId&gt;)</code>
-      </td>
-      <td style="text-align:center">TransactionId</td>
-      <td style="text-align:left">The ID of the transaction</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setNewRealAdminKey(&lt;publicKey&gt;)</code>
-      </td>
-      <td style="text-align:center">PublicKey</td>
-      <td style="text-align:left"></td>
     </tr>
   </tbody>
 </table>## Example:
