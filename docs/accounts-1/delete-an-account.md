@@ -86,15 +86,13 @@ AccountId accountId = receipt.getAccountId();
 
 System.out.println(accountId);
 
-TransactionId delete = new AccountDeleteTransaction()
+TransactionId deleteAccount = new AccountDeleteTransaction()
     .setTransferAccountId(OPERATOR_ID)
     .setDeleteAccountId(accountId)
     .execute(client.setOperator(accountId,newKey));
 
 
-System.out.println(delete.getReceipt(client).status);
-
-client.setOperator(OPERATOR_ID,OPERATOR_KEY);
+System.out.println(deleteAccount.getReceipt(client).status);
 
 ```
 
