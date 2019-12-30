@@ -10,8 +10,6 @@ The account represents your account specific to the Hedera network. Accounts are
 When creating a **new account** an existing account will need to fund the initial balance and pay for the transaction fee.
 {% endhint %}
 
-## Basic 
-
 | Constructor | Description |
 | :--- | :--- |
 | `AccountCreateTransaction()` | Initializes the AccountCreateTransaction object |
