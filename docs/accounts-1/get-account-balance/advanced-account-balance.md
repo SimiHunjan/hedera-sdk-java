@@ -8,7 +8,8 @@ You can also construct an `AccountBalanceQuery()` object.
 
 ```java
 new AccountBalanceQuery()
-.setAccountId();
+.setAccountId()
+.execute();
 ```
 
 | Method | Type | Description |
