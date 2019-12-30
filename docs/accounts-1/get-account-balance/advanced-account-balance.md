@@ -1,6 +1,6 @@
 # Advanced account balance
 
-You can also create an `AccountBalanceQuery()` object.
+You can also construct an `AccountBalanceQuery()` object.
 
 | Constructor | Description |
 | :--- | :--- |

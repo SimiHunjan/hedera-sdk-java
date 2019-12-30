@@ -53,7 +53,7 @@ new AccountDeleteTransaction()
     <tr>
       <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
       </td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
       <td style="text-align:left">
         <p>A short note attached to the transaction</p>
         <p>Max: 100 bytes</p>
@@ -63,36 +63,9 @@ new AccountDeleteTransaction()
 </table>##  Example
 
 ```java
-// To improve responsiveness, you should specify multiple nodes using the
-// `Client(<Map<AccountId, String>>)` constructor instead
-Client client = new Client(NODE_ID, NODE_ADDRESS);
-
-// Defaults the operator account ID and key such that all generated transactions will be paid for
-// by this account and be signed by this key
-client.setOperator(OPERATOR_ID, OPERATOR_KEY);
-
-Ed25519PrivateKey newKey = Ed25519PrivateKey.generate();
-Ed25519PublicKey pubKey = newKey.getPublicKey();
-
-TransactionId txId = new AccountCreateTransaction()
-    // The only _required_ property here is `key`
-    .setKey(newKey.getPublicKey())
-    .setInitialBalance(900000000)
-    .execute(client);
-
-TransactionReceipt receipt = txId.getReceipt(client);
-
-AccountId accountId = receipt.getAccountId();
-
-System.out.println(accountId);
-
-TransactionId deleteAccount = new AccountDeleteTransaction()
-    .setTransferAccountId(OPERATOR_ID)
-    .setDeleteAccountId(accountId)
-    .execute(client.setOperator(accountId,newKey));
-
-
-System.out.println(deleteAccount.getReceipt(client).status);
-
+Transaction transaction = new AccountDeleteTransaction()
+.setTransferAccountId(accountId)
+.setDeleteAccountId(deleteAccountId)
+.build(client);
 ```
 
