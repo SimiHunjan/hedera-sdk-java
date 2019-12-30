@@ -19,7 +19,7 @@ new KeyList().addKey()
 ### Example
 
 ```java
-TransactionId account = new AccountCreateTransaction()  
+TransactionId accountKeyList = new AccountCreateTransaction()  
     // All three signatures required 
     .setKey(new KeyList().addKey(publicKey1).addKey(publicKey2).addKey(publicKey3))
     .setInitialBalance(1000000)
@@ -30,16 +30,28 @@ TransactionId account = new AccountCreateTransaction()
 
 ## Threshold Key
 
-| Constructor | Description |
-| :--- | :--- |
-| `ThresholdKey()` | Initializes the ThresholdKey object |
+| Constructor | Type | Description |
+| :--- | :--- | :--- |
+| `ThresholdKey(<thresholdValue>)` | int | Initializes the ThresholdKey object and takes the int value represents the minimum number of signatures required to modify the account |
+
+```java
+new ThresholdKey().addAll()
+```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-|  | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) |  |
+| `addAll(<keys>)` | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) | The public keys to add to the account |
 
-```text
+### Example
 
+```java
+TransactionId accountThresholdKeys = new AccountCreateTransaction()  
+  //2 out 3 signatures required
+    .setKey(new ThresholdKey(2).addAll(key1,key2,key3)
+    .setInitialBalance(1000000)
+    .setAutoRenewPeriod(Duration.ofSeconds(7890000))
+    .setTransactionFee(80000000)
+    .build(client);
 ```
 
 ## Nested Keys
