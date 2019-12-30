@@ -13,6 +13,7 @@ new ContractCallQuery()
      .setFunctionParameters()
      .setMaxResultSize()
      .setMaxQueryPayment()
+     .setPaymentAmount()
      .execute();
     
 ```
@@ -24,6 +25,7 @@ new ContractCallQuery()
 | `setFunctionParameters(<parameters>)` | Callparams\(&lt;function&gt;\) | Which funtion to call from the contract instance and the parameters |
 | `setMaxResultSize(<size>)` | long |  |
 | `setMaxQueryPayment(<maxPayment>)` | long |  |
+| setPaymentAmount\(&lt;transaction&gt;\) | Transaction |  |
 
 ## Example
 
