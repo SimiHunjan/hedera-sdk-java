@@ -165,3 +165,5 @@ ContractId contractId = ContractId.fromString("0.0.20");
 System.out.println(contractId);
 ```
 
+## Duration
+
