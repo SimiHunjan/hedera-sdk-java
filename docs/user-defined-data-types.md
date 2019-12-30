@@ -18,10 +18,6 @@ Together these values make up your `AccountId`. When an `AccountId` is requested
 | :--- | :---: | :--- |
 | `AccountId(<shardNum>,<realmNum>,<accountNum>)` | long, long, long | Constructs an `AccountId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<accountNum>`\) |
 
-```java
-new AccountId(); 
-```
-
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `AccountId.fromString(<account>)` | string | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
@@ -52,10 +48,6 @@ Together these values make up your accountId. When an `FileId` is requested, be 
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
 | `FileId(<shardNum>,<realmNum>,<fileNum>)` | long, long, long | Constructs an `FileId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<fileNum>`\) |
-
-```java
-new FileId();
-```
 
 <table>
   <thead>
@@ -125,10 +117,6 @@ Together these values make up your `ContractId`. When an `ContractId` is request
 | :--- | :--- | :--- |
 | `ContractId(<shardNum>,<realmNum>,<contractNum>)` | long, long, long | Constructs a `ContractId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<contractNum>`\) |
 
-```java
-new ContractId(); 
-```
-
 <table>
   <thead>
     <tr>
@@ -163,23 +151,5 @@ System.out.println(contractId);
 // Construct ContractId from string
 ContractId contractId = ContractId.fromString("0.0.20");
 System.out.println(contractId);
-```
-
-## [TransactionId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/TransactionId.java)
-
-A `TransactionId` is composed of the current time and account that is primarily signing the transaction. Every transaction has an assciated `TransactionId`. The `TransactionId` should never be set by a user unless in very special circumstances.
-
-| Constructor | Type | Description |
-| :--- | :--- | :--- |
-| `TransactionId(<accountId>)` | AccountId | Generates a new transaction ID for the given `accountId`. |
-
-```java
-new TransactionId()
-```
-
-### Example
-
-```java
-TransactionId transactionId = new TransactionId(myAccountId);
 ```
 
