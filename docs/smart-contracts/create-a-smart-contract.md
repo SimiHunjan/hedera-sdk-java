@@ -23,6 +23,8 @@ new ContractCreateTransaction()
      .setGas()
      .setInitialBalance()
      .setAutoRenewPeriod()
+     .setMaxTransactionFee()
+     .setMemo()
      .execute()
      
      
@@ -36,6 +38,8 @@ new ContractCreateTransaction()
 | `setGas(<gas>)` | long | Gas amount to run the constructor |
 | `setInitialBalance(<amount>)` | long | The initial number of tinybars to put into the cryptocurrency account associated with and owned by the smart contract. |
 | `setAutoRenewPeriod(<duration>)` | Duration | The period of time in which the smart contract will auto-renew in seconds. Duration type is in seconds. For example, one hour would result in the input value of 3600 seconds. |
+| `setMaxTransactionFee(<fee>)` | long | The maximum fee to be paid for this transaction executed by this client. The actual fee may be less, but will never be greater than this value. |
+| `setMemo(<memo>)` | String |  |
 
 ## Example
 
