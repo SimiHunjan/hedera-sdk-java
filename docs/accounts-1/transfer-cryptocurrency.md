@@ -4,10 +4,10 @@ description: CryptoTransferTransaction
 
 # Transfer cryptocurrency
 
-`CryptoTransferTransaction()` transfers tinybars from one Hedera account to different Hedera account in the Hedera network. The amount is in **tinybars** \(not hbars\). The transaction must be signed by all the keys from all sender accounts. If the sender fails to have insufficient funds in their account to process the transaction, the transaction fails and the tinybars will not be transferred to the receiving account. The service fee will still be charged in the case of insufficient funds.
+`CryptoTransferTransaction()` transfers tinybars from one Hedera account to different Hedera account on the Hedera network. The amount is in **tinybars** \(not hbars\). The transaction must be signed by all the keys from all sender accounts. If the sender fails to have insufficient funds in their account to process the transaction, the transaction fails and the tinybars will not be transferred to the receiving account. The service fee will still be charged in the case of insufficient funds.
 
 {% hint style="info" %}
-There are `100_000_000` tinybars in one hbar. 
+There are `100_000_000` tinybars in one hbar.
 {% endhint %}
 
 | Constructor | Description |
@@ -62,21 +62,19 @@ new CryptoTransferTransaction()
     <tr>
       <td style="text-align:left"><code>setNodeAccountId(&lt;accountId&gt;)</code>
       </td>
-      <td style="text-align:left">AccountId</td>
-      <td style="text-align:left"><b>TBD</b>
-      </td>
+      <td style="text-align:left">AccountID</td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setTransactionId(&lt;transactionId&gt;)</code>
       </td>
-      <td style="text-align:left">TransactionId</td>
-      <td style="text-align:left"><b>TBD</b>
-      </td>
+      <td style="text-align:left">TransactionID</td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
       </td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left">string</td>
       <td style="text-align:left">
         <p>A short note attached to the transaction</p>
         <p>Max: 100 bytes</p>

@@ -63,9 +63,38 @@ new AccountDeleteTransaction()
 </table>##  Example
 
 ```java
-Transaction transaction = new AccountDeleteTransaction()
-.setTransferAccountId(accountId)
-.setDeleteAccountId(deleteAccountId)
-.build(client);
+// To improve responsiveness, you should specify multiple nodes using the
+// `Client(<Map<AccountId, String>>)` constructor instead
+Client client = new Client(NODE_ID, NODE_ADDRESS);
+
+// Defaults the operator account ID and key such that all generated transactions will be paid for
+// by this account and be signed by this key
+client.setOperator(OPERATOR_ID, OPERATOR_KEY);
+
+Ed25519PrivateKey newKey = Ed25519PrivateKey.generate();
+Ed25519PublicKey pubKey = newKey.getPublicKey();
+
+TransactionId txId = new AccountCreateTransaction()
+    // The only _required_ property here is `key`
+    .setKey(newKey.getPublicKey())
+    .setInitialBalance(900000000)
+    .execute(client);
+
+TransactionReceipt receipt = txId.getReceipt(client);
+
+AccountId accountId = receipt.getAccountId();
+
+System.out.println(accountId);
+
+TransactionId delete = new AccountDeleteTransaction()
+    .setTransferAccountId(OPERATOR_ID)
+    .setDeleteAccountId(accountId)
+    .execute(client.setOperator(accountId,newKey));
+
+
+System.out.println(delete.getReceipt(client).status);
+
+client.setOperator(OPERATOR_ID,OPERATOR_KEY);
+
 ```
 

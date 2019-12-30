@@ -34,7 +34,7 @@ You can store these variables in a .env file at the root directory of the sdk. P
     <tr>
       <td style="text-align:left"><code>Client(&lt;nodeAccountId&gt;, &lt;nodeURL&gt;)</code>
       </td>
-      <td style="text-align:center">AccountId, string</td>
+      <td style="text-align:center">AccountId, String</td>
       <td style="text-align:left">
         <p>Constructs a client object</p>
         <p>Map&lt;AccountId, String&gt;</p>
@@ -76,7 +76,7 @@ You can store these variables in a .env file at the root directory of the sdk. P
     <tr>
       <td style="text-align:left"><code>putNode(&lt;nodeAccountId&gt;, &lt;nodeURL&gt;)</code>
       </td>
-      <td style="text-align:center">AccountId, string</td>
+      <td style="text-align:center">AccountId, String</td>
       <td style="text-align:left">Insert or update a node in the client</td>
     </tr>
     <tr>
@@ -93,7 +93,7 @@ You can store these variables in a .env file at the root directory of the sdk. P
     </tr>
   </tbody>
 </table>{% hint style="warning" %}
-The **maximum transaction fee** and **maximum query payment** are both set to 1\_000\_000 tinybar \(1 hbar\).  This amount can be modified by editing the [Client.java](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/Client.java) class or by using setMaxTransactionFee\(\). 
+The **max transaction fee** and **max query payment** are both set to 1\_000\_000 tinybar \(1 hbar\).  This amount can be modified by editing the [Client.java](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/Client.java) class or by using `setMaxTransactionFee()` and `setMaxQueryPayment()`. 
 {% endhint %}
 
 ### Create Client Example
