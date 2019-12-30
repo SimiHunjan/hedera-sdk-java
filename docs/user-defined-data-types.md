@@ -49,13 +49,13 @@ A `FileId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;fileNum&gt; \(
 
 Together these values make up your accountId. When an `FileId` is requested, be sure all three values are included.
 
-```java
-new FileId();
-```
-
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
 | `FileId(<shardNum>,<realmNum>,<fileNum>)` | long, long, long | Constructs an `FileId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<fileNum>`\) |
+
+```java
+new FileId();
+```
 
 <table>
   <thead>
@@ -119,15 +119,15 @@ A `ContractId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;contractNu
 * **realmnNum** represents the realm number \(`realmId`\). It will default to 0 today, as realms are not yet supported.
 * **contractNum** represents the contract number
 
-```java
-new ContractId(); 
-```
-
 Together these values make up your `ContractId`. When an `ContractId` is requested, be sure all three values are included.
 
 | Constructor | Type | Description |
 | :--- | :--- | :--- |
 | `ContractId(<shardNum>,<realmNum>,<contractNum>)` | long, long, long | Constructs a `ContractId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<contractNum>`\) |
+
+```java
+new ContractId(); 
+```
 
 <table>
   <thead>
