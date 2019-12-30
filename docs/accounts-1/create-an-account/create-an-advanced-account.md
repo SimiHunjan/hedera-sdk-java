@@ -56,13 +56,3 @@ TransactionId accountThresholdKeys = new AccountCreateTransaction()
     .build(client);
 ```
 
-## Nested Keys
-
-| Method | Type | Description |
-| :--- | :--- | :--- |
-|  | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) |  |
-
-```text
-
-```
-
