@@ -63,13 +63,15 @@ new CryptoTransferTransaction()
       <td style="text-align:left"><code>setNodeAccountId(&lt;accountId&gt;)</code>
       </td>
       <td style="text-align:left">AccountId</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><b>TBD</b>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setTransactionId(&lt;transactionId&gt;)</code>
       </td>
       <td style="text-align:left">TransactionId</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><b>TBD</b>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
