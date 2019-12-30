@@ -18,10 +18,6 @@ Together these values make up your `AccountId`. When an `AccountId` is requested
 | :--- | :---: | :--- |
 | `AccountId(<shardNum>,<realmNum>,<accountNum>)` | long, long, long | Constructs an `AccountId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<accountNum>`\) |
 
-```java
-new AccountId(); 
-```
-
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `AccountId.fromString(<account>)` | string | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
@@ -52,10 +48,6 @@ Together these values make up your accountId. When an `FileId` is requested, be 
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
 | `FileId(<shardNum>,<realmNum>,<fileNum>)` | long, long, long | Constructs an `FileId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<fileNum>`\) |
-
-```java
-new FileId();
-```
 
 <table>
   <thead>
@@ -125,10 +117,6 @@ Together these values make up your `ContractId`. When an `ContractId` is request
 | :--- | :--- | :--- |
 | `ContractId(<shardNum>,<realmNum>,<contractNum>)` | long, long, long | Constructs a `ContractId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<contractNum>`\) |
 
-```java
-new ContractId(); 
-```
-
 <table>
   <thead>
     <tr>
@@ -164,6 +152,4 @@ System.out.println(contractId);
 ContractId contractId = ContractId.fromString("0.0.20");
 System.out.println(contractId);
 ```
-
-## Duration
 
