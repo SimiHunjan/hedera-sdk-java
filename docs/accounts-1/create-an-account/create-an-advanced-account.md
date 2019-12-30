@@ -14,7 +14,7 @@ new KeyList().addKey()
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-| `addKey(<publicKey>)` | PublicKey | Adds the public key to the account. Can be used multiple times to add multiple public keys.  |
+| `addKey(<publicKey>)` | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) | Adds the public key to the account. Can be used multiple times to add multiple public keys.  |
 
 ### Example
 
@@ -32,7 +32,7 @@ var account = new AccountCreateTransaction(client).
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-|  |  |  |
+|  | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) |  |
 
 ```text
 
@@ -42,7 +42,7 @@ var account = new AccountCreateTransaction(client).
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-|  |  |  |
+|  | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) |  |
 
 ```text
 
