@@ -24,9 +24,9 @@
 
 ## Consensus
 
-* [Errors](consensus/errors.md)
 * [Create a topic](consensus/create-a-topic.md)
 * [Subscribe to topic](consensus/untitled.md)
+* [Errors](consensus/errors.md)
 
 ## File Service <a id="file-service-1"></a>
 

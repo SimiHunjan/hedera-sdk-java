@@ -34,7 +34,7 @@ You can store these variables in a .env file at the root directory of the sdk. P
     <tr>
       <td style="text-align:left"><code>Client(&lt;nodeAccountId&gt;, &lt;nodeURL&gt;)</code>
       </td>
-      <td style="text-align:center">AccountId, string</td>
+      <td style="text-align:center">AccountId, String</td>
       <td style="text-align:left">
         <p>Constructs a client object</p>
         <p>Map&lt;AccountId, String&gt;</p>
@@ -76,7 +76,7 @@ You can store these variables in a .env file at the root directory of the sdk. P
     <tr>
       <td style="text-align:left"><code>putNode(&lt;nodeAccountId&gt;, &lt;nodeURL&gt;)</code>
       </td>
-      <td style="text-align:center">AccountId, string</td>
+      <td style="text-align:center">AccountId, String</td>
       <td style="text-align:left">Insert or update a node in the client</td>
     </tr>
     <tr>
