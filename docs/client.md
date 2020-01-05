@@ -15,12 +15,23 @@ The operator is the user paying for the transactions fees.
 
 **Network Information**
 
-You can find testnet and mainnet network details by logging into your Hedera portal. On mainnet, you can also request the contents of the most current [address book file](addressbook.md).
+You can find testnet and mainnet network details by logging into your Hedera portal. 
 
 * **Node ID:** The account ID of the node submitting the transaction to the network
 * **Node Address:** The network address of the node submitting the transaction to the network
 
 You can store these variables in a .env file at the root directory of the sdk. Please see the [env.sample](https://github.com/hashgraph/hedera-sdk-java/blob/master/.env.sample) file in the SDK for how to set this up.
+
+## Basic
+
+The ExampleHelper class helps you build a client easily. The helper class grabs the envrionment configuration variables from the .env file. 
+
+```java
+Client client = ExampleHelper.createHederaClient();
+
+```
+
+## Advanced
 
 <table>
   <thead>
@@ -117,7 +128,7 @@ You can store these variables in a .env file at the root directory of the sdk. P
     </tr>
   </tbody>
 </table>{% hint style="warning" %}
-The **max transaction fee** and **max query payment** are both set to 1\_000\_000 tinybar \(1 hbar\).  This amount can be modified by editing the [Client.java](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/Client.java) class or by using `setMaxTransactionFee()` and `setMaxQueryPayment()`. 
+The **max transaction fee** and **max query payment** are both set to 1\_000\_000 tinybar \(1 hbar\).  This amount can be modified by editing the [Client.java](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/Client.java) class or by using `setMaxTransactionFee()` and `setMaxQueryPayment()`when building the transaction or query.
 {% endhint %}
 
 ### Create Client Example
