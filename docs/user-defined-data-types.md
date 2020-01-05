@@ -4,7 +4,7 @@ description: Standard HAPI data types derived from the HAPI definition
 
 # Specialized Data Types
 
-## [AccountId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/account/AccountId.java)
+## [AccountId](https://github.com/hashgraph/hedera-sdk-java/blob/v0.8.0/src/main/java/com/hedera/hashgraph/sdk/account/AccountId.java)
 
 An `AccountId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; \(eg. 0.0.10\).
 
@@ -92,7 +92,7 @@ System.out.println(accountId);
 
 ```
 
-## [FileId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/file/FileId.java)
+## [FileId](https://github.com/hashgraph/hedera-sdk-java/blob/v0.8.0/src/main/java/com/hedera/hashgraph/sdk/file/FileId.java)
 
 A `FileId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;fileNum&gt; \(eg. 0.0.15\).
 
@@ -185,7 +185,7 @@ FileId fileId = FileId.fromString("0.0.15");
 System.out.println(fileId);
 ```
 
-## [ContractId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/contract/ContractId.java)
+## [ContractId](https://github.com/hashgraph/hedera-sdk-java/blob/v0.8.0/src/main/java/com/hedera/hashgraph/sdk/contract/ContractId.java)
 
 A `ContractId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;contractNum&gt; \(eg. 0.0.20\).
 
