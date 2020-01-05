@@ -10,6 +10,8 @@ description: CryptoTransferTransaction
 There are `100_000_000` tinybars in one hbar. 
 {% endhint %}
 
+## Basic
+
 | Constructor | Description |
 | :--- | :--- |
 | `CryptoTransferTransaction()` | Initializes the CryptoTransferTransaction object |
@@ -34,7 +36,7 @@ new CryptoTransferTransaction()
 | `setTransactionId(<transactionId>)` | TransactionId | **TBD** |
 | `setMemo(<memo>)` | String | Any notes or descriptions that should be put into the record \(max length 100\) |
 
-## Example
+### Example
 
 ```java
 // Transfer X hbar from the operator of the client to the given account ID

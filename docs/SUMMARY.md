@@ -11,11 +11,11 @@
 ## Accounts <a id="accounts-1"></a>
 
 * [Create an account](accounts-1/create-an-account/README.md)
-  * [Create an advanced account](accounts-1/create-an-account/create-an-advanced-account.md)
+  * [Accounts & Keys](accounts-1/create-an-account/create-an-advanced-account.md)
 * [Update an account](accounts-1/update-an-account.md)
 * [Transfer cryptocurrency](accounts-1/transfer-cryptocurrency.md)
 * [Delete an account](accounts-1/delete-an-account.md)
-* [Get account balance](accounts-1/get-account-balance.md)
+* [Get account balance](accounts-1/get-account-balance/README.md)
 * [Get account info](accounts-1/get-account-info.md)
 * [Get account record](accounts-1/get-account-record.md)
 * [Get account claims](accounts-1/get-account-claims.md)
