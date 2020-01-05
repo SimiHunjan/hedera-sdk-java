@@ -165,7 +165,7 @@ new FileId();
       <td style="text-align:left"><code>toProto()</code>
       </td>
       <td style="text-align:left">FileID</td>
-      <td style="text-align:left">Returns the protobuf</td>
+      <td style="text-align:left">Returns the protobuf message</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>toString()</code>
@@ -258,7 +258,7 @@ new ContractId();
       <td style="text-align:left"><code>toProto()</code>
       </td>
       <td style="text-align:left">ContractID</td>
-      <td style="text-align:left">Returns the protobuf</td>
+      <td style="text-align:left">Returns the protobuf message</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>toString()</code>
@@ -280,7 +280,7 @@ System.out.println(contractId);
 
 ## [TransactionId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/TransactionId.java)
 
-A `TransactionId` is composed of the current time and account that is primarily signing the transaction. Every transaction has an assciated `TransactionId`. The `TransactionId` should never be set by a user unless in very special circumstances.
+A `TransactionId` is composed of the valid start time and the account ID that is signing the transaction. Every transaction has an assciated `TransactionId`. The `TransactionId` should never be set by a user unless in very special circumstances.
 
 | Constructor | Type | Description |
 | :--- | :--- | :--- |
@@ -290,9 +290,17 @@ A `TransactionId` is composed of the current time and account that is primarily 
 new TransactionId()
 ```
 
+| Methods | Type | Description |
+| :--- | :--- | :--- |
+| `getAccountId()` | AccountId | Returns the AccountId |
+| `getValidStart()` | Instant | Returns the valid start time |
+| `toProto()` | TransactionID | Returns the protobuf message |
+
 ### Example
 
 ```java
-TransactionId transactionId = new TransactionId(myAccountId);
+TransactionId transactionId = new TransactionId(accountId);
+System.out.println(transactionId.toProto());
+
 ```
 
