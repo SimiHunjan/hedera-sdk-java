@@ -73,6 +73,12 @@ new AccountId();
       <td style="text-align:left">AccountID</td>
       <td style="text-align:left">Returns the protobuf</td>
     </tr>
+    <tr>
+      <td style="text-align:left"><code>toString()</code>
+      </td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Returns the AccoutId in string format</td>
+    </tr>
   </tbody>
 </table>### Example
 
@@ -129,22 +135,43 @@ new FileId();
       <td style="text-align:left">Constructs an <code>FileId</code> from a solidity address in string format</td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>FileId.ADDRESS_BOOK</code>
+      <td style="text-align:left"><code>getRealmNum()</code>
       </td>
-      <td style="text-align:left">FileId</td>
-      <td style="text-align:left">The public node address book for the current network</td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">
+        <p>Returns the realm number from the <code>FileId</code>
+        </p>
+        <p>default: 0</p>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>FileId.EXCHANGE_RATES</code>
+      <td style="text-align:left"><code>getFileNum()</code>
       </td>
-      <td style="text-align:left">FileId</td>
-      <td style="text-align:left">The current exchange rate of HBAR to USD</td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">Returns the <code>fileNum</code> from the <code>FileId</code>
+      </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>FileId.FEE_SCHEDULE</code>
+      <td style="text-align:left"><code>getShardNum()</code>
       </td>
-      <td style="text-align:left">FileId</td>
-      <td style="text-align:left">The current fee schedule for the network</td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">
+        <p>Returns the <code>shardNum</code> from the <code>FileId</code>
+        </p>
+        <p>default: 0</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>toProto()</code>
+      </td>
+      <td style="text-align:left">FileID</td>
+      <td style="text-align:left">Returns the protobuf</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>toString()</code>
+      </td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Returns the FileId in string format</td>
     </tr>
   </tbody>
 </table>### Example
@@ -199,6 +226,45 @@ new ContractId();
       </td>
       <td style="text-align:left">String</td>
       <td style="text-align:left">Constructs a <code>ContractId</code> from a solidity address in string format</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getRealmNum()</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">
+        <p>Returns the realm number from the <code>ContractId</code>
+        </p>
+        <p>default: 0</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getContractNum()</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">Returns the <code>contractNum</code> from the <code>ContractId</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getShardNum()</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">
+        <p>Returns the <code>shardNum</code> from the <code>ContractId</code>
+        </p>
+        <p>default: 0</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>toProto()</code>
+      </td>
+      <td style="text-align:left">ContractID</td>
+      <td style="text-align:left">Returns the protobuf</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>toString()</code>
+      </td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Returns the ContractId in string format</td>
     </tr>
   </tbody>
 </table>### Example
