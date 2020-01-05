@@ -31,6 +31,13 @@ Client client = ExampleHelper.createHederaClient();
 
 ```
 
+| Methods | Type | Description |
+| :--- | :--- | :--- |
+| `createHederaClient()` | Client | Build the Hedera client. Obtains the envrionment configuration from the .env file in the root directory |
+| `getOperatorKey()` | ED25519PrivateKey | Returns the private key of the operator  |
+| `getOperatorId()` | AccountId | Returns the AccountId of the operator  |
+| `getNodeId()` | AccountId | Returns the nodeId of the client |
+
 ## Advanced
 
 <table>
