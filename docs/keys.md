@@ -4,16 +4,6 @@ description: Generate keys using Java SDK
 
 # Keys
 
-Hedera accounts require a cryptographically secure key pair in order to be generated and used. It’s these keys that define ownership, granting access to files, or allowing hbar transfers. 
-
-Hedera conveniently supplies support for different key types without the use of a smart contract. This is powerful and allows you to easily model how you want your users to make decisions directly in the code. 
-
-* **Simple Key**: Only one key pair has the authority to modify the account 
-* **Key List**: A list of keys that are all required to sign transactions to modify the account
-* **Threshold Keys**: Requires a minimum of x number of signatures from a total of y signatures to modify the account.
-
-
-
 The SDK currently suppports Ed25519 key system. 
 
 | **Method** | Type | Description |

@@ -153,7 +153,7 @@ new FileId();
 FileId fileId = new FileId(0,0,15);
 System.out.println(fileId);
 
-//Contruct FileId from string
+//Construct FileId from string
 FileId fileId = FileId.fromString("0.0.15");
 System.out.println(fileId);
 ```
