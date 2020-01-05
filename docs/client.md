@@ -140,9 +140,9 @@ The **max transaction fee** and **max query payment** are both set to 1\_000\_00
 
 ### Create Client Example
 
- .env file:
+ **.env file:**
 
-## \#Network 
+
 
 {% tabs %}
 {% tab title="Single Node" %}
@@ -174,7 +174,7 @@ OPERATOR_KEY= <ED25519 Private Key>
 {% endtab %}
 {% endtabs %}
 
-Java file:
+**Java file:**
 
 {% tabs %}
 {% tab title="Single Node" %}

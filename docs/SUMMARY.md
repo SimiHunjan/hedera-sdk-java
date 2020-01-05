@@ -22,12 +22,6 @@
 * [Get account claims](accounts-1/get-account-claims.md)
 * [Errors](accounts-1/errors.md)
 
-## Consensus
-
-* [Create a topic](consensus/create-a-topic.md)
-* [Subscribe to topic](consensus/untitled.md)
-* [Errors](consensus/errors.md)
-
 ## File Service <a id="file-service-1"></a>
 
 * [Create a file](file-service-1/create-a-file.md)
