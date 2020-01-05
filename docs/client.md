@@ -74,10 +74,34 @@ You can store these variables in a .env file at the root directory of the sdk. P
         will be paid for by this account Id and and signed by this key</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>TransferCryptoTo(&lt;recipient&gt;, amount)</code>
+      </td>
+      <td style="text-align:center">AccountId, long</td>
+      <td style="text-align:left">Transfers the amount tinybars to the recipient</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>createAccount(&lt;publicKey , initialBalance&gt;)</code>
+      </td>
+      <td style="text-align:center">PublicKey, long</td>
+      <td style="text-align:left">Creates a new account</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>putNode(&lt;nodeAccountId&gt;, &lt;nodeURL&gt;)</code>
       </td>
       <td style="text-align:center">AccountId, String</td>
       <td style="text-align:left">Insert or update a node in the client</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getAccount()</code>
+      </td>
+      <td style="text-align:center">AccountId</td>
+      <td style="text-align:left">Returns the account</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getAccountBalance(&lt;accountId&gt;)</code>
+      </td>
+      <td style="text-align:center">AccountId</td>
+      <td style="text-align:left">Returns the account balance</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>getMaxQueryPayment()</code>
