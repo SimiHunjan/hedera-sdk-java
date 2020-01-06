@@ -1,11 +1,13 @@
 # Mirror Node Client
 
-| Constructor |  | Description |
+Contructs the mirror node client.
+
+| Constructor | Type | Description |
 | :--- | :--- | :--- |
-| `ConsensusClient(<endpoint>)` | String | Intializes the ConsensusClient object |
+| `ConsensusClient(<endpoint>)` | String | Initializes the ConsensusClient object |
 
 ```java
-new ConsensusClient()
+new ConsensusClient();
 ```
 
 <table>
@@ -79,6 +81,6 @@ new ConsensusClient()
 </table>## Example
 
 ```java
-
+final ConsensusClient consensusClient = new ConsensusClient(MIRROR_NODE_ADDRESS);
 ```
 
