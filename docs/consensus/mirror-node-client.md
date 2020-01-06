@@ -1,6 +1,6 @@
 # Mirror Node Client
 
-| Constructor | Type | Description |
+| Constructor |  | Description |
 | :--- | :--- | :--- |
 | `ConsensusClient(<endpoint>)` | String | Intializes the ConsensusClient object |
 
@@ -79,6 +79,6 @@ new ConsensusClient()
 </table>## Example
 
 ```java
-final ConsensusClient consensusClient = new ConsensusClient(MIRROR_NODE_ADDRESS).;
+
 ```
 
