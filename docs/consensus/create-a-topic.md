@@ -18,8 +18,8 @@ new ConsensusTopicCreateTransaction()
 | `setAutoRenewPeriod(<autoRenewPeriod>)` | Duration | The initial lifetime of the topic and the amount of time to attempt to extend the topic's lifetime by |
 | `setTopicMemo(<memo>)` | String | Short publicly visible memo about the topic. No guarantee of uniqueness. |
 | `setAutoRenewAccountId(<autoRenewAccountId>)` | AccountId |  |
-| `build()` |  |  |
-| `execute(<client>)` | Client |  |
+| `build()` |  | Builds the object |
+| `execute(<client>)` | Client | Submits the transaction to the Hederan network |
 
 ## Example
 
