@@ -17,7 +17,7 @@ new ConsensusTopicCreateTransaction()
 | `setMaxTransactionFee(<fee>)` | long | The maximum fee to be paid for this transaction executed by this client. The actual fee may be less, but will never be greater than this value. |
 | `setAdminKey(<key>)` | ED25519PublicKey | The key that has the ability to update or delete the topic. expirationTime can be modified by anyone. If no adminKey is specified, updateTopic may only be used to extend the expirationTime, and deleteTopic is disallowed. |
 | `build()` |  | Builds the object |
-| `execute(<client>)` | Client | Submits the transaction to the Hederan network |
+| `execute(<client>)` | Client | Submits the transaction to the Hedera network |
 
 ### Example
 
