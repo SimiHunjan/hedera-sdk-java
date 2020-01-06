@@ -18,10 +18,14 @@ Together these values make up your `AccountId`. When an `AccountId` is requested
 | :--- | :---: | :--- |
 | `AccountId(<shardNum>,<realmNum>,<accountNum>)` | long, long, long | Constructs an `AccountId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<accountNum>`\) |
 
+```java
+new AccountId(); 
+```
+
 | Method | Type | Description |
 | :--- | :--- | :--- |
-| `AccountId.fromString(<account>)` | string | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
-| `AccountId.fromSolidityAddress(<address>)` | string | Constructs an `AccountId` from a solidity address in string format  |
+| `AccountId.fromString(<account>)` | String | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
+| `AccountId.fromSolidityAddress(<address>)` | String | Constructs an `AccountId` from a solidity address in string format  |
 
 ### Example
 
@@ -49,6 +53,10 @@ Together these values make up your accountId. When an `FileId` is requested, be 
 | :--- | :---: | :--- |
 | `FileId(<shardNum>,<realmNum>,<fileNum>)` | long, long, long | Constructs an `FileId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<fileNum>`\) |
 
+```java
+new FileId();
+```
+
 <table>
   <thead>
     <tr>
@@ -61,7 +69,7 @@ Together these values make up your accountId. When an `FileId` is requested, be 
     <tr>
       <td style="text-align:left"><code>FileId.fromString()</code>
       </td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">String</td>
       <td style="text-align:left">
         <p>Constructs an <code>FileId</code> from a string formatted as</p>
         <p>&lt;shardNum&gt;.&lt;realmNum&gt;.&lt;fileNum&gt;</p>
@@ -70,7 +78,7 @@ Together these values make up your accountId. When an `FileId` is requested, be 
     <tr>
       <td style="text-align:left"><code>FileId.fromSolidityAddress()</code>
       </td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">String</td>
       <td style="text-align:left">Constructs an <code>FileId</code> from a solidity address in string format</td>
     </tr>
     <tr>
@@ -117,6 +125,10 @@ Together these values make up your `ContractId`. When an `ContractId` is request
 | :--- | :--- | :--- |
 | `ContractId(<shardNum>,<realmNum>,<contractNum>)` | long, long, long | Constructs a `ContractId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<contractNum>`\) |
 
+```java
+new ContractId(); 
+```
+
 <table>
   <thead>
     <tr>
@@ -129,7 +141,7 @@ Together these values make up your `ContractId`. When an `ContractId` is request
     <tr>
       <td style="text-align:left"><code>ContractId.fromString(&lt;account&gt;)</code>
       </td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">String</td>
       <td style="text-align:left">
         <p>Constructs a <code>ContractId </code>from a string formatted as</p>
         <p>&lt;shardNum&gt;.&lt;realmNum&gt;.&lt;contractNum&gt;</p>
@@ -138,7 +150,7 @@ Together these values make up your `ContractId`. When an `ContractId` is request
     <tr>
       <td style="text-align:left"><code>ContractId.fromSolidityAddress(&lt;address&gt;)</code>
       </td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">String</td>
       <td style="text-align:left">Constructs a <code>ContractId</code> from a solidity address in string format</td>
     </tr>
   </tbody>
@@ -151,5 +163,23 @@ System.out.println(contractId);
 // Construct ContractId from string
 ContractId contractId = ContractId.fromString("0.0.20");
 System.out.println(contractId);
+```
+
+## [TransactionId](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/TransactionId.java)
+
+A `TransactionId` is composed of the current time and account that is primarily signing the transaction. Every transaction has an assciated `TransactionId`. The `TransactionId` should never be set by a user unless in very special circumstances.
+
+| Constructor | Type | Description |
+| :--- | :--- | :--- |
+| `TransactionId(<accountId>)` | AccountId | Generates a new transaction ID for the given `accountId`. |
+
+```java
+new TransactionId()
+```
+
+### Example
+
+```java
+TransactionId transactionId = new TransactionId(myAccountId);
 ```
 
