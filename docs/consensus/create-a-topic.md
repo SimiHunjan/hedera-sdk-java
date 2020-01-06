@@ -4,7 +4,7 @@ Creates a new topic.
 
 | Constructor | Description |
 | :--- | :--- |
-| `ConsensusTopicCreateTransaction()` |  |
+| `ConsensusTopicCreateTransaction()` | Initializes the ConsensusTopicCreateTransaction object |
 
 ```java
 new ConsensusTopicCreateTransaction()
