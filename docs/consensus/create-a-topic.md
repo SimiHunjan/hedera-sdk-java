@@ -17,6 +17,8 @@ new ConsensusTopicCreateTransaction()
 | `setSubmitKey(<key>)` | ED25519PublicKey |  |
 | `setAutoRenewPeriod(<autoRenewPeriod>)` | Duration |  |
 | `setTopicMemo(<memo>)` | String |  |
+| `build()` |  |  |
+| `execute(<client>)` | Client |  |
 
 ## Example
 
