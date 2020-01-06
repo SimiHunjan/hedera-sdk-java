@@ -1,6 +1,6 @@
 # Mirror Node Client
 
-| Constructor |  | Description |
+| Constructor | Type | Description |
 | :--- | :--- | :--- |
 | `ConsensusClient(<endpoint>)` | String | Intializes the ConsensusClient object |
 
