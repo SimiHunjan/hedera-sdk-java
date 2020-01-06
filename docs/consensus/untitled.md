@@ -17,9 +17,6 @@ new ConsensusTopicUpdateTransaction()
 | `setTopicId(<topicId>)` | TopicID | The ID of the topic to update |
 | `setAdminKey(<key>)` | ED25519PublicKey | Access control for update/delete of the topic. If unspecified, no change. If empty keyList - the adminKey is cleared. |
 | `setSubmitKey(<key>)` | ED25519PublicKey | Access control for ConsensusService.submitMessage.  If unspecified, no change. If empty keyList - the submitKey is cleared. |
-| \`\` |  |  |
-
-## 
 
 ### Example
 
