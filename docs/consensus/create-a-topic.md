@@ -17,6 +17,7 @@ new ConsensusTopicCreateTransaction()
 | `setSubmitKey(<key>)` | ED25519PublicKey | Access control for submitMessage. If this property is not set, no access control is performed on ConsensusService.submitMessage \(all submissions aloud\).  |
 | `setAutoRenewPeriod(<autoRenewPeriod>)` | Duration | The initial lifetime of the topic and the amount of time to attempt to extend the topic's lifetime by |
 | `setTopicMemo(<memo>)` | String | Short publicly visible memo about the topic. No guarantee of uniqueness. |
+| `setAutoRenewAccountId(<autoRenewAccountId>)` | AccountId |  |
 | `build()` |  |  |
 | `execute(<client>)` | Client |  |
 
