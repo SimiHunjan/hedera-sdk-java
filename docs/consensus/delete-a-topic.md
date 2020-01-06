@@ -16,8 +16,6 @@ new ConsensusTopicDeleteTransaction()
 | :--- | :--- | :--- |
 | `setTopicId(<topicId>)` | TopicID | The ID of the topic to be deleted |
 | `setMaxTransactionFee(<fee>)` | long |  |
-| \`\` |  |  |
-|  |  |  |
 
 ### Example
 
