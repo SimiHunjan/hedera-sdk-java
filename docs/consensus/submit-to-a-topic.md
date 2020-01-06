@@ -1,7 +1,5 @@
 # Submit to a topic
 
-Submit a message to a topic.
-
 | Constructor | Description |
 | :--- | :--- |
 | `ConsensusMessageSubmitTransaction()` | Initializes a ConsensusMessageSubmitTransaction object |
