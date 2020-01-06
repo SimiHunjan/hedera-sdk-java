@@ -1,6 +1,6 @@
 # Mirror Node Client
 
-Contructs the mirror node client.
+Constructs the mirror node client.
 
 | Constructor | Type | Description |
 | :--- | :--- | :--- |
