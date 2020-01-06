@@ -10,6 +10,14 @@ The account represents your account specific to the Hedera network. Accounts are
 When creating a **new account** an existing account will need to fund the initial balance and pay for the transaction fee.
 {% endhint %}
 
+## Basic
+
+```java
+Client client = ExampleHelper.createHederaClient();
+```
+
+## Advanced
+
 | Constructor | Description |
 | :--- | :--- |
 | `AccountCreateTransaction()` | Initializes the AccountCreateTransaction object |
@@ -18,7 +26,7 @@ When creating a **new account** an existing account will need to fund the initia
 new AccountCreateTransaction()
   .setKey()
   .setInitialBalance()
-  .setMaxTransactionFee()
+  .setTransactionFee()
   .setAutoRenewPeriod()
   .setReceiverSignatureRequired()
   .setReceiveRecordThreshold()
@@ -56,11 +64,10 @@ new AccountCreateTransaction()
       <td style="text-align:left">The initial balance for the account in tinybars</td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
+      <td style="text-align:left"><code>setTransactionFee(&lt;fee&gt;)</code>
       </td>
       <td style="text-align:center">long</td>
-      <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
-        The actual fee may be less, but will never be greater than this value.</td>
+      <td style="text-align:left">The fee for the transaction</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setAutoRenewPeriod(&lt;autoRenewPeriod&gt;)</code>
@@ -134,23 +141,22 @@ new AccountCreateTransaction()
         be created</td>
     </tr>
   </tbody>
-</table>## Example:
+</table>### Example:
 
 ```java
-Transaction tx = new AccountCreateTransaction()
-     // The only _required_ property here is `key`
-     .setKey(newKey.getPublicKey())
-     .setInitialBalance(1000)
-     .setMaxTransactionFee(10000000)
-     .build(client);
-
-tx.execute(client);
+AccountCreateTransaction tx = new AccountCreateTransaction(client)
+    // The only _required_ property here is `key`
+    .setKey(newKey.getPublicKey())
+    .setInitialBalance(1000)
+    .setTransactionFee(10_000_000);
 
 // This will wait for the receipt to become available
-TransactionReceipt receipt = tx.getReceipt(client);
+TransactionReceipt receipt = tx.executeForReceipt();
 
 AccountId newAccountId = receipt.getAccountId();
 
 System.out.println("account = " + newAccountId);
 ```
+
+
 
