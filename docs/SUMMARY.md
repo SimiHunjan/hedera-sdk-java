@@ -23,6 +23,7 @@
 
 ## Consensus
 
+* [Mirror Node Client](consensus/mirror-node-client.md)
 * [Create a topic](consensus/create-a-topic.md)
 * [Subscribe to topic](consensus/untitled.md)
 * [Errors](consensus/errors.md)
