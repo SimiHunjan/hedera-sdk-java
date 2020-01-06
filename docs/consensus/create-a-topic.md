@@ -22,14 +22,6 @@ new ConsensusTopicCreateTransaction()
 
 ## Example
 
-
-
-
-
-| The initial lifetime of the topic and the amount of time to attempt to extend the topic's lifetime by |  |
-| :--- | :--- |
-|  |  // automatically at the topic's expirationTime |
-
 ```java
  final TransactionId transactionId = new ConsensusTopicCreateTransaction()
      .setMaxTransactionFee(1_000_000_000)
