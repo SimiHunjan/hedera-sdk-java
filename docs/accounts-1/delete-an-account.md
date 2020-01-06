@@ -25,8 +25,6 @@ new AccountDeleteTransaction()
 | `setDeleteAccountId(<accountId>)` | [AccountId](../user-defined-data-types.md#accountid) | The ID of the account to be deleted from the Hedera network |
 | `setMaxTransactionFee(<fee>)` | long | The maximum fee to be paid for this transaction executed by this client. The actual fee may be less, but will never be greater than this value. |
 | `setMemo(<memo>)` | String | Any notes or descriptions that should be put into the record \(max length 100\) |
-| `build()` |  | Constructs the object |
-| `execute(<client>)` | Client | Submits the transaction to the Hedera network |
 
 ##  Example
 
@@ -72,6 +70,4 @@ AccountInfo accountInfo = new AccountInfoQuery()
     .execute(client);
 
 ```
-
-## Advanced
 
