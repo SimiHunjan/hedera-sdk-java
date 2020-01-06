@@ -151,4 +151,9 @@ final ConsensusClient consensusClient = new ConsensusClient(MIRROR_NODE_ADDRESS)
       </td>
     </tr>
   </tbody>
-</table>
+</table>### Example
+
+```java
+
+```
+
