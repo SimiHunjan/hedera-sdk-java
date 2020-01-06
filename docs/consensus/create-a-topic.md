@@ -1,6 +1,6 @@
 # Create a topic
 
-
+Creates a new topic.
 
 | Constructor | Description |
 | :--- | :--- |

@@ -15,7 +15,7 @@
 * [Update an account](accounts-1/update-an-account.md)
 * [Transfer cryptocurrency](accounts-1/transfer-cryptocurrency.md)
 * [Delete an account](accounts-1/delete-an-account.md)
-* [Get account balance](accounts-1/get-account-balance.md)
+* [Get account balance](accounts-1/get-account-balance/README.md)
 * [Get account info](accounts-1/get-account-info.md)
 * [Get account record](accounts-1/get-account-record.md)
 * [Get account claims](accounts-1/get-account-claims.md)
@@ -25,7 +25,10 @@
 
 * [Mirror Node Client](consensus/mirror-node-client.md)
 * [Create a topic](consensus/create-a-topic.md)
-* [Subscribe to topic](consensus/untitled.md)
+* [Update a topic](consensus/untitled.md)
+* [Submit to a topic](consensus/submit-to-a-topic.md)
+* [Delete a Topic](consensus/delete-a-topic.md)
+* [Get topic info](consensus/get-topic-info.md)
 * [Errors](consensus/errors.md)
 
 ## File Service <a id="file-service-1"></a>
