@@ -134,11 +134,22 @@ new AccountCreateTransaction()
       <td style="text-align:left">The ID of the transaction</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>setNodeAccountId(&lt;accountId&gt;)</code>
+      </td>
+      <td style="text-align:center">AccountId</td>
+      <td style="text-align:left">The node that will submit the transaction to the Hedera network</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>setNewRealAdminKey(&lt;publicKey&gt;)</code>
       </td>
       <td style="text-align:center">PublicKey</td>
       <td style="text-align:left">if realmID is null, then this the admin key for the new realm that will
         be created</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:center"></td>
+      <td style="text-align:left"></td>
     </tr>
   </tbody>
 </table>### Example:
