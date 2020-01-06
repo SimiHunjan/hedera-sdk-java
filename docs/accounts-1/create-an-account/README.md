@@ -147,9 +147,9 @@ new AccountCreateTransaction()
         be created</td>
     </tr>
     <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">setGenerateRecord(&lt;generateRecord&gt;)</td>
+      <td style="text-align:center">boolean</td>
+      <td style="text-align:left">Whether a record should be generated for the transaction or not</td>
     </tr>
   </tbody>
 </table>### Example:
