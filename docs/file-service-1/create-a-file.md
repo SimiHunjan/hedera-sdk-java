@@ -13,7 +13,7 @@ new FileCreateTransaction()
     .addKey()
     .setContents()
     .setExpirationTime()
-    .setMaxTransactionFee()
+    .setTransactionFee()
     .setMemo()
     .execute()
 

@@ -36,7 +36,9 @@ new AccountCreateTransaction()
   .setShardId()
   .setProxyAccountId()
   .setTransactionId()
+  .setNodeAccountId()
   .setNewRealmAdminKey()
+  .setGenerateRecord()
   .build();
 ```
 
@@ -67,7 +69,7 @@ new AccountCreateTransaction()
       <td style="text-align:left"><code>setTransactionFee(&lt;fee&gt;)</code>
       </td>
       <td style="text-align:center">long</td>
-      <td style="text-align:left">The fee for the transaction</td>
+      <td style="text-align:left">The fee for the transaction in tinybars</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setAutoRenewPeriod(&lt;autoRenewPeriod&gt;)</code>
@@ -134,11 +136,29 @@ new AccountCreateTransaction()
       <td style="text-align:left">The ID of the transaction</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>setNodeAccountId(&lt;accountId&gt;)</code>
+      </td>
+      <td style="text-align:center">AccountId</td>
+      <td style="text-align:left">The node that will submit the transaction to the Hedera network</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>setNewRealAdminKey(&lt;publicKey&gt;)</code>
       </td>
       <td style="text-align:center">PublicKey</td>
       <td style="text-align:left">if realmID is null, then this the admin key for the new realm that will
         be created</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setGenerateRecord(&lt;generateRecord&gt;)</code>
+      </td>
+      <td style="text-align:center">boolean</td>
+      <td style="text-align:left">Whether a record should be generated for the transaction or not</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>executeForReceipt()</code>
+      </td>
+      <td style="text-align:center">TransactionReceipt</td>
+      <td style="text-align:left">Returns the receipt for the transaction</td>
     </tr>
   </tbody>
 </table>### Example:

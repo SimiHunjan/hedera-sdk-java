@@ -15,7 +15,7 @@ new FileContentsQuery()
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
-| `setAccountId(<account>)` | AccountID | The ID of the file to get contents from |
+| `setAccountId(<account>)` | AccountId | The ID of the file to get contents from |
 
 ## Example
 
