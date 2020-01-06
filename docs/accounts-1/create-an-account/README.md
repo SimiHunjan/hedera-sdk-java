@@ -36,7 +36,9 @@ new AccountCreateTransaction()
   .setShardId()
   .setProxyAccountId()
   .setTransactionId()
+  .setNodeAccountId()
   .setNewRealmAdminKey()
+  .setGenerateRecord()
   .build();
 ```
 
@@ -147,9 +149,16 @@ new AccountCreateTransaction()
         be created</td>
     </tr>
     <tr>
-      <td style="text-align:left">setGenerateRecord(&lt;generateRecord&gt;)</td>
+      <td style="text-align:left"><code>setGenerateRecord(&lt;generateRecord&gt;)</code>
+      </td>
       <td style="text-align:center">boolean</td>
       <td style="text-align:left">Whether a record should be generated for the transaction or not</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>executeForReceipt()</code>
+      </td>
+      <td style="text-align:center">TransactionReceipt</td>
+      <td style="text-align:left">Returns the receipt for the transaction</td>
     </tr>
   </tbody>
 </table>### Example:
