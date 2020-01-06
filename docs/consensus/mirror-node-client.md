@@ -37,11 +37,41 @@ new ConsensusClient()
         <p>Subscribe to a Consensus Service topic; the callback will receive messages</p>
         <p>with consensus timestamps falling on or after the given {@link Instant}</p>
         <p>(which may be in the past or future) and continuing indefinitely afterwards.</p>
+        <p></p>
+        <p><code>consensusStartTime</code>: the lower bound for timestamps (inclusive),
+          may be in the past or future.</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>getMessasges()</code>
+      <td style="text-align:left"><code>getMessasges(&lt;topic, startTime, endTime)</code>
       </td>
+      <td style="text-align:left">TopicId, Instant, Instant</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Get a blocking iterator which returns messages for the given topic with
+          consensus timestamps</p>
+        <p>between two Instants.</p>
+        <p></p>
+        <p><code>startTime</code>: the lower bound for timestamps (inclusive), may
+          be in the past or future.</p>
+        <p><code>endTime</code> : the upper bound for timestamps (exclusive), may
+          also be in the past or future.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getMessageUntil(&lt;topic, endTime&gt;)</code>
+      </td>
+      <td style="text-align:left">TopicId, Instant</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Get a blocking iterator which returns messages for the given topic with
+          consensus timestamps starting now and continuing until the given Instant</p>
+        <p><code>endTime</code> : the upper bound for timestamps (exclusive), may
+          be in the past or future.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
       <td style="text-align:left"></td>
       <td style="text-align:left"></td>
     </tr>
