@@ -112,11 +112,10 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
+      <td style="text-align:left"><code>setTransactionFee(&lt;fee&gt;)</code>
       </td>
       <td style="text-align:left">long</td>
-      <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
-        The actual fee may be less, but will never be greater than this value.</td>
+      <td style="text-align:left">The fee for the transaction in tinybars</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setProxyAccount(&lt;accountId&gt;)</code>

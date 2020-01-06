@@ -19,53 +19,15 @@ new FileCreateTransaction()
 
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>addKey(&lt;key&gt;)</code>
-      </td>
-      <td style="text-align:left"><a href="https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java">Ed25519PublicKey</a>
-      </td>
-      <td style="text-align:left">The public key of the owner of the file</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setContents(&lt;contents&gt;)</code>
-      </td>
-      <td style="text-align:left">bytes[]</td>
-      <td style="text-align:left">The file contents</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setExpirationTime(&lt;expiration&gt;)</code>
-      </td>
-      <td style="text-align:left">Instant</td>
-      <td style="text-align:left">The time at which this file should expire (unless FileUpdateTransaction
-        is used before then to extend its life)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
-      </td>
-      <td style="text-align:left">long</td>
-      <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
-        The actual fee may be less, but will never be greater than this value.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>A short note attached to the transaction</p>
-        <p>Max: 100 bytes</p>
-      </td>
-    </tr>
-  </tbody>
-</table>## Example
+| Method | Type | Description |
+| :--- | :--- | :--- |
+| `addKey(<key>)` | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) | The public key of the owner of the file |
+| `setContents(<contents>)` | bytes\[\] | The file contents |
+| `setExpirationTime(<expiration>)` | Instant | The time at which this file should expire \(unless FileUpdateTransaction is used before then to extend its life\) |
+| `setTransactionFee(<fee>)` | long | The fee for the transaction in tinybars |
+| `setMemo(<memo>)` | String | Any notes or descriptions that should be put into the record \(max length 100\) |
+
+## Example
 
 ```java
 // The file is required to be a byte array,
