@@ -12,3 +12,9 @@ new ConsensusTopicDeleteTransaction()
 | :--- | :--- | :--- |
 | `setTopicId(<topicId>)` | TopicID |  |
 
+## Example
+
+```java
+
+```
+
