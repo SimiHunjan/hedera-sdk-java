@@ -19,6 +19,10 @@ new ConsensusTopicUpdateTransaction()
 | `setExpirationTime(<expirationTime>)` | Instant |  |
 | `setAutoRenewPeriod(<duration>)` | Duration |  |
 | `setAutoRenewAccountId(<autoRenewAccountId>)` | AccountId |  |
+| `setMaxTransactionFee(<fee>)` | long |  |
+| `setTransactionId(<transactionId>)` | TransactionId |  |
+| `setTransactionValidDuration(<duration>)` | Duration |  |
+| `setNodeAccountId(<accountId>)` | AccountId |  |
 
 ## Example
 
