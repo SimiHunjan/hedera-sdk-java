@@ -14,47 +14,6 @@ When creating a **new account** an existing account will need to fund the initia
 | :--- | :--- |
 | `AccountCreateTransaction()` | Initializes the AccountCreateTransaction object |
 
-## Basic
-
-```java
-new AccountCreateTransaction()
-  .setKey()
-  .setInitialBalance()
-  .setMaxTransactionFee()
-  .build();
-```
-
-### 
-
-| Methods | Type | Description |
-| :--- | :---: | :--- |
-| `setKey(<key>)` | Ed25519PrivateKey | The private key generated for the new account. |
-| `setInitialBalance(<amount>)` | uint64 | The initial balance for the account in tinybars |
-| `build()` |  | Builds the object |
-| `execute(<client>)` | Client | Submits the transaction to the Hedera network |
-
-### Example:
-
-```java
-Transaction tx = new AccountCreateTransaction()
-     // The only _required_ property here is `key`
-     .setKey(newKey.getPublicKey())
-     .setInitialBalance(1000)
-     .setMaxTransactionFee(10000000)
-     .build(client);
-
-tx.execute(client);
-
-// This will wait for the receipt to become available
-TransactionReceipt receipt = tx.getReceipt(client);
-
-AccountId newAccountId = receipt.getAccountId();
-
-System.out.println("account = " + newAccountId);
-```
-
-## Advanced
-
 ```java
 new AccountCreateTransaction()
   .setKey()
@@ -64,16 +23,10 @@ new AccountCreateTransaction()
   .setReceiverSignatureRequired()
   .setReceiveRecordThreshold()
   .setSendRecordThreshold()
-  .setMemo()
-  .setRealmId()
-  .setShardId()
-  .setProxyAccountId()
-  .setTransactionId()
-  .setNewRealmAdminKey()
   .build();
 ```
 
-
+### 
 
 <table>
   <thead>
@@ -84,6 +37,18 @@ new AccountCreateTransaction()
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td style="text-align:left"><code>setKey(&lt;key&gt;)</code>
+      </td>
+      <td style="text-align:center">Ed25519PrivateKey</td>
+      <td style="text-align:left">The private key generated for the new account.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setInitialBalance(&lt;amount&gt;)</code>
+      </td>
+      <td style="text-align:center">uint64</td>
+      <td style="text-align:left">The initial balance for the account in tinybars</td>
+    </tr>
     <tr>
       <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
       </td>
@@ -130,43 +95,24 @@ new AccountCreateTransaction()
       <td style="text-align:left">Creates a record for any transaction that withdraws more than x value
         of tinybars.</td>
     </tr>
-    <tr>
-      <td style="text-align:left"><code>setMemo()</code>
-      </td>
-      <td style="text-align:center">String</td>
-      <td style="text-align:left">Any notes or descriptions that should be put into the record (max length
-        100)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setRealmId(&lt;realmId&gt;)</code>
-      </td>
-      <td style="text-align:center">long</td>
-      <td style="text-align:left">The ID of the realm</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setShardId(&lt;shardId&gt;)</code>
-      </td>
-      <td style="text-align:center">long</td>
-      <td style="text-align:left">The ID of the shard</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setTransactionId(&lt;transactionId&gt;)</code>
-      </td>
-      <td style="text-align:center">TransactionId</td>
-      <td style="text-align:left">The ID of the transaction</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setNodeAccountId(&lt;accountId&gt;)</code>
-      </td>
-      <td style="text-align:center">AccountId</td>
-      <td style="text-align:left">The node that will submit the transaction to the Hedera network</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setNewRealAdminKey(&lt;publicKey&gt;)</code>
-      </td>
-      <td style="text-align:center">PublicKey</td>
-      <td style="text-align:left">if realmID is null, then this the admin key for the new realm that will
-        be created</td>
-    </tr>
   </tbody>
-</table>
+</table>## Example:
+
+```java
+Transaction tx = new AccountCreateTransaction()
+     // The only _required_ property here is `key`
+     .setKey(newKey.getPublicKey())
+     .setInitialBalance(1000)
+     .setMaxTransactionFee(10000000)
+     .build(client);
+
+tx.execute(client);
+
+// This will wait for the receipt to become available
+TransactionReceipt receipt = tx.getReceipt(client);
+
+AccountId newAccountId = receipt.getAccountId();
+
+System.out.println("account = " + newAccountId);
+```
+
