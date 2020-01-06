@@ -1,4 +1,4 @@
-# Getting Started
+# \[Getting Started\] Edit
 
 ## Step 1: Create an account
 
