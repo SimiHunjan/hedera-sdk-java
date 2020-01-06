@@ -29,7 +29,9 @@ new AccountUpdateTransaction()
   .setExpirationTime()
   .setSendRecordThreshold()
   .setReceiveRecordThreshold()
+  .setMaxTransactionFee()
   .setProxyAccount()
+  .setMemo()
   .build();
 ```
 
@@ -110,6 +112,13 @@ new AccountUpdateTransaction()
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
+        The actual fee may be less, but will never be greater than this value.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>setProxyAccount(&lt;accountId&gt;)</code>
       </td>
       <td style="text-align:left">AccountId</td>
@@ -119,31 +128,47 @@ new AccountUpdateTransaction()
         </p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
+      </td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Any notes or descriptions that should be put into the record (max length
+        100)</td>
+    </tr>
   </tbody>
 </table>
 
 ## Example:
 
 ```java
-Transaction transaction = new AccountUpdateTransaction()
-     .setAccountForUpdate(accountId)
-     .setKey(newKey.getPublicKey())
-     // Sign with the previous key and the new key
-     .build(client)
-     .sign(originalKey)
-     .sign(newKey);
+Client client = ExampleHelper.createHederaClient();
+client.setMaxTransactionFee(800000000);
 
-System.out.println("transaction ID: " + transaction.id);
+// First, we create a new account so we don't affect our account
 
-transaction.execute(client);
-// (important!) wait for the transaction to complete by querying the receipt
-transaction.getReceipt(client);
+Ed25519PrivateKey originalKey = Ed25519PrivateKey.generate();
+AccountId accountId = client.createAccount(originalKey.getPublicKey(), 0);
+
+// Next, we update the key
+
+Ed25519PrivateKey newKey = Ed25519PrivateKey.generate();
+
+System.out.println(" :: update public key of account " + accountId);
+System.out.println("set key = " + newKey.getPublicKey());
+
+new AccountUpdateTransaction(client).setAccountForUpdate(accountId)
+    .setKey(newKey.getPublicKey())
+    // Sign with the previous key and the new key
+    .sign(originalKey)
+    .sign(newKey)
+    .executeForReceipt();
 
 // Now we fetch the account information to check if the key was changed
+
 System.out.println(" :: getAccount and check our current key");
 
 AccountInfo info = client.getAccount(accountId);
 
-System.out.println("key = " + info.key);
+System.out.println("key = " + info.getKey());
 ```
 
