@@ -10,7 +10,7 @@
 new FileAppendTransaction()
      .setFileId()
      .setContents()
-     .setMaxTransactionFee()
+     .setTransactionFee()
      .setMemo()
      .build();
 ```

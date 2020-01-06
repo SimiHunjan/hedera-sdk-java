@@ -14,7 +14,7 @@ description: AccountDeleteTransaction
 new AccountDeleteTransaction()
 .setTransferAccountId()
 .setDeleteAccountId()
-.setMaxTransactionFee()
+.setTransactionFee()
 .setMemo()
 .build();
 ```

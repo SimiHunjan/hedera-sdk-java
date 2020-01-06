@@ -9,7 +9,7 @@
 ```java
 new FileDeleteTransaction()
      .setFileId()
-     .setMaxTransactionFee()
+     .setTransactionFee()
      .setTransactionId()
      .setNodeAccountId()
      .setTransactionValidDuration()

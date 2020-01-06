@@ -29,7 +29,7 @@ new AccountUpdateTransaction()
   .setExpirationTime()
   .setSendRecordThreshold()
   .setReceiveRecordThreshold()
-  .setMaxTransactionFee()
+  .setTransactionFee()
   .setProxyAccount()
   .setMemo()
   .build();
