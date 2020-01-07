@@ -11,7 +11,7 @@
 ## Accounts <a id="accounts-1"></a>
 
 * [Create an account](accounts-1/create-an-account/README.md)
-  * [Create an advanced account](accounts-1/create-an-account/create-an-advanced-account.md)
+  * [Accounts & Keys](accounts-1/create-an-account/create-an-advanced-account.md)
 * [Update an account](accounts-1/update-an-account.md)
 * [Transfer cryptocurrency](accounts-1/transfer-cryptocurrency.md)
 * [Delete an account](accounts-1/delete-an-account.md)
