@@ -9,7 +9,7 @@
 ```java
 new FileDeleteTransaction()
      .setFileId()
-     .setMaxTransactionFee()
+     .setTransactionFee()
      .setTransactionId()
      .setNodeAccountId()
      .setTransactionValidDuration()
@@ -19,63 +19,17 @@ new FileDeleteTransaction()
 
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Method</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>setFileId(&lt;fileId&gt;)</code>
-      </td>
-      <td style="text-align:left">FileId</td>
-      <td style="text-align:left">The ID of the file to delete</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
-      </td>
-      <td style="text-align:left">long</td>
-      <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
-        The actual fee may be less, but will never be greater than this value.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setTransactionId(&lt;transactionId&gt;)</code>
-      </td>
-      <td style="text-align:left">TransactionID</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setNodeAccountId(&lt;accountId&gt;)</code>
-      </td>
-      <td style="text-align:left">AccountID</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setTransactionValidDuration(&lt;duration&gt;)</code>
-      </td>
-      <td style="text-align:left">Duration</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>A short note attached to the transaction</p>
-        <p>Max: 100 bytes</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>sign(&lt;key&gt;)</code>
-      </td>
-      <td style="text-align:left">PrivateKey</td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>## Example
+| Method | Type | Description |
+| :--- | :--- | :--- |
+| `setFileId(<fileId>)` | FileId | The ID of the file to delete |
+| `setTransactionFee(<fee>)` | long | The fee for the transaction in tinybars |
+| `setTransactionId(<transactionId>)` | TransactionID |  |
+| `setNodeAccountId(<accountId>)` | AccountID |  |
+| `setTransactionValidDuration(<duration>)` | Duration |  |
+| `setMemo(<memo>)` | String | Any notes or descriptions that should be put into the record \(max length 100\) |
+| `sign(<key>)` | PrivateKey |  |
+
+## Example
 
 ```java
 TransactionId fileDeleteTxnId = new FileDeleteTransaction()
