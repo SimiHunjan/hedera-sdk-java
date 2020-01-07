@@ -50,10 +50,43 @@ IntelliJ and Eclipse are popular IDEs that can be used to open the project.
 5.2 ****Run **CreateAccount.java** file
 
 ```java
+package com.hedera.hashgraph.sdk.examples.simple;
 
+import com.hedera.hashgraph.sdk.Client;
+import com.hedera.hashgraph.sdk.HederaException;
+import com.hedera.hashgraph.sdk.account.AccountId;
+import com.hedera.hashgraph.sdk.crypto.ed25519.Ed25519PrivateKey;
+import com.hedera.hashgraph.sdk.crypto.ed25519.Ed25519PublicKey;
+import com.hedera.hashgraph.sdk.examples.ExampleHelper;
+
+public final class CreateAccount {
+    private CreateAccount() { }
+
+    public static void main(String[] args) throws HederaException {
+        // Generate a Ed25519 private, public key pair
+        Ed25519PrivateKey newKey = Ed25519PrivateKey.generate();
+        Ed25519PublicKey newPublicKey = newKey.getPublicKey();
+
+        System.out.println("private key = " + newKey);
+        System.out.println("public key = " + newPublicKey);
+
+        Client client = ExampleHelper.createHederaClient();
+        int maxTransactionFee = 100000000;
+        AccountId newAccountId = client.setMaxTransactionFee(maxTransactionFee).createAccount(newPublicKey, 100000000);
+
+        System.out.println("account = " + newAccountId);
+
+        AccountId accountId = new AccountId(0 ,0 ,10);
+        System.out.println(accountId);
+    }
+}
 ```
 
+#### Example Output:
 
+`private key = 302e020100300506032b657004220420a776a6be436984f45ccf3b03caab4909fb259182019c25bdda11ac208ede5cde  
+public key = 302a300506032b657003210017ff0adea0192e362b3357ee207eeef7a7a41c28f905d8008a86b75d96bd6493  
+account = 0.0.141642`
 
 If you have any issues running the examples, please connect with with us via Discord!
 
