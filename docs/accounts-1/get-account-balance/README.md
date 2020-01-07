@@ -24,27 +24,26 @@ System.out.println(transactionId);
 
 ## Advanced 
 
-| Constructor | Type | Description |
-| :--- | :--- | :--- |
-| `AccountBalanceQuery(<client>)` | Client | Initializes the AccountBalanceQuery object |
+| Constructor | Description |
+| :--- | :--- |
+| `AccountBalanceQuery()` | Initializes the AccountBalanceQuery object |
 
 ```java
-new AccountBalanceQuery();
+new AccountBalanceQuery()
+.setAccountId()
+.execute();
 ```
 
-| Methods | Type | Description |
+| Method | Type | Description |
 | :--- | :--- | :--- |
-| `setAccountId(<accountId>)` | AccountId | The account ID of the account to return the balance for |
+| `setAccountId(<account>)` | [AccountId](../../user-defined-data-types.md#accountid) | The accountId of the account to retrieve the balance for |
 
-### Example
+## Example
 
 ```java
-AccountId operatorId = ExampleHelper.getOperatorId();
-Client client = ExampleHelper.createHederaClient();
-
-AccountBalanceQuery query = new AccountBalanceQuery(client).setAccountId(operatorId);
-
-Long balance = query.execute();
+Long balance = new AccountBalanceQuery()
+     .setAccountId(OPERATOR_ID)
+     .execute(client);
 
 System.out.println("balance = " + balance);
 ```

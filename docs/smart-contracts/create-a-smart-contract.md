@@ -23,7 +23,7 @@ new ContractCreateTransaction()
      .setGas()
      .setInitialBalance()
      .setAutoRenewPeriod()
-     .setTransactionFee()
+     .setMaxTransactionFee()
      .setMemo()
      .execute()
      
@@ -31,18 +31,101 @@ new ContractCreateTransaction()
 
 ```
 
-| Method | Type | Description |
-| :--- | :--- | :--- |
-| `setAdminKey(<key>)` | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) | The state of the instance and its fields can be modified arbitrarily if this key signs a transaction to modify it. If this is null, then such modifications are not possible, and there is no administrator that can override the normal operation of this smart contract instance. |
-| `setByteCodeFile(<fileId>)` | FileId | The `fileId` of the file that contains the smart contract bytecode |
-| `setGas(<gas>)` | long | Gas amount to run the constructor |
-| `setInitialBalance(<amount>)` | long | The initial number of tinybars to put into the cryptocurrency account associated with and owned by the smart contract. |
-| `setAutoRenewPeriod(<duration>)` | Duration | The period of time in which the smart contract will auto-renew in seconds. Duration type is in seconds. For example, one hour would result in the input value of 3600 seconds. |
-| `setMemo(<memo>)` | String | Any notes or descriptions that should be put into the record \(max length 100\) |
-
-## Example
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>setAdminKey(&lt;key&gt;)</code>
+      </td>
+      <td style="text-align:left"><a href="https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java">Ed25519PublicKey</a>
+      </td>
+      <td style="text-align:left">The state of the instance and its fields can be modified arbitrarily if
+        this key signs a transaction to modify it. If this is null, then such modifications
+        are not possible, and there is no administrator that can override the normal
+        operation of this smart contract instance.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setByteCodeFile(&lt;fileId&gt;)</code>
+      </td>
+      <td style="text-align:left">FileId</td>
+      <td style="text-align:left">The <code>fileId</code> of the file that contains the smart contract bytecode</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setGas(&lt;gas&gt;)</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">Gas amount to run the constructor</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setInitialBalance(&lt;amount&gt;)</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">The initial number of tinybars to put into the cryptocurrency account
+        associated with and owned by the smart contract.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setAutoRenewPeriod(&lt;duration&gt;)</code>
+      </td>
+      <td style="text-align:left">Duration</td>
+      <td style="text-align:left">The period of time in which the smart contract will auto-renew in seconds.
+        Duration type is in seconds. For example, one hour would result in the
+        input value of 3600 seconds.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
+        The actual fee may be less, but will never be greater than this value.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
+      </td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">
+        <p>A short note attached to the transaction</p>
+        <p>Max: 100 bytes</p>
+      </td>
+    </tr>
+  </tbody>
+</table>## Example
 
 ```java
+// create the contract's bytecode file
+TransactionId fileTxId = new FileCreateTransaction().setExpirationTime(
+    Instant.now()
+        .plus(Duration.ofSeconds(3600)))
+    // Use the same key as the operator to "own" this file
+    .addKey(OPERATOR_KEY.getPublicKey())
+    .setContents(byteCodeHex.getBytes())
+    .execute(client);
 
+TransactionReceipt fileReceipt = fileTxId.getReceipt(client);
+FileId newFileId = fileReceipt.getFileId();
+
+System.out.println("contract bytecode file: " + newFileId);
+
+// create the contract itself
+TransactionId contractTxId = new ContractCreateTransaction()
+    .setAutoRenewPeriod(Duration.ofHours(1))
+    .setGas(217000)
+    .setBytecodeFile(newFileId)
+    // set an admin key so we can delete the contract later
+    .setAdminKey(OPERATOR_KEY.getPublicKey())
+    .execute(client);
+
+TransactionReceipt contractReceipt = contractTxId.getReceipt(client);
+
+System.out.println(contractReceipt.toProto());
+
+ContractId newContractId = contractReceipt.getContractId();
+
+System.out.println("new contract ID: " + newContractId);
 ```
 
