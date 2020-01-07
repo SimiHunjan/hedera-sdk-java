@@ -8,6 +8,8 @@ The example below uses the client object and calls the `getAccountBalance` metho
 | :--- | :--- | :--- |
 | `getAccountBalance(<accountId>)` | [AccountId](../../user-defined-data-types.md#accountid) | Get the balance of an account |
 
+### Example
+
 ```java
 AccountId operatorId = ExampleHelper.getOperatorId();
 Client client = ExampleHelper.createHederaClient();

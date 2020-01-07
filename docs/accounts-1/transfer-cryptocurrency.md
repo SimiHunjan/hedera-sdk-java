@@ -18,7 +18,7 @@ There are `100_000_000` tinybars in one hbar.
 new CryptoTransferTransaction()
     .addSender()
     .addRecipient()
-    .setTransactionFee()
+    .setMaxTransactionFee()
     .setNodeAccountId()
     .setTransactionId()
     .setMemo()
