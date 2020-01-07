@@ -1,12 +1,26 @@
 # Mirror Node Client
 
-| Constructor |  | Description |
+Constructs the mirror node client.
+
+| Constructor | Type | Description |
 | :--- | :--- | :--- |
-| `ConsensusClient(<endpoint>)` | String | Intializes the ConsensusClient object |
+| `ConsensusClient(<endpoint>)` | String | Initializes the ConsensusClient object |
 
 ```java
-new ConsensusClient()
+new ConsensusClient();
 ```
+
+
+
+### Example
+
+```java
+private static final String MIRROR_NODE_ADDRESS = Objects.requireNonNull(Dotenv.load().get("MIRROR_NODE_ADDRESS"));
+
+final ConsensusClient consensusClient = new ConsensusClient(MIRROR_NODE_ADDRESS);
+```
+
+## Advanced
 
 <table>
   <thead>
@@ -70,13 +84,8 @@ new ConsensusClient()
           be in the past or future.</p>
       </td>
     </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
   </tbody>
-</table>## Example
+</table>### Example
 
 ```java
 
