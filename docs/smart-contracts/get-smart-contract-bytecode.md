@@ -9,12 +9,14 @@
 ```java
 new ContractByteCodeQuery()
     .setContractId()
+    .setPaymentAmount()
     .execute();
 ```
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setContractId(<contractId>)` | [ContractId](../user-defined-data-types.md#contractid) | The ID for the contract for which the bytecode is requested |
+| `setPaymentAmount(<paymentAmount>)` | long |  |
 
 ## Example
 
