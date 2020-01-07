@@ -3,7 +3,8 @@
 In this example, you will do the following:
 
 * [ ] Create a Public Testnet account
-* [ ] Download and compile a hedera-sdk-java example file
+* [ ] Download the hedera-java-sdk
+* [ ] compile a hedera-sdk-java example file
 
 ## Step 1: Create an account
 
