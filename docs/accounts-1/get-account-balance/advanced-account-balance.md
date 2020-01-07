@@ -1,13 +1,14 @@
 # Advanced account balance
 
+You can also create an `AccountBalanceQuery()` object.
+
 | Constructor | Description |
 | :--- | :--- |
 | `AccountBalanceQuery()` | Initializes the AccountBalanceQuery object |
 
 ```java
 new AccountBalanceQuery()
-.setAccountId()
-.execute();
+.setAccountId();
 ```
 
 | Method | Type | Description |
