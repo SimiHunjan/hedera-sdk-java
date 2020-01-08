@@ -1,7 +1,5 @@
 # Submit to a topic
 
-Submit a message to a topic.
-
 | Constructor | Description |
 | :--- | :--- |
 | `ConsensusMessageSubmitTransaction()` | Initializes a ConsensusMessageSubmitTransaction object |
@@ -10,36 +8,13 @@ Submit a message to a topic.
 new ConsensusMessageSubmitTransaction()
 ```
 
-## Basic
-
 | Methods | Type | Description |
 | :--- | :--- | :--- |
 | `setTopicID(<topic>` | TopicID | The ID of the topic to submit a message to |
-| `setMessage(<message>)` | byte\[ \] | The message to submit in byte format. Max size of the Transaction \(including signatures\) is 4kB. |
+| `setMessage(<message>)` | byte\[ \] | The message to submit in byte format |
 | `setMessage(<message>)` | String | The message to submit in string format |
 
-### Example
-
-```java
-new ConsensusMessageSubmitTransaction()
-    .setTopicId(topicId)
-    .setMessage("hello, HCS! " + i)
-    .execute(client)
-    .getReceipt(client);
-```
-
-## Advanced
-
-| Methods | Types | Description |
-| :--- | :--- | :--- |
-| `setMaxTransactionFee(<fee>)` | long |  |
-| `setTransactionId(<transactionId>)` | TransactionId |  |
-| `setTransactionValidDuration(<duration>)` | Duration |  |
-| `setNodeAccountId(<accountId>)` | AccountId |  |
-| `setMemo(<memo>)` | String |  |
-| `sign(<key>)` |  |  |
-
-### Example
+## Example
 
 ```java
 
