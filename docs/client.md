@@ -34,18 +34,14 @@ You can store these variables in a .env file at the root directory of the sdk. P
     <tr>
       <td style="text-align:left"><code>Client(&lt;nodeAccountId&gt;, &lt;nodeURL&gt;)</code>
       </td>
-      <td style="text-align:center">AccountId, String</td>
+      <td style="text-align:center">AccountId, string</td>
       <td style="text-align:left">
         <p>Constructs a client object</p>
         <p>Map&lt;AccountId, String&gt;</p>
       </td>
     </tr>
   </tbody>
-</table>```java
-new Client();
-```
-
-<table>
+</table><table>
   <thead>
     <tr>
       <th style="text-align:left">Methods</th>
@@ -78,6 +74,12 @@ new Client();
         will be paid for by this account Id and and signed by this key</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>putNode(&lt;nodeAccountId&gt;, &lt;nodeURL&gt;)</code>
+      </td>
+      <td style="text-align:center">AccountId, string</td>
+      <td style="text-align:left">Insert or update a node in the client</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>getMaxQueryPayment()</code>
       </td>
       <td style="text-align:center">long</td>
@@ -91,25 +93,23 @@ new Client();
     </tr>
   </tbody>
 </table>{% hint style="warning" %}
-The **max transaction fee** and **max query payment** are both set to 1\_000\_000 tinybar \(1 hbar\).  This amount can be modified by editing the [Client.java](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/Client.java) class or by using `setMaxTransactionFee()` and `setMaxQueryPayment()`. 
+The **maximum transaction fee** and **maximum query payment** are both set to 1\_000\_000 tinybar \(1 hbar\).  This amount can be modified by editing the [Client.java](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/Client.java) class or by using setMaxTransactionFee\(\). 
 {% endhint %}
 
 ### Create Client Example
 
  .env file:
 
-
-
 {% tabs %}
 {% tab title="Single Node" %}
-```text
+```java
 # Network Node ID and Address
-NODE_ID= <node account ID>
+NODE_ID= node AccountId
 NODE_ADDRESS= x.testnet.hedera.com:PORT_NUMBER
 
 # Operator ID and Private Key
-OPERATOR_ID= //accountId of the account paying for tranasactions
-OPERATOR_KEY= //ED25519 Private Key associated with the account
+OPERATOR_ID= AccountId
+OPERATOR_KEY= ED25519 Private Key
 ```
 {% endtab %}
 
