@@ -1,26 +1,12 @@
 # Mirror Node Client
 
-Constructs the mirror node client.
-
-| Constructor | Type | Description |
+| Constructor |  | Description |
 | :--- | :--- | :--- |
-| `ConsensusClient(<endpoint>)` | String | Initializes the ConsensusClient object |
+| `ConsensusClient(<endpoint>)` | String | Intializes the ConsensusClient object |
 
 ```java
-new ConsensusClient();
+new ConsensusClient()
 ```
-
-
-
-### Example
-
-```java
-private static final String MIRROR_NODE_ADDRESS = Objects.requireNonNull(Dotenv.load().get("MIRROR_NODE_ADDRESS"));
-
-final ConsensusClient consensusClient = new ConsensusClient(MIRROR_NODE_ADDRESS);
-```
-
-## Advanced
 
 <table>
   <thead>
@@ -84,29 +70,15 @@ final ConsensusClient consensusClient = new ConsensusClient(MIRROR_NODE_ADDRESS)
           be in the past or future.</p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
   </tbody>
-</table>### Example
+</table>## Example
 
 ```java
-final ConsensusClient consensusClient = new ConsensusClient(MIRROR_NODE_ADDRESS)
-    .setErrorHandler(e -> System.out.println("error in consensus client: " + e));
 
-// To improve responsiveness, you should specify multiple nodes using the
-// `Client(<Map<AccountId, String>>)` constructor instead
-Client client = new Client(NODE_ID, NODE_ADDRESS);
-
-// Defaults the operator account ID and key such that all generated transactions will be paid for
-// by this account and be signed by this key
-client.setOperator(OPERATOR_ID, OPERATOR_KEY);
-
-final TransactionId transactionId = new ConsensusTopicCreateTransaction()
-    .setMaxTransactionFee(1_000_000_000)
-    .execute(client);
-
-final ConsensusTopicId topicId = transactionId.getReceipt(client).getConsensusTopicId();
-
-consensusClient.subscribe(topicId, message -> {
-    System.out.println(message.consensusTimestamp + " received topic message: " + message.getMessageString());
-});
 ```
 
