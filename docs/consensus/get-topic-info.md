@@ -1,6 +1,6 @@
 # Get topic info
 
-
+**Returns:**
 
 | Constructor | Description |
 | :--- | :--- |
