@@ -6,19 +6,6 @@
 | :--- | :--- |
 | `FileDeleteTransaction()` | Initializes the FileDeleteTransaction object |
 
-```java
-new FileDeleteTransaction()
-     .setFileId()
-     .setMaxTransactionFee()
-     .setTransactionId()
-     .setNodeAccountId()
-     .setTransactionValidDuration()
-     .setMemo()
-     .sign()
-     .execute();
-
-```
-
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setFileId(<fileId>)` | FileId | The ID of the file to delete |

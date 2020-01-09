@@ -2,20 +2,15 @@
 
 `FileAppendTransaction()` appends content to the end of an existing file.
 
+### Constructor
+
 | Constructor | Description |
 | :--- | :--- |
 | `FileAppendTransaction()` | Initializes the FileAppendTransaction object |
 
-```java
-new FileAppendTransaction()
-     .setFileId()
-     .setContents()
-     .setMaxTransactionFee()
-     .setMemo()
-     .build();
-```
+### Methods
 
-| Method | Type | Description |
+| Methods | Type | Description |
 | :--- | :--- | :--- |
 | `setFileId(<fileId>)` | FileId | The `fileId` of the file to append content to |
 | `setContents(<content>)` | byte\[ \] | The appended content in byte format |
