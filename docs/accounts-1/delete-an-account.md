@@ -10,21 +10,10 @@ description: AccountDeleteTransaction
 | :--- | :--- |
 | `AccountDeleteTransaction()` | Initializes the AccountDeleteTransaction object |
 
-```java
-new AccountDeleteTransaction()
-.setTransferAccountId()
-.setDeleteAccountId()
-.setMaxTransactionFee()
-.setMemo()
-.build();
-```
-
-| Method | Type | Description |
+| Methods | Type | Description |
 | :--- | :--- | :--- |
 | `setTransferAccountId(<accountId>)` | [AccountId](../user-defined-data-types.md#accountid) | The ID of the account the tinybars will be transferred to from the account that will be deleted |
 | `setDeleteAccountId(<accountId>)` | [AccountId](../user-defined-data-types.md#accountid) | The ID of the account to be deleted from the Hedera network |
-| `setMaxTransactionFee(<fee>)` | long | The maximum fee to be paid for this transaction executed by this client. The actual fee may be less, but will never be greater than this value. |
-| `setMemo(<memo>)` | String | Any notes or descriptions that should be put into the record \(max length 100\) |
 
 ##  Example
 
@@ -70,4 +59,6 @@ AccountInfo accountInfo = new AccountInfoQuery()
     .execute(client);
 
 ```
+
+
 
