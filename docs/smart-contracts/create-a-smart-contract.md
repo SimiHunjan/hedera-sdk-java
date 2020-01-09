@@ -12,13 +12,24 @@ description: ContractCreateTransaction
 Each smart contract has a maximum state size of 1MB which can store up to approximately 16,000 key-value pairs.
 {% endhint %}
 
-## Constructor
-
 | Constructor | Description |
 | :--- | :--- |
 | `ContractCreateTransaction()` | Initializes the ContractCreateTransaction\(\) |
 
-## Methods
+```java
+new ContractCreateTransaction()
+     .setAdminKey()
+     .setByteCodeFile()
+     .setGas()
+     .setInitialBalance()
+     .setAutoRenewPeriod()
+     .setMaxTransactionFee()
+     .setMemo()
+     .execute()
+     
+     
+
+```
 
 | Methods | Type | Description |
 | :--- | :--- | :--- |

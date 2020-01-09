@@ -6,15 +6,24 @@ description: ContractUpdateTransaction
 
 `ContractUpdateTransaction()` updates an existing smart contract instance to the given parameter values. Any null field is left unchanged.
 
-## Constructor
-
 | Constructor | Description |
 | :--- | :--- |
 | `ContractUpdateTransaction()` | Initializes the ContractUpdateTransaction object |
 
-## Methods
+```java
+new ContractUpdateTransaction()
+     .setContractId()
+     .setFileId()
+     .setAdminKey()
+     .setAutoRenewPeriod()
+     .setExpirationTime()
+     .setProxyAccount()
+     .setMaxTransactionFee()
+     .setMemo()
+     .build()
+```
 
-| Methods | Type | Description |
+| Method | Type | Description |
 | :--- | :--- | :--- |
 | `setContractId(<contractId>)` | [ContractId](../user-defined-data-types.md#contractid) | The contract ID instance to update |
 | `setFileId(<fileId>)` | [FileId](../user-defined-data-types.md#fileid) | The file ID of file containing the smart contract bytecode |
@@ -22,6 +31,8 @@ description: ContractUpdateTransaction
 | `setAutoRenewPeriod(<duration>)` | Duration | The instance will charge its account every this many seconds to renew for this long. Duration type is in seconds. For example, one hour duration would result in the value of 3,600 seconds. |
 | `setExpirationTime(<expiration>)` | Instant | Extend the expiration of the instance and its account to this time. |
 | `setProxyAccount(<accountId>)` | [AccountId](../user-defined-data-types.md#accountid) | ID of the account to which this account is proxy staked. |
+| `setMaxTransactionFee(<fee>)` | long | The maximum fee to be paid for this transaction executed by this client. The actual fee may be less, but will never be greater than this value. |
+| `setMemo(<memo>)` | String | Any notes or descriptions that should be put into the record \(max length 100\) |
 
 ## Example
 
