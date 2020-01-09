@@ -6,6 +6,7 @@
 * [Keys](keys.md)
 * [Client](client.md)
 * [Address Book](addressbook.md)
+* [Transaction Builder](transaction-builder.md)
 * [General Errors](global-errors.md)
 
 ## Accounts <a id="accounts-1"></a>
