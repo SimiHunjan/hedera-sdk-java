@@ -18,6 +18,9 @@ The following methods can be called when building the following transaction type
 | `setMaxTransactionFee(<fee>)` | long | Sets the maximum fee, in tinybar, that the client is willing to pay to execute this transaction, which is split between the network and the node. The actual fee assessed may be less than this, in which case you will only be charged that amount. An error is thrown if the assessed fee is greater than this. |
 | `setTransactionValidDuration(<duration>)` | Duration | Sets the the duration that this transaction is valid for. The transaction must reach consensus before this elapses. The duration will be capped at 2 minutes as that is the maximum for the network.  |
 | `setTransactionMemo(<memo>)` | String | Sets any notes or description that should be put into the transaction record \(if one is requested\). Note that a max of length of 100 is enforced. |
+| `sign(<key>)` |  | Expliclity sign the transaction with a private key |
+| `execute(<client>)` | Client | Submits the transaction to the Hedera network for consensus  |
+| `build()` |  | Builds the transaction |
 
 
 
