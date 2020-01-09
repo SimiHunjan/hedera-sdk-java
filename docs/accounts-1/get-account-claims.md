@@ -10,13 +10,6 @@ description: TBD
 | :--- | :--- |
 | `AccountClaimsQuery()` | Initializes the AccountClaimsQueryObject |
 
-```java
-new AccountClaimQuery()
-  .setAccount()
-  .setHash()
-  .build();
-```
-
 | Method | Description |
 | :--- | :--- |
 | `setAccount(<account>)` |  |

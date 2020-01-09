@@ -6,16 +6,9 @@
 | :--- | :--- |
 | `FileContentsQuery()` | Initializes a FileContentQuery object |
 
-```java
-new FileContentsQuery()
-    .setAcountId()
-    .execute();
-
-```
-
 | Method | Type | Description |
 | :--- | :--- | :--- |
-| `setAccountId(<account>)` | AccountID | The ID of the file to get contents from |
+| `setAccountId(<account>)` | AccountId | The ID of the file to get contents from |
 
 ## Example
 

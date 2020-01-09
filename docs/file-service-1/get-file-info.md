@@ -6,12 +6,6 @@
 | :--- | :--- |
 | `FileInfoQuery()` | Initializes the FileInfoQuery object |
 
-```java
-new FileInfoQuery()
-    .setFileId()
-    .execute();
-```
-
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setFileId(<fileId>)` | FileId | The `fileId` of the file to return information for |

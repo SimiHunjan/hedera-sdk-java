@@ -8,17 +8,6 @@
 | :--- | :--- |
 | `FileCreateTransaction` | Initializes the FileCreateTransaction object |
 
-```java
-new FileCreateTransaction()
-    .addKey()
-    .setContents()
-    .setExpirationTime()
-    .setMaxTransactionFee()
-    .setMemo()
-    .execute()
-
-```
-
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `addKey(<key>)` | [Ed25519PublicKey](https://github.com/hashgraph/hedera-sdk-java/blob/master/src/main/java/com/hedera/hashgraph/sdk/crypto/ed25519/Ed25519PublicKey.java) | The public key of the owner of the file |
