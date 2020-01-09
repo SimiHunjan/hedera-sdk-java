@@ -6,6 +6,17 @@
 | :--- | :--- |
 | `FileUpdateTransaction()` | Intializes the FileUpdateTransaction object |
 
+```java
+new FileUpdateTransaction()
+    .setFileId()
+    .addKey()
+    .setContents()
+    .setExpirationTime()
+    .setMaxTransactionFee()
+    .setMemo()
+    .build();
+```
+
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setFileId(<fileId>)` | FileId | The FileID of the file to update |
