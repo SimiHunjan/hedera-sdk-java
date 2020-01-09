@@ -5,7 +5,6 @@
 * [Specialized Data Types](user-defined-data-types.md)
 * [Keys](keys.md)
 * [Client](client.md)
-* [\[Address Book\] EDIT](addressbook.md)
 * [General Errors](global-errors.md)
 
 ## Accounts <a id="accounts-1"></a>

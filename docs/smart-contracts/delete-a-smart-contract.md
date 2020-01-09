@@ -42,7 +42,15 @@
       <td style="text-align:left"><code>setTransactionId(&lt;transactionId&gt;)</code>
       </td>
       <td style="text-align:left">TransactionID</td>
+      <td style="text-align:left">The ID for a transaction.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p></p>
+        <p></p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>setTransactionValidDuration(&lt;duration&gt;)</code>
@@ -60,10 +68,8 @@
       <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
       </td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left">
-        <p>A short note attached to the transaction</p>
-        <p>Max: 100 bytes</p>
-      </td>
+      <td style="text-align:left">Any notes or descriptions that should be put into the record (max length
+        100)</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>sign(&lt;key&gt;)</code>
@@ -76,7 +82,7 @@
 
 ## Example <a id="example"></a>
 
-```text
-​
+```java
+
 ```
 
