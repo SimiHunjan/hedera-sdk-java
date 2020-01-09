@@ -14,19 +14,44 @@ When creating a **new account** an existing account will need to fund the initia
 | :--- | :--- |
 | `AccountCreateTransaction()` | Initializes the AccountCreateTransaction object |
 
+## Basic
+
 ```java
 new AccountCreateTransaction()
   .setKey()
   .setInitialBalance()
   .setMaxTransactionFee()
-  .setAutoRenewPeriod()
-  .setReceiverSignatureRequired()
-  .setReceiveRecordThreshold()
-  .setSendRecordThreshold()
   .build();
 ```
 
 ### 
+
+| Methods | Type | Description |
+| :--- | :---: | :--- |
+| `setKey(<key>)` | Ed25519PrivateKey | The private key generated for the new account. |
+| `setInitialBalance(<amount>)` | uint64 | The initial balance for the account in tinybars |
+
+### Example:
+
+```java
+Transaction tx = new AccountCreateTransaction()
+     // The only _required_ property here is `key`
+     .setKey(newKey.getPublicKey())
+     .setInitialBalance(1000)
+     .setMaxTransactionFee(10000000)
+     .build(client);
+
+tx.execute(client);
+
+// This will wait for the receipt to become available
+TransactionReceipt receipt = tx.getReceipt(client);
+
+AccountId newAccountId = receipt.getAccountId();
+
+System.out.println("account = " + newAccountId);
+```
+
+## Advanced
 
 <table>
   <thead>
@@ -37,18 +62,6 @@ new AccountCreateTransaction()
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td style="text-align:left"><code>setKey(&lt;key&gt;)</code>
-      </td>
-      <td style="text-align:center">Ed25519PrivateKey</td>
-      <td style="text-align:left">The private key generated for the new account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>setInitialBalance(&lt;amount&gt;)</code>
-      </td>
-      <td style="text-align:center">uint64</td>
-      <td style="text-align:left">The initial balance for the account in tinybars</td>
-    </tr>
     <tr>
       <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
       </td>
@@ -96,23 +109,4 @@ new AccountCreateTransaction()
         of tinybars.</td>
     </tr>
   </tbody>
-</table>## Example:
-
-```java
-Transaction tx = new AccountCreateTransaction()
-     // The only _required_ property here is `key`
-     .setKey(newKey.getPublicKey())
-     .setInitialBalance(1000)
-     .setMaxTransactionFee(10000000)
-     .build(client);
-
-tx.execute(client);
-
-// This will wait for the receipt to become available
-TransactionReceipt receipt = tx.getReceipt(client);
-
-AccountId newAccountId = receipt.getAccountId();
-
-System.out.println("account = " + newAccountId);
-```
-
+</table>
