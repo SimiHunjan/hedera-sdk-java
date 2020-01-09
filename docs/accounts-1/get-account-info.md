@@ -17,13 +17,6 @@ This information includes:
 | :--- | :--- |
 | `AccountInfoQuery()` | Initializes the AccountInfoQuery object |
 
-```java
-new AccountInfoQuery()
-     .setAccountId()
-     .setMaxQueryPayment()
-     .execute();
-```
-
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setAccountId(<accountId>)` | AccountId | The accountId of the account to return the information for |
