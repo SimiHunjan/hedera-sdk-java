@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](GettingStarted.md)
-* [\[Getting Started\] Edit](getting-started.md)
+* [Getting Started](getting-started.md)
 * [Specialized Types](user-defined-data-types.md)
 * [Keys](keys.md)
 * [Client](client.md)
