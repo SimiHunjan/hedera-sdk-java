@@ -17,13 +17,25 @@ description: AccountUpdateTransaction
 The account must be signed by the **old key\(s\)** and **new key\(s\)** when updating the keys of an account.
 {% endhint %}
 
-### Constructor
-
 | Constructor | Description |
 | :--- | :--- |
 | `AccountUpdateTransaction()` | Initializes the AccountUpdateTransaction object |
 
-### Methods
+```java
+new AccountUpdateTransaction()
+  .setAccountForUpdate()
+  .setKey()
+  .setAutoRenewPeriod()
+  .setExpirationTime()
+  .setSendRecordThreshold()
+  .setReceiveRecordThreshold()
+  .setMaxTransactionFee()
+  .setProxyAccount()
+  .setMemo()
+  .build();
+```
+
+
 
 <table>
   <thead>
@@ -100,6 +112,13 @@ The account must be signed by the **old key\(s\)** and **new key\(s\)** when upd
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>setMaxTransactionFee(&lt;fee&gt;)</code>
+      </td>
+      <td style="text-align:left">long</td>
+      <td style="text-align:left">The maximum fee to be paid for this transaction executed by this client.
+        The actual fee may be less, but will never be greater than this value.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>setProxyAccount(&lt;accountId&gt;)</code>
       </td>
       <td style="text-align:left">AccountId</td>
@@ -108,6 +127,13 @@ The account must be signed by the **old key\(s\)** and **new key\(s\)** when upd
         <p><em>default:  None</em>
         </p>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>setMemo(&lt;memo&gt;)</code>
+      </td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Any notes or descriptions that should be put into the record (max length
+        100)</td>
     </tr>
   </tbody>
 </table>
@@ -137,5 +163,5 @@ AccountInfo info = client.getAccount(accountId);
 System.out.println("key = " + info.key);
 ```
 
-
+## Advanced 
 
