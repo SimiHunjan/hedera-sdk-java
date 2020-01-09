@@ -6,11 +6,15 @@ description: ContractUpdateTransaction
 
 `ContractUpdateTransaction()` updates an existing smart contract instance to the given parameter values. Any null field is left unchanged.
 
+## Constructor
+
 | Constructor | Description |
 | :--- | :--- |
 | `ContractUpdateTransaction()` | Initializes the ContractUpdateTransaction object |
 
-| Method | Type | Description |
+## Methods
+
+| Methods | Type | Description |
 | :--- | :--- | :--- |
 | `setContractId(<contractId>)` | [ContractId](../user-defined-data-types.md#contractid) | The contract ID instance to update |
 | `setFileId(<fileId>)` | [FileId](../user-defined-data-types.md#fileid) | The file ID of file containing the smart contract bytecode |
