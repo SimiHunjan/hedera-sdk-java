@@ -2,7 +2,7 @@
 description: Standard HAPI data types derived from the HAPI definition
 ---
 
-# Specialized Data Types
+# Specialized Types
 
 ## [AccountId](https://github.com/hashgraph/hedera-sdk-java/blob/v0.8.0/src/main/java/com/hedera/hashgraph/sdk/account/AccountId.java)
 
