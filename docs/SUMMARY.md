@@ -2,7 +2,7 @@
 
 * [Introduction](GettingStarted.md)
 * [\[Getting Started\] Edit](getting-started.md)
-* [Specialized Data Types](user-defined-data-types.md)
+* [Specialized Types](user-defined-data-types.md)
 * [Keys](keys.md)
 * [Client](client.md)
 * [Address Book](addressbook.md)
