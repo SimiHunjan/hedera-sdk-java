@@ -16,16 +16,6 @@ When creating a **new account** an existing account will need to fund the initia
 
 ## Basic
 
-```java
-new AccountCreateTransaction()
-  .setKey()
-  .setInitialBalance()
-  .setMaxTransactionFee()
-  .build();
-```
-
-### 
-
 | Methods | Type | Description |
 | :--- | :---: | :--- |
 | `setKey(<key>)` | Ed25519PrivateKey | The private key generated for the new account. |

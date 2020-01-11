@@ -13,6 +13,7 @@
 | `INVALID_FILE_ID` | The file id is invalid or does not exist |
 | `INVALID_FILE_WACL` | File WACL keys are invalid |
 | `MAX_FILE_SIZE_EXCEEDED` | File size exceeded the currently allowable limit |
+| `NO_WACL_KEY` | WriteAccess Control Keys are not provided for the file |
 
 
 

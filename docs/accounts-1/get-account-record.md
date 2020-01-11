@@ -20,18 +20,9 @@ A record returns the following information about an account:
 | :--- | :--- |
 | `AccountRecordsQuery()` | Initializes the AccountRecordsQuery object |
 
-```java
-new AccountRecordsQuery()
-  .setAccount()
-  .setMaxQueryPayment()
-  .execute();
-```
-
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setAccountId(<accountId>)` | AccountId | The accountId of the account to return the record for |
-| `setMaxQueryPayment(<long>)` | long | The max the client will pay for the query |
-| `getCost(<client>)` | Client | Returns the cost of the query  |
 
 ## Example
 

@@ -22,6 +22,8 @@ You can find testnet and mainnet network details by logging into your Hedera por
 
 You can store these variables in a .env file at the root directory of the sdk. Please see the [env.sample](https://github.com/hashgraph/hedera-sdk-java/blob/master/.env.sample) file in the SDK for how to set this up.
 
+### Constructor
+
 <table>
   <thead>
     <tr>
@@ -41,9 +43,7 @@ You can store these variables in a .env file at the root directory of the sdk. P
       </td>
     </tr>
   </tbody>
-</table>```java
-new Client();
-```
+</table>### Methods
 
 <table>
   <thead>
