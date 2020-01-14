@@ -43,3 +43,7 @@
 * [Get smart contract record](smart-contracts/get-smart-contract-record.md)
 * [Errors](smart-contracts/errors.md)
 
+## Consensus
+
+* [Create a topic](consensus/create-a-topic.md)
+

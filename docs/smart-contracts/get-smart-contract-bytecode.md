@@ -2,23 +2,17 @@
 
 `ContractByteCodeQuery()` returns the bytecode for a smart contract instance.
 
+## Constructor
+
 | Constructor | Description |
 | :--- | :--- |
 | `ContractByteCodeQuery()` | Initalizes a ContractByteCodeQuery object |
 
-```java
-new ContractByteCodeQuery()
-    .setContractId()
-    .setPaymentAmount()
-    .setMaxQueryPayment()
-    .execute();
-```
+## Methods
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setContractId(<contractId>)` | [ContractId](../user-defined-data-types.md#contractid) | The ID for the contract for which the bytecode is requested |
-| `setPaymentAmount(<paymentAmount>)` | long |  |
-| `setMaxQueryPaymentAmount(<maxPayment>)` | long |  |
 
 ## Example
 

@@ -14,15 +14,15 @@ An `AccountId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum
 
 Together these values make up your `AccountId`. When an `AccountId` is requested, be sure all three values are included.
 
+### Constructor
+
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
 | `AccountId(<shardNum>,<realmNum>,<accountNum>)` | long, long, long | Constructs an `AccountId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<accountNum>`\) |
 
-```java
-new AccountId(); 
-```
+### Method
 
-| Method | Type | Description |
+| Methods | Type | Description |
 | :--- | :--- | :--- |
 | `AccountId.fromString(<account>)` | String | Constructs an `AccountId` from a string formatted as &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;accountNum&gt; |
 | `AccountId.fromSolidityAddress(<address>)` | String | Constructs an `AccountId` from a solidity address in string format  |
@@ -49,18 +49,18 @@ A `FileId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;fileNum&gt; \(
 
 Together these values make up your accountId. When an `FileId` is requested, be sure all three values are included.
 
+### Constructor
+
 | Constructor | Type | Description |
 | :--- | :---: | :--- |
 | `FileId(<shardNum>,<realmNum>,<fileNum>)` | long, long, long | Constructs an `FileId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<fileNum>`\) |
 
-```java
-new FileId();
-```
+### Methods
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Methods</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
@@ -121,18 +121,18 @@ A `ContractId` is composed of a &lt;shardNum&gt;.&lt;realmNum&gt;.&lt;contractNu
 
 Together these values make up your `ContractId`. When an `ContractId` is requested, be sure all three values are included.
 
+### Constructor
+
 | Constructor | Type | Description |
 | :--- | :--- | :--- |
 | `ContractId(<shardNum>,<realmNum>,<contractNum>)` | long, long, long | Constructs a `ContractId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<contractNum>`\) |
 
-```java
-new ContractId(); 
-```
+### Methods
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Method</th>
+      <th style="text-align:left">Methods</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
@@ -169,13 +169,11 @@ System.out.println(contractId);
 
 A `TransactionId` is composed of the current time and account that is primarily signing the transaction. Every transaction has an assciated `TransactionId`. The `TransactionId` should never be set by a user unless in very special circumstances.
 
+### Constructor
+
 | Constructor | Type | Description |
 | :--- | :--- | :--- |
 | `TransactionId(<accountId>)` | AccountId | Generates a new transaction ID for the given `accountId`. |
-
-```java
-new TransactionId()
-```
 
 ### Example
 

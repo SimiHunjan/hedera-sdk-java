@@ -9,23 +9,17 @@
 * Number of bytes of storage bein used
 * Memo
 
+## Constructor
+
 | Constructor | Description |
 | :--- | :--- |
 | `ContractInfoQuery()` | Initializes a ContractCallInfoQuery object |
 
-```java
-new ContractInfoQuery()
-    .setContractId()
-    .setPaymentAmount()
-    .setMaxQueryPayment()
-    .execute()
-```
+## Methods
 
 | Method | Type | Description |
 | :--- | :--- | :--- |
 | `setContractId(<contractId>)` | ContractId | The ID of the smart contract to return the information for |
-| `setPaymentAmount(<paymentAmount>)` | long |  |
-| `setMaxQueryPaymentAmount(<maxPayment>)` | long |  |
 
 ## Example
 
