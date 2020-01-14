@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](GettingStarted.md)
+* [Summary](GettingStarted.md)
 * [Getting Started](getting-started.md)
 * [Specialized Types](user-defined-data-types.md)
 * [Keys](keys.md)
