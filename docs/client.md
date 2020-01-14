@@ -28,7 +28,6 @@ The ExampleHelper class helps you build a client easily. The helper class grabs 
 
 ```java
 Client client = ExampleHelper.createHederaClient();
-
 ```
 
 | Methods | Type | Description |
@@ -59,7 +58,11 @@ Client client = ExampleHelper.createHederaClient();
       </td>
     </tr>
   </tbody>
-</table><table>
+</table>```java
+
+```
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left">Methods</th>
