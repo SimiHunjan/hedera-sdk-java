@@ -20,7 +20,7 @@ Together these values make up your `AccountId`. When an `AccountId` is requested
 | :--- | :---: | :--- |
 | `AccountId(<shardNum>,<realmNum>,<accountNum>)` | long, long, long | Constructs an `AccountId` with 0 for `shardNum` and `realmNum` \(e.g., `0.0.<accountNum>`\) |
 
-### Method
+### Methods
 
 | Methods | Type | Description |
 | :--- | :--- | :--- |
