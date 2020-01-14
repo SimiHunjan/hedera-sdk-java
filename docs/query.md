@@ -16,5 +16,5 @@ The following methods can be called when building the following query types:
 | `setQueryPayment(<paymentAmount>)` | Hbar/long | Sets the explicit query payment amount in hbars |
 | `setMaxQueryPayment()` | Hbar/long |  |
 | `getCost(<client>)` | Client | Returns the cost of the query |
-| `execute(<client>)` | Client |  |
+| `execute(<client>)` | Client | Submits the transaction to the Hedera network |
 
