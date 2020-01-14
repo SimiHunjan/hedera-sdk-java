@@ -17,7 +17,7 @@ Once complete, the following information will be available:
 
 ## Step 2: Download the hedera-java-sdk
 
-**2.1** Visit [https://github.com/hashgraph/hedera-sdk-java/tree/v0.8.0](https://github.com/hashgraph/hedera-sdk-java/tree/v0.8.0) and download the hedera-sdk-java       v0.8.0
+**2.1** Visit [https://github.com/hashgraph/hedera-sdk-java/tree/v0.8.0](https://github.com/hashgraph/hedera-sdk-java/tree/v0.8.0) and download the hedera-sdk-java   
 
 The hedera-sdk-java should now be in your Downloads folder.
 
